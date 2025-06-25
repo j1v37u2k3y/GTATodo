@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA Online Daily Money Checklist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #00ff88, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+        }
+
+        .daily-earnings {
+            background: rgba(0, 255, 136, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #00ff88;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #00ff88;
+        }
+
+        .section h2 {
+            color: #00ff88;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .task {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .task:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(5px);
+        }
+
+        .task.completed {
+            background: rgba(0, 255, 136, 0.2);
+            border: 1px solid #00ff88;
+        }
+
+        .task input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            accent-color: #00ff88;
+        }
+
+        .task-content {
+            flex: 1;
+        }
+
+        .task-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .task-details {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+
+        .detail-section {
+            margin: 8px 0;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            border-left: 3px solid #00ff88;
+        }
+
+        .detail-header {
+            color: #00ff88;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .detail-content {
+            color: #ffffff;
+            margin-left: 8px;
+        }
+
+        .vehicle-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 5px 0;
+        }
+
+        .vehicle-tag {
+            background: rgba(0, 255, 136, 0.2);
+            border: 1px solid #00ff88;
+            padding: 4px 8px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #00ff88;
+        }
+
+        .task-reward {
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        .priority {
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+
+        .priority.high {
+            background: #ff4444;
+        }
+
+        .priority.medium {
+            background: #ffaa00;
+        }
+
+        .priority.low {
+            background: #4444ff;
+        }
+
+        .reset-btn {
+            background: linear-gradient(45deg, #ff4444, #ff6666);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 20px 0;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+
+        .reset-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff88, #00ccff);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .timer {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>GTA Online Daily Money Grind</h1>
+        <p>Maximize your earnings with this optimized daily routine</p>
+        <div class="daily-earnings">
+            <strong>Your Setup Potential: $3-5 Million+ Daily</strong><br>
+            <small>🚁 Sparrow | 🚗 Armored Kuruma | 🚁 Buzzard | 🚛 Mule Custom | 🏢 Full Business Portfolio</small>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+        <div>Progress: <span id="progressText">0%</span></div>
+    </div>
+
+    <button class="reset-btn" onclick="resetChecklist()">Reset Daily Checklist</button>
+
+    <div class="section">
+        <h2>🏢 CEO/VIP Work (Priority #1) - Your Sparrow/Buzzard Advantage</h2>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Headhunter Mission</div>
+                <div class="task-details">
+                    <div class="detail-section">
+                        <div class="detail-header">🚁 Your Vehicles:</div>
+                        <div class="vehicle-list">
+                            <div class="vehicle-tag">Sparrow (Agency)</div>
+                            <div class="vehicle-tag">Buzzard (CEO Menu)</div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">🎯 Strategy:</div>
+                        <div class="detail-content">
+                            • Target armored car first (missiles work)<br>
+                            • Hover and eliminate 3 bodyguards<br>
+                            • Stay high to avoid damage
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">💡 Pro Tips:</div>
+                        <div class="detail-content">
+                            • Sparrow spawns instantly at agency<br>
+                            • Use Buzzard if Sparrow destroyed<br>
+                            • Never land near enemies
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">⏰ Time: 3-4 minutes | No cooldown if alternated</div>
+                    </div>
+                </div>
+                <div class="task-reward">💰 $20,000-25,000</div>
+            </div>
+            <div class="priority high">HIGH</div>
+        </div>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Sightseer Mission</div>
+                <div class="task-details">
+                    <div class="detail-section">
+                        <div class="detail-header">🚁 Your Vehicles:</div>
+                        <div class="vehicle-list">
+                            <div class="vehicle-tag">Sparrow (Speed)</div>
+                            <div class="vehicle-tag">Buzzard (Backup)</div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">📦 Strategy:</div>
+                        <div class="detail-content">
+                            • Collect packages closest to furthest<br>
+                            • Land Sparrow carefully on rooftops<br>
+                            • Use GPS for optimal routing
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">🔄 Alternative:</div>
+                        <div class="detail-content">If packages spread out: "Hostile Takeover - LSIA"</div>
+                    </div>
+                </div>
+                <div class="task-reward">💰 $15,000-20,000</div>
+            </div>
+            <div class="priority high">HIGH</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🏭 Nightclub Management - Your Mule Custom Setup</h2>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Sell Nightclub Goods</div>
+                <div class="task-details">
+                    <div class="detail-section">
+                        <div class="detail-header">🚛 Your Vehicle:</div>
+                        <div class="vehicle-list">
+                            <div class="vehicle-tag">Mule Custom (90-180 units)</div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">🔧 Required Upgrades:</div>
+                        <div class="detail-content">
+                            • Armor Plating • .50 Cal Machine Gun<br>
+                            • Proximity Mines • Turbo Tuning
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">👥 Best Technicians:</div>
+                        <div class="detail-content">
+                            • Cargo (highest value) • Sporting Goods<br>
+                            • Pharmaceutical • Organic Produce • Printing
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">💰 Optimal Sell Point:</div>
+                        <div class="detail-content">120-150 units = $600k-900k (perfect for Mule)</div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">⚠️ Critical:</div>
+                        <div class="detail-content">Solo public session + Los Santos buyers only</div>
+                    </div>
+                </div>
+                <div class="task-reward">💰 $600,000-1,200,000</div>
+            </div>
+            <div class="priority high">HIGH</div>
+        </div>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Nightclub Popularity</div>
+                <div class="task-details">
+                    <div class="detail-section">
+                        <div class="detail-header">🚗 Your Combat Vehicle:</div>
+                        <div class="vehicle-list">
+                            <div class="vehicle-tag">Armored Kuruma</div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">🎯 Mission Types:</div>
+                        <div class="detail-content">
+                            • Stolen Goods → Use Kuruma (bulletproof)<br>
+                            • Troublemakers → Any vehicle<br>
+                            • Flyers → Use Sparrow/Buzzard
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">💡 Lazy Option:</div>
+                        <div class="detail-content">Pay $10k to rebook DJ (instant popularity)</div>
+                    </div>
+                </div>
+                <div class="task-reward">💰 $50,000/day passive</div>
+            </div>
+            <div class="priority medium">MED</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📦 CEO Cargo & Vehicle Warehouse</h2>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Source & Sell Vehicle Cargo</div>
+                <div class="task-details">
+                    <div class="detail-section">
+                        <div class="detail-header">🚁 Your Vehicles:</div>
+                        <div class="vehicle-list">
+                            <div class="vehicle-tag">Buzzard (Travel)</div>
+                            <div class="vehicle-tag">Sparrow (Backup)</div>
+                            <div class="vehicle-tag">Kuruma (Combat)</div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">🏆 32-Car Method:</div>
+                        <div class="detail-content">
+                            • Keep 10 Standard + 10 Mid-Range cars<br>
+                            • Only source/sell Top-Range after that<br>
+                            • Never sell Standard or Mid-Range
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">📍 Sourcing Strategy:</div>
+                        <div class="detail-content">
+                            • Land helicopter away from enemies<br>
+                            • Use Kuruma for heavy combat situations<br>
+                            • Drive carefully to minimize repair costs
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">💰 Selling:</div>
+                        <div class="detail-content">Always choose Specialist Dealer (+$80k bonus)</div>
+                    </div>
+                </div>
+                <div class="task-reward">💰 $80,000 per top range car</div>
+            </div>
+            <div class="priority high">HIGH</div>
+        </div>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Source Special Cargo</div>
+                <div class="task-details">
+                    <div class="detail-section">
+                        <div class="detail-header">🚁 Your Vehicles:</div>
+                        <div class="vehicle-list">
+                            <div class="vehicle-tag">Buzzard (Primary)</div>
+                            <div class="vehicle-tag">Sparrow (Alternative)</div>
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">📦 Purchase Strategy:</div>
+                        <div class="detail-content">
+                            • Always buy 3 crates ($18k cost)<br>
+                            • Best profit-to-time ratio<br>
+                            • Fill large warehouse to 111 crates
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">💡 Pro Tips:</div>
+                        <div class="detail-content">
+                            • Wait for 2x cargo events (up to $4.4M)<br>
+                            • Use Ghost Organization during sales<br>
+                            • Solo public session mandatory
+                        </div>
+                    </div>
+                </div>
+                <div class="task-reward">💰 $2,220,000 per full warehouse</div>
+            </div>
+            <div class="priority medium">MED</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🏠 Bunker Operations</h2>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Resupply Bunker</div>
+                <div class="task-details">
+                    <strong>Required Upgrades:</strong> Staff + Equipment upgrades (mandatory for profit), Security
+                    upgrade (optional)<br>
+                    <strong>Optimal Strategy:</strong> Always BUY supplies ($75k), never steal (time inefficient)<br>
+                    <strong>Sell Timing:</strong> Sell at 25% stock (1 supply bar used) = $210k Los Santos sale =
+                    guaranteed 1 vehicle<br>
+                    <strong>Best Bunkers:</strong> Chumash, Farmhouse (closest to city), avoid Paleto Bay<br>
+                    <strong>Pro Tips:</strong> Production takes 2h 20m per supply bar, sell in solo public for
+                    safety<br>
+                    <strong>Delivery Vehicles:</strong> Phantom Wedge (easiest), Insurgent (hardest), Dune FAV, Marshall
+                </div>
+                <div class="task-reward">💰 $135,000 profit per cycle</div>
+            </div>
+            <div class="priority high">HIGH</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎯 Daily Objectives & Bonuses</h2>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Complete Daily Objectives (3/3)</div>
+                <div class="task-details">
+                    <strong>Common Objectives:</strong> Participate in race, rob store, kill players, complete
+                    mission<br>
+                    <strong>Easy Completions:</strong> Host quick job (pause > online > jobs), rob gas station, join
+                    random race<br>
+                    <strong>Weekly Bonus:</strong> Complete 7 days in a row for $100k + RP bonus<br>
+                    <strong>Monthly Bonus:</strong> Complete 28 days for $500k + RP bonus<br>
+                    <strong>Pro Tips:</strong> Check objectives at session start, some can be done during other
+                    activities
+                </div>
+                <div class="task-reward">💰 $30,000 + RP bonus</div>
+            </div>
+            <div class="priority medium">MED</div>
+        </div>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Spin Lucky Wheel</div>
+                <div class="task-details">
+                    <strong>Wheel Strategy:</strong> Wait 4 seconds after previous spin stops, then spin for vehicle<br>
+                    <strong>Possible Prizes:</strong> Vehicle ($1M+), $50k cash, RP, clothing, mystery prizes<br>
+                    <strong>Mystery Prizes:</strong> Can include money ($50k-500k), weapons, or vehicles<br>
+                    <strong>Pro Tips:</strong> If you win clothing, wait 4 seconds; if you win money/RP, spin
+                    immediately<br>
+                    <strong>Alt Strategy:</strong> Close game if you don't get what you want (only works before saving)
+                </div>
+                <div class="task-reward">💰 Up to $50,000 + prizes</div>
+            </div>
+            <div class="priority low">LOW</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>💎 Agency & Auto Shop</h2>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Agency Security Contracts</div>
+                <div class="task-details">
+                    <strong>Best Contracts:</strong> Asset Protection ($31k, 5 mins), Gang Termination ($31k), Rescue
+                    Operation<br>
+                    <strong>Required Equipment:</strong> Armored vehicle (Kuruma, Nightshark), heavy weapons<br>
+                    <strong>Vehicle Recommendations:</strong> Oppressor Mk2 (fast travel), Sparrow (agency spawn),
+                    Armored Kuruma<br>
+                    <strong>Pro Tips:</strong> Use agency helicopter spawn, complete 201 contracts for $20k daily
+                    passive income<br>
+                    <strong>Bonus:</strong> Dr. Dre VIP Contract gives $1M payout (one-time), unlock after 3 security
+                    contracts
+                </div>
+                <div class="task-reward">💰 $30,000-60,000 each</div>
+            </div>
+            <div class="priority medium">MED</div>
+        </div>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Auto Shop Customer Vehicles</div>
+                <div class="task-details">
+                    <strong>Delivery Strategy:</strong> Modify cars to customer specifications, deliver undamaged<br>
+                    <strong>Best Approach:</strong> Drive carefully or use Cargobob to avoid damage<br>
+                    <strong>Auto Shop Robberies:</strong> Union Depository ($300k), Fleeca Bank ($180k), IAA Facility
+                    ($170k)<br>
+                    <strong>Required:</strong> Auto Shop with modification bay, lift, and planning room<br>
+                    <strong>Pro Tips:</strong> Customer cars spawn every 48 minutes, robberies are good solo heists
+                </div>
+                <div class="task-reward">💰 $20,000-30,000 each</div>
+            </div>
+            <div class="priority low">LOW</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🏖️ Cayo Perico Heist</h2>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Scope Cayo Perico</div>
+                <div class="task-details">
+                    <strong>Scoping Priority:</strong> Primary target → Drainage tunnel → Secondary targets (cocaine,
+                    gold, cash)<br>
+                    <strong>Best Secondary Loot:</strong> Cocaine ($220k-440k), Gold ($330k-500k, need 2 players),
+                    Weed/Cash (last resort)<br>
+                    <strong>Required Intel:</strong> Main gate, drainage tunnel, bolt cutters (for secondary loot)<br>
+                    <strong>Optional Intel:</strong> Uniforms, truck, weapons cache (makes heist easier but not
+                    necessary)<br>
+                    <strong>Pro Tips:</strong> Always scope drainage tunnel, ignore guard uniforms if going stealth
+                    route
+                </div>
+                <div class="task-reward">💰 Setup for $1M+ heist</div>
+            </div>
+            <div class="priority high">HIGH</div>
+        </div>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Complete Cayo Perico Heist</div>
+                <div class="task-details">
+                    <strong>Best Solo Route:</strong> Drainage tunnel → basement → office → main gate exit<br>
+                    <strong>Required Prep:</strong> Cutting torch, fingerprint cloner, plasma cutter (for primary
+                    target)<br>
+                    <strong>Optional Prep:</strong> Conspirator weapons, Rebreather, Unmarked weapons<br>
+                    <strong>Stealth Strategy:</strong> Kill only necessary guards, use silenced weapons, avoid
+                    cameras<br>
+                    <strong>Escape Route:</strong> Main gate → steal motorcycle → drive off cliff east of compound<br>
+                    <strong>Pro Tips:</strong> Hard mode (+10% payout), cocaine in main dock, avoid El Rubio's
+                    helicopter
+                </div>
+                <div class="task-reward">💰 $1,000,000-1,900,000</div>
+            </div>
+            <div class="priority high">HIGH</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>📱 Passive Income Checks</h2>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Collect Arcade Safe</div>
+                <div class="task-details">Max $50k, collect every few hours</div>
+                <div class="task-reward">💰 $50,000</div>
+            </div>
+            <div class="priority low">LOW</div>
+        </div>
+        <div class="task" onclick="toggleTask(this)">
+            <input type="checkbox">
+            <div class="task-content">
+                <div class="task-title">Collect Agency Safe</div>
+                <div class="task-details">Generates $20k per in-game day</div>
+                <div class="task-reward">💰 $20,000</div>
+            </div>
+            <div class="priority low">LOW</div>
+        </div>
+    </div>
+
+    <div class="timer">
+        <div>⏰ Optimal Grinding Sessions: 3-4 hours for maximum efficiency</div>
+    </div>
+</div>
+
+<script>
+    function toggleTask(taskElement) {
+        const checkbox = taskElement.querySelector('input[type="checkbox"]');
+        checkbox.checked = !checkbox.checked;
+
+        if (checkbox.checked) {
+            taskElement.classList.add('completed');
+        } else {
+            taskElement.classList.remove('completed');
+        }
+
+        updateProgress();
+        saveProgress();
+    }
+
+    function updateProgress() {
+        const tasks = document.querySelectorAll('.task');
+        const completedTasks = document.querySelectorAll('.task.completed');
+        const progress = (completedTasks.length / tasks.length) * 100;
+
+        document.getElementById('progressBar').style.width = progress + '%';
+        document.getElementById('progressText').textContent = Math.round(progress) + '%';
+    }
+
+    function resetChecklist() {
+        const tasks = document.querySelectorAll('.task');
+        tasks.forEach(task => {
+            task.classList.remove('completed');
+            task.querySelector('input[type="checkbox"]').checked = false;
+        });
+        updateProgress();
+        saveProgress();
+    }
+
+    function saveProgress() {
+        const completedTasks = [];
+        document.querySelectorAll('.task.completed').forEach((task, index) => {
+            completedTasks.push(Array.from(document.querySelectorAll('.task')).indexOf(task));
+        });
+        // Using a simple variable instead of localStorage for Claude.ai compatibility
+        window.dailyProgress = completedTasks;
+    }
+
+    function loadProgress() {
+        if (window.dailyProgress) {
+            const tasks = document.querySelectorAll('.task');
+            window.dailyProgress.forEach(index => {
+                if (tasks[index]) {
+                    tasks[index].classList.add('completed');
+                    tasks[index].querySelector('input[type="checkbox"]').checked = true;
+                }
+            });
+            updateProgress();
+        }
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function () {
+        loadProgress();
+        updateProgress();
+    });
+</script>
+</body>
+</html>
