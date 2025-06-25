@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA Online Daily Money Checklist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #00ff88, #00ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+        }
+
+        .daily-earnings {
+            background: rgba(0, 255, 136, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #00ff88;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff88, #00ccff);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .tabs {
+            display: flex;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .tab {
+            padding: 15px 20px;
+            background: transparent;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .tab.active {
+            background: rgba(0, 255, 136, 0.2);
+            border-bottom: 3px solid #00ff88;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            margin: 15px 0;
+            border-radius: 15px;
+            border-left: 5px solid #00ff88;
+            overflow: hidden;
+        }
+
+        .section-header {
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .section-header:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .section-title {
+            color: #00ff88;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .section-arrow {
+            transition: transform 0.3s ease;
+            color: #00ff88;
+            font-size: 1.2rem;
+        }
+
+        .section.expanded .section-arrow {
+            transform: rotate(90deg);
+        }
+
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .section.expanded .section-content {
+            max-height: 1000px;
+        }
+
+        .task {
+            background: rgba(255, 255, 255, 0.05);
+            margin: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .task:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .task.completed {
+            background: rgba(0, 255, 136, 0.15);
+            border: 1px solid #00ff88;
+        }
+
+        .task input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            margin-top: 5px;
+            accent-color: #00ff88;
+            flex-shrink: 0;
+        }
+
+        .task-content {
+            flex: 1;
+        }
+
+        .task-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .task-reward {
+            color: #00ff88;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .priority {
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+
+        .priority.high {
+            background: #ff4444;
+        }
+
+        .priority.medium {
+            background: #ffaa00;
+        }
+
+        .priority.low {
+            background: #4444ff;
+        }
+
+        .detail-section {
+            margin: 8px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            border-left: 3px solid #00ff88;
+        }
+
+        .detail-header {
+            color: #00ff88;
+            font-weight: bold;
+            margin-bottom: 6px;
+            font-size: 0.9rem;
+        }
+
+        .detail-content {
+            color: #ffffff;
+            margin-left: 8px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .vehicle-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 5px 0;
+        }
+
+        .vehicle-tag {
+            background: rgba(0, 255, 136, 0.2);
+            border: 1px solid #00ff88;
+            padding: 4px 8px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #00ff88;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #00ff88, #00ccff);
+            color: #000;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .btn.secondary {
+            background: linear-gradient(45deg, #ff4444, #ff6666);
+            color: white;
+        }
+
+        .quick-summary {
+            background: rgba(0, 255, 136, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #00ff88;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .summary-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .summary-amount {
+            color: #00ff88;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>GTA Online Daily Money Grind</h1>
+        <p>Optimized for your setup: Sparrow • Buzzard • Kuruma • Mule Custom</p>
+        <div class="daily-earnings">
+            <strong>Your Setup Potential: $3-5 Million+ Daily</strong>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressBar"></div>
+        </div>
+        <div>Progress: <span id="progressText">0%</span> | Tasks Completed: <span id="completedCount">0</span>/<span
+                id="totalCount">0</span></div>
+    </div>
+
+    <div class="controls">
+        <button class="btn" onclick="expandAll()">📖 Expand All</button>
+        <button class="btn" onclick="collapseAll()">📝 Collapse All</button>
+        <button class="btn secondary" onclick="resetChecklist()">🔄 Reset Daily</button>
+    </div>
+
+    <div class="quick-summary">
+        <h3>🚀 Quick Start Priority Guide</h3>
+        <div class="summary-grid">
+            <div class="summary-item">
+                <div>🔥 Highest Priority</div>
+                <div class="summary-amount">CEO Work + Nightclub</div>
+            </div>
+            <div class="summary-item">
+                <div>💎 Big Single Payouts</div>
+                <div class="summary-amount">Cayo Perico ($1-1.9M)</div>
+            </div>
+            <div class="summary-item">
+                <div>🏢 Steady Income</div>
+                <div class="summary-amount">Vehicle Cargo + Bunker</div>
+            </div>
+            <div class="summary-item">
+                <div>📅 Check Weekly</div>
+                <div class="summary-amount">2x/3x Event Bonuses</div>
+            </div>
+            <div class="summary-item">
+                <div>🎯 Daily Tasks</div>
+                <div class="summary-amount">Objectives + Wheel Spin</div>
+            </div>
+            <div class="summary-item">
+                <div>🚗 Your Setup</div>
+                <div class="summary-amount">Sparrow + Kuruma + Mule</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="showTab('priority')">🔥 High Priority</button>
+        <button class="tab" onclick="showTab('businesses')">🏢 Businesses</button>
+        <button class="tab" onclick="showTab('heists')">💎 Heists & Contracts</button>
+        <button class="tab" onclick="showTab('missions')">🎯 Missions & Jobs</button>
+        <button class="tab" onclick="showTab('passive')">💰 Passive Income</button>
+        <button class="tab" onclick="showTab('weekly')">📅 Weekly/Events</button>
+    </div>
+
+    <!-- High Priority Tab -->
+    <div id="priority" class="tab-content active">
+        <div class="section expanded">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">🏢 CEO/VIP Work - Your Sparrow/Buzzard Advantage</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Headhunter Mission</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚁 Your Vehicles:</div>
+                            <div class="vehicle-list">
+                                <div class="vehicle-tag">Sparrow (Agency)</div>
+                                <div class="vehicle-tag">Buzzard (CEO Menu)</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎯 Strategy:</div>
+                            <div class="detail-content">
+                                • Target armored car first (missiles work)<br>
+                                • Hover and eliminate 3 bodyguards<br>
+                                • Stay high to avoid damage
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $20,000-25,000 | ⏰ 3-4 min</div>
+                    </div>
+                    <div class="priority high">HIGH</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Sightseer Mission</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚁 Your Vehicles:</div>
+                            <div class="vehicle-list">
+                                <div class="vehicle-tag">Sparrow (Speed)</div>
+                                <div class="vehicle-tag">Buzzard (Backup)</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-header">📦 Strategy:</div>
+                            <div class="detail-content">
+                                • Collect packages closest to furthest<br>
+                                • Alternative: "Hostile Takeover - LSIA" if spread out
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $15,000-20,000 | ⏰ 3-5 min</div>
+                    </div>
+                    <div class="priority high">HIGH</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">🏭 Nightclub Management - Your Mule Custom</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Sell Nightclub Goods</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚛 Your Vehicle:</div>
+                            <div class="vehicle-list">
+                                <div class="vehicle-tag">Mule Custom (90-180 units)</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-header">💰 Sweet Spot:</div>
+                            <div class="detail-content">120-150 units = $600k-900k (perfect for Mule)</div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-header">⚠️ Critical:</div>
+                            <div class="detail-content">Solo public + Los Santos buyers only</div>
+                        </div>
+                        <div class="task-reward">💰 $600,000-1,200,000</div>
+                    </div>
+                    <div class="priority high">HIGH</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Businesses Tab -->
+    <div id="businesses" class="tab-content">
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">🚗 Auto Shop Business</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Deliver Customer Vehicles</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🔧 Strategy:</div>
+                            <div class="detail-content">
+                                • Modify cars to customer specs<br>
+                                • Deliver without damage for full payment<br>
+                                • New car every 48 minutes
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚁 Your Vehicles:</div>
+                            <div class="vehicle-list">
+                                <div class="vehicle-tag">Drive Carefully</div>
+                                <div class="vehicle-tag">Or Use Cargobob</div>
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $20,000-30,000 each</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Exotic Exports (Daily List)</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎯 Strategy:</div>
+                            <div class="detail-content">
+                                • Check LS Car Meet for daily list<br>
+                                • Find 10 specific cars around map<br>
+                                • $20k each car, $100k bonus for all 10
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $300,000 total (all 10 cars)</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">📦 Vehicle Cargo - 32-Car Method</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Source & Sell Top-Range Cars</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚁 Your Vehicles:</div>
+                            <div class="vehicle-list">
+                                <div class="vehicle-tag">Buzzard (Travel)</div>
+                                <div class="vehicle-tag">Kuruma (Combat)</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-header">🏆 32-Car Method:</div>
+                            <div class="detail-content">
+                                • Keep 10 Standard + 10 Mid-Range<br>
+                                • Only source/sell Top-Range after that<br>
+                                • Always choose Specialist Dealer (+$80k)
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $80,000 per car | ⏰ 15-20 min cycle</div>
+                    </div>
+                    <div class="priority high">HIGH</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">🏠 Bunker Operations</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Buy Supplies & Sell at 25%</div>
+                        <div class="detail-section">
+                            <div class="detail-header">💵 Strategy:</div>
+                            <div class="detail-content">
+                                • Always BUY supplies ($75k)<br>
+                                • Sell at 25% stock = guaranteed 1 vehicle<br>
+                                • $210k sale - $75k supplies = $135k profit
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-header">⏰ Timing:</div>
+                            <div class="detail-content">2h 20m per supply bar</div>
+                        </div>
+                        <div class="task-reward">💰 $135,000 profit per cycle</div>
+                    </div>
+                    <div class="priority high">HIGH</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">📦 Special Cargo</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Source 3-Crate Shipments</div>
+                        <div class="detail-section">
+                            <div class="detail-header">📦 Strategy:</div>
+                            <div class="detail-content">
+                                • Always buy 3 crates ($18k)<br>
+                                • Wait for 2x events for big sales<br>
+                                • 111 crates = $2.2M normal, $4.4M on 2x
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $2,220,000 per full warehouse</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">📱 Terrorbyte Client Jobs</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Robbery in Progress</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚁 Your Vehicles:</div>
+                            <div class="vehicle-list">
+                                <div class="vehicle-tag">Buzzard</div>
+                                <div class="vehicle-tag">Kuruma</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎯 Strategy:</div>
+                            <div class="detail-content">Stop fleeing robbers, collect money</div>
+                        </div>
+                        <div class="task-reward">💰 $30,000 | ⏰ 5 min</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Data Sweep</div>
+                        <div class="detail-section">
+                            <div class="detail-header">💻 Strategy:</div>
+                            <div class="detail-content">Hack 4 laptops around the city</div>
+                        </div>
+                        <div class="task-reward">💰 $30,000 | ⏰ 8 min</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Targeted Data</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎯 Strategy:</div>
+                            <div class="detail-content">Steal specific data from enemies</div>
+                        </div>
+                        <div class="task-reward">💰 $31,000 | ⏰ 10 min</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">🎰 Casino Work (Agatha Baker)</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Casino Story Missions</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎰 Missions:</div>
+                            <div class="detail-content">
+                                • Loose Cheng ($50k) • House Keeping ($50k)<br>
+                                • Strong Arm Tactics ($50k) • Play to Win ($50k)<br>
+                                • Bad Beat ($50k) • Cashing Out ($100k)
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $300,000 total + $500k car</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Heists & Contracts Tab -->
+    <div id="heists" class="tab-content">
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">🏖️ Cayo Perico Heist (Best Solo Money)</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Scope Primary & Secondary Targets</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎯 Priority Intel:</div>
+                            <div class="detail-content">
+                                • Primary target (office) • Drainage tunnel<br>
+                                • Cocaine (best secondary) • Bolt cutters
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 Setup for $1M+ heist</div>
+                    </div>
+                    <div class="priority high">HIGH</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Complete Heist - Drainage Route</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🗺️ Best Solo Route:</div>
+                            <div class="detail-content">
+                                • Drainage tunnel → basement → office<br>
+                                • Grab secondary loot → main gate exit<br>
+                                • Steal motorcycle → drive off east cliff
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $1,000,000-1,900,000</div>
+                    </div>
+                    <div class="priority high">HIGH</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">🏦 Classic Heists (4-Player)</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Fleeca Job</div>
+                        <div class="detail-section">
+                            <div class="detail-header">👥 Requirements:</div>
+                            <div class="detail-content">2 players, High-End Apartment, Kuruma</div>
+                        </div>
+                        <div class="task-reward">💰 $143,750 (Host) | ⏰ 30 min</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Prison Break</div>
+                        <div class="detail-section">
+                            <div class="detail-header">👥 Requirements:</div>
+                            <div class="detail-content">4 players, aircraft recommended</div>
+                        </div>
+                        <div class="task-reward">💰 $500,000 (Host) | ⏰ 90 min</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Humane Labs Raid</div>
+                        <div class="detail-section">
+                            <div class="detail-header">👥 Requirements:</div>
+                            <div class="detail-content">4 players, good coordination needed</div>
+                        </div>
+                        <div class="task-reward">💰 $675,000 (Host) | ⏰ 90 min</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Series A Funding</div>
+                        <div class="detail-section">
+                            <div class="detail-header">👥 Requirements:</div>
+                            <div class="detail-content">4 players, combat heavy</div>
+                        </div>
+                        <div class="task-reward">💰 $505,000 (Host) | ⏰ 90 min</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Pacific Standard</div>
+                        <div class="detail-section">
+                            <div class="detail-header">👥 Requirements:</div>
+                            <div class="detail-content">4 players, Kuruma for finale</div>
+                        </div>
+                        <div class="task-reward">💰 $1,250,000 (Host) | ⏰ 2 hours</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">🏢 Doomsday Heists</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Act I: The Data Breaches</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎯 Your Setup:</div>
+                            <div class="vehicle-list">
+                                <div class="vehicle-tag">Kuruma (Setups)</div>
+                                <div class="vehicle-tag">Buzzard (Travel)</div>
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $812,500 (Host) | ⏰ 2-3 hours</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Act II: The Bogdan Problem</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚁 Requirements:</div>
+                            <div class="detail-content">
+                                2-4 players, submarine finale<br>
+                                Popular for replay glitch (risky)
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $1,187,500 (Host) | ⏰ 2-3 hours</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Act III: The Doomsday Scenario</div>
+                        <div class="detail-section">
+                            <div class="detail-header">⚠️ Difficulty:</div>
+                            <div class="detail-content">
+                                Hardest heist, jetpack finale<br>
+                                Requires skilled team
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $1,500,000 (Host) | ⏰ 3-4 hours</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">💎 Diamond Casino Heist</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Scope Casino & Choose Approach</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎯 Approaches:</div>
+                            <div class="detail-content">
+                                • Silent & Sneaky (stealth, lower payout)<br>
+                                • The Big Con (disguises, moderate)<br>
+                                • Aggressive (loud, highest payout)
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 Setup for $1.5-2.1M heist</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Complete Casino Heist</div>
+                        <div class="detail-section">
+                            <div class="detail-header">💰 Target Priority:</div>
+                            <div class="detail-content">
+                                • Diamonds (rare, $3.6M max)<br>
+                                • Gold ($2.5M max, 2+ players)<br>
+                                • Art ($2.35M max, easiest)<br>
+                                • Cash ($2.1M max, worst)
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $1,500,000-2,100,000</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">🚗 Auto Shop Heists</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Union Depository Contract</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎯 Your Setup:</div>
+                            <div class="vehicle-list">
+                                <div class="vehicle-tag">Kuruma (Setups)</div>
+                                <div class="vehicle-tag">Any Fast Car (Finale)</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-header">💰 Strategy:</div>
+                            <div class="detail-content">
+                                1-2 players, gold stealing, car chase finale<br>
+                                No equipment costs, good solo option
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $300,000 | ⏰ 1-2 hours</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Fleeca Bank Contract</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🏦 Strategy:</div>
+                            <div class="detail-content">
+                                Similar to classic Fleeca but updated<br>
+                                Good for 2 players, relatively easy
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $180,000 | ⏰ 45 min</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">IAA Data Facility</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🕵️ Strategy:</div>
+                            <div class="detail-content">
+                                Stealth focused, hack servers<br>
+                                Moderate difficulty, decent payout
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $170,000 | ⏰ 1 hour</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Prison Contract</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚁 Strategy:</div>
+                            <div class="detail-content">
+                                Break someone out of prison<br>
+                                Use Buzzard for escape
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $200,000 | ⏰ 1 hour</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Agency Bank Contract</div>
+                        <div class="detail-section">
+                            <div class="detail-header">💼 Strategy:</div>
+                            <div class="detail-content">
+                                Multi-part bank job<br>
+                                Good coordination needed
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $250,000 | ⏰ 1.5 hours</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">ECU Job</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🏎️ Strategy:</div>
+                            <div class="detail-content">
+                                Car focused heist<br>
+                                Perfect for Auto Shop theme
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $190,000 | ⏰ 1 hour</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Lost MC Contract</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🏍️ Strategy:</div>
+                            <div class="detail-content">
+                                Take on motorcycle gang<br>
+                                Combat heavy missions
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $180,000 | ⏰ 1 hour</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Superdollar Deal</div>
+                        <div class="detail-section">
+                            <div class="detail-header">💵 Strategy:</div>
+                            <div class="detail-content">
+                                Counterfeit money operation<br>
+                                Multi-location finale
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $160,000 | ⏰ 1 hour</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">💎 Agency Security Contracts</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Asset Protection</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚗 Your Setup:</div>
+                            <div class="vehicle-list">
+                                <div class="vehicle-tag">Sparrow (Agency spawn)</div>
+                                <div class="vehicle-tag">Kuruma (Combat)</div>
+                            </div>
+                        </div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎯 Strategy:</div>
+                            <div class="detail-content">
+                                Protect CEO's car/yacht/etc<br>
+                                Easiest contract, 5 minutes
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $31,000 | ⏰ 5 min</div>
+                    </div>
+                    <div class="priority high">HIGH</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Gang Termination</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎯 Strategy:</div>
+                            <div class="detail-content">
+                                Eliminate gang members<br>
+                                Use Kuruma for protection
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $31,000 | ⏰ 8 min</div>
+                    </div>
+                    <div class="priority high">HIGH</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Rescue Operation</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚁 Strategy:</div>
+                            <div class="detail-content">
+                                Save VIP from kidnappers<br>
+                                Use Sparrow for quick extraction
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $46,500 | ⏰ 10 min</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Vehicle Recovery</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚗 Strategy:</div>
+                            <div class="detail-content">
+                                Steal back client's vehicle<br>
+                                Drive carefully to avoid damage
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $34,000 | ⏰ 8 min</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Liquidize Assets</div>
+                        <div class="detail-section">
+                            <div class="detail-header">💥 Strategy:</div>
+                            <div class="detail-content">
+                                Destroy rival's property<br>
+                                Use explosives or weaponized vehicles
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $31,000 | ⏰ 8 min</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Dr. Dre VIP Contract</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎵 One-Time Bonus:</div>
+                            <div class="detail-content">
+                                Multi-part story missions<br>
+                                Unlock after 3 security contracts
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $1,000,000 (One-Time) | ⏰ 2 hours</div>
+                    </div>
+                    <div class="priority high">HIGH</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Missions & Jobs Tab -->
+    <div id="missions" class="tab-content">
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">🎮 Contact Missions (Double Money Events)</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Rooftop Rumble (Martin)</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎯 Strategy:</div>
+                            <div class="detail-content">
+                                • Use Kuruma for easy completion<br>
+                                • Kill all enemies, steal briefcase<br>
+                                • Wait 4+ minutes before delivery for max payout
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $25,000 | ⏰ 8 min</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Blow Up (Simeon)</div>
+                        <div class="detail-section">
+                            <div class="detail-header">💥 Strategy:</div>
+                            <div class="detail-content">
+                                • Destroy cars at parking garage<br>
+                                • Use sticky bombs or RPG<br>
+                                • Quick and easy mission
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $20,000 | ⏰ 5 min</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Los Santos Connection (Martin)</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚁 Your Vehicles:</div>
+                            <div class="vehicle-list">
+                                <div class="vehicle-tag">Buzzard</div>
+                                <div class="vehicle-tag">Kuruma</div>
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $30,000 | ⏰ 12 min</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">🏁 Races & Time Trials</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Time Trial (Weekly)</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🏎️ Strategy:</div>
+                            <div class="detail-content">
+                                • New time trial every Thursday<br>
+                                • Use fastest car in class<br>
+                                • Practice the route first
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $101,000 (Triple Time) | ⏰ 10 min</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">RC Bandito Time Trial</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚗 Strategy:</div>
+                            <div class="detail-content">
+                                • Use RC Bandito vehicle<br>
+                                • Much easier than regular time trials<br>
+                                • New location weekly
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $100,000 | ⏰ 5 min</div>
+                    </div>
+                    <div class="priority medium">MED</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Stunt Races</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🏁 Strategy:</div>
+                            <div class="detail-content">
+                                • Join during double money weeks<br>
+                                • Win = $50k+, participation = $20k+<br>
+                                • Use custom vehicles if allowed
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $20,000-80,000 | ⏰ 5-10 min</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">🎯 Adversary Modes</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Sumo (Remix)</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚗 Strategy:</div>
+                            <div class="detail-content">
+                                • Push opponents off platforms<br>
+                                • Good during double money events<br>
+                                • Quick rounds, fun gameplay
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $30,000-50,000 | ⏰ 5-8 min</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Motor Wars</div>
+                        <div class="detail-section">
+                            <div class="detail-header">⚔️ Strategy:</div>
+                            <div class="detail-content">
+                                • Battle royale with vehicles<br>
+                                • Stay alive as long as possible<br>
+                                • Use cover and team tactics
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $25,000-40,000 | ⏰ 10-15 min</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">🌊 Open World Activities</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Armored Truck Robbery</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚛 Strategy:</div>
+                            <div class="detail-content">
+                                • Random spawn around map<br>
+                                • Blow up back doors, collect money<br>
+                                • Use sticky bombs
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $10,000-20,000 | ⏰ 3 min</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Security Van Robbery</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🚐 Strategy:</div>
+                            <div class="detail-content">
+                                • Follow Gruppe Sechs vans<br>
+                                • Rob them when they stop<br>
+                                • Kill guards, collect cash
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $15,000-25,000 | ⏰ 5 min</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Store Robberies</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🏪 Strategy:</div>
+                            <div class="detail-content">
+                                • Rob convenience stores<br>
+                                • Point gun at clerk, take money<br>
+                                • 20 stores around Los Santos
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $1,000-2,000 each | ⏰ 2 min</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Bounty Hunting</div>
+                        <div class="detail-section">
+                            <div class="detail-header">🎯 Strategy:</div>
+                            <div class="detail-content">
+                                • Kill players with bounties<br>
+                                • Use aircraft for mobility<br>
+                                • Collect $1k-10k bounties
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $1,000-10,000 | ⏰ Variable</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection(this)">
+                <div class="section-title">💎 VIP/CEO Challenges</div>
+                <div class="section-arrow">▶</div>
+            </div>
+            <div class="section-content">
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Most Wanted</div>
+                        <div class="detail-section">
+                            <div class="detail-header">⭐ Strategy:</div>
+                            <div class="detail-content">
+                                • Survive highest wanted level<br>
+                                • Use tunnels and subways<br>
+                                • $30k for winning
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $30,000 | ⏰ 10 min</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+                <div class="task" onclick="toggleTask(this)">
+                    <input type="checkbox">
+                    <div class="task-content">
+                        <div class="task-title">Executive Deathmatch</div>
+                        <div class="detail-section">
+                            <div class="detail-header">⚔️ Strategy:</div>
+                            <div class="detail-content">
+                                • Kill other CEOs/VIPs<br>
+                                • Use cover and tactics<br>
+                                • Winner takes all
+                            </div>
+                        </div>
+                        <div class="task-reward">💰 $25,000 | ⏰ 10 min</div>
+                    </div>
+                    <div class="priority low">LOW</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-title">🎯 Daily Objectives & Bonuses</div>
+            <div class="section-arrow">▶</div>
+        </div>
+        <div class="section-content">
+            <div class="task" onclick="toggleTask(this)">
+                <input type="checkbox">
+                <div class="task-content">
+                    <div class="task-title">Complete Daily Objectives (3/3)</div>
+                    <div class="detail-section">
+                        <div class="detail-header">📋 Common Objectives:</div>
+                        <div class="detail-content">
+                            • Participate in race • Rob store<br>
+                            • Complete mission • Join random event
+                        </div>
+                    </div>
+                    <div class="detail-section">
+                        <div class="detail-header">🏆 Bonus Streaks:</div>
+                        <div class="detail-content">
+                            • 7 days = $100k bonus<br>
+                            • 28 days = $500k bonus
+                        </div>
+                    </div>
+                    <div class="task-reward">💰 $30,000 + RP bonus</div>
+                </div>
+                <div class="priority medium">MED</div>
+            </div>
+            <div class="task" onclick="toggleTask(this)">
+                <input type="checkbox">
+                <div class="task-content">
+                    <div class="task-title">Spin Lucky Wheel</div>
+                    <div class="detail-section">
+                        <div class="detail-header">🎰 Strategy:</div>
+                        <div class="detail-content">
+                            • Wait 4 seconds after wheel stops<br>
+                            • Can win vehicle, $50k cash, mystery prizes
+                        </div>
+                    </div>
+                    <div class="task-reward">💰 Up to $50,000 + prizes</div>
+                </div>
+                <div class="priority low">LOW</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header" onclick="toggleSection(this)">
+            <div class="section-title">💰 Passive Income Collection</div>
+            <div class="section-arrow">▶</div>
+        </div>
+        <div class="section-content">
+            <div class="task" onclick="toggleTask(this)">
+                <input type="checkbox">
+                <div class="task-content">
+                    <div class="task-title">Collect Nightclub Safe</div>
+                    <div class="detail-section">
+                        <div class="detail-header">💵 Details:</div>
+                        <div class="detail-content">
+                            100% popularity = $50k per day<br>
+                            Check every few hours
+                        </div>
+                    </div>
+                    <div class="task-reward">💰 $50,000</div>
+                </div>
+                <div class="priority low">LOW</div>
+            </div>
+            <div class="task" onclick="toggleTask(this)">
+                <input type="checkbox">
+                <div class="task-content">
+                    <div class="task-title">Collect Agency Safe</div>
+                    <div class="detail-section">
+                        <div class="detail-header">💵 Details:</div>
+                        <div class="detail-content">
+                            $20k per in-game day<br>
+                            Complete 201 contracts for bonus
+                        </div>
+                    </div>
+                    <div class="task-reward">💰 $20,000</div>
+                </div>
+                <div class="priority low">LOW</div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+    function toggleTask(taskElement) {
+        const checkbox = taskElement.querySelector('input[type="checkbox"]');
+        checkbox.checked = !checkbox.checked;
+
+        if (checkbox.checked) {
+            taskElement.classList.add('completed');
+        } else {
+            taskElement.classList.remove('completed');
+        }
+
+        updateProgress();
+        saveProgress();
+    }
+
+    function toggleSection(headerElement) {
+        const section = headerElement.parentElement;
+        section.classList.toggle('expanded');
+    }
+
+    function expandAll() {
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.add('expanded');
+        });
+    }
+
+    function collapseAll() {
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.remove('expanded');
+        });
+    }
+
+    function showTab(tabName) {
+        // Hide all tabs
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+        });
+
+        // Remove active from all tab buttons
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.classList.remove('active');
+        });
+
+        // Show selected tab
+        const selectedTab = document.getElementById(tabName);
+        if (selectedTab) {
+            selectedTab.classList.add('active');
+        }
+
+        // Activate clicked tab button
+        event.target.classList.add('active');
+    }
+
+    function updateProgress() {
+        const tasks = document.querySelectorAll('.task');
+        const completedTasks = document.querySelectorAll('.task.completed');
+        const progress = (completedTasks.length / tasks.length) * 100;
+
+        document.getElementById('progressBar').style.width = progress + '%';
+        document.getElementById('progressText').textContent = Math.round(progress) + '%';
+        document.getElementById('completedCount').textContent = completedTasks.length;
+        document.getElementById('totalCount').textContent = tasks.length;
+    }
+
+    function resetChecklist() {
+        const tasks = document.querySelectorAll('.task');
+        tasks.forEach(task => {
+            task.classList.remove('completed');
+            task.querySelector('input[type="checkbox"]').checked = false;
+        });
+        updateProgress();
+        saveProgress();
+    }
+
+    function saveProgress() {
+        const completedTasks = [];
+        document.querySelectorAll('.task.completed').forEach((task, index) => {
+            completedTasks.push(Array.from(document.querySelectorAll('.task')).indexOf(task));
+        });
+        window.dailyProgress = completedTasks;
+    }
+
+    function loadProgress() {
+        if (window.dailyProgress) {
+            const tasks = document.querySelectorAll('.task');
+            window.dailyProgress.forEach(index => {
+                if (tasks[index]) {
+                    tasks[index].classList.add('completed');
+                    tasks[index].querySelector('input[type="checkbox"]').checked = true;
+                }
+            });
+            updateProgress();
+        }
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function () {
+        loadProgress();
+        updateProgress();
+
+        // Expand first section by default
+        document.querySelector('.section').classList.add('expanded');
+    });
+</script>
+</body>
+</html>

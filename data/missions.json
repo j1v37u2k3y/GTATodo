@@ -1,0 +1,2006 @@
+{
+  "categories": [
+    {
+      "id": "quick-money",
+      "name": "Quick Money (15-30 min)",
+      "icon": "⚡",
+      "sections": [
+        {
+          "id": "ceo-vip-work",
+          "name": "CEO/VIP Work",
+          "activities": [
+            {
+              "id": "headhunter",
+              "name": "Headhunter",
+              "priority": "HIGH",
+              "reward": "$20,000-25,000",
+              "time": "3-4 minutes",
+              "difficulty": "Easy",
+              "moneyPotential": "Low ($0-50K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Solo Only",
+              "launchLocation": {
+                "icon": "📱",
+                "name": "Interaction Menu",
+                "method": "SecuroServ > VIP/CEO Work > Headhunter"
+              },
+              "requirements": [
+                "CEO/VIP Status",
+                "$25,000 minimum to register as VIP"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Sparrow (Agency - fastest)",
+                  "Buzzard (CEO Menu)",
+                  "Oppressor MK2"
+                ],
+                "strategy": "Always target armored car first with homing missiles, then hover high and pick off bodyguards"
+              },
+              "details": [
+                "🎯 TARGET ORDER: Armored car → 3 bodyguards around the target",
+                "🚁 STRATEGY: Stay airborne, use homing missiles, maintain altitude to avoid RPGs",
+                "⏰ EFFICIENCY: Park Sparrow on nearby rooftop between targets",
+                "💡 TIP: If no aircraft, use Kuruma and drive-by shooting",
+                "🔄 COOLDOWN: 5 minutes between VIP work missions",
+                "💰 PAYOUT: $20K-25K depending on time taken (under 7 minutes = max payout)"
+              ]
+            },
+            {
+              "id": "sightseer",
+              "name": "Sightseer",
+              "priority": "HIGH",
+              "reward": "$15,000-20,000",
+              "time": "3-5 minutes",
+              "difficulty": "Easy",
+              "moneyPotential": "Low ($0-50K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Solo Only",
+              "launchLocation": {
+                "icon": "📱",
+                "name": "Interaction Menu",
+                "method": "SecuroServ > VIP/CEO Work > Sightseer"
+              },
+              "requirements": [
+                "CEO/VIP Status"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Sparrow (Speed)",
+                  "Buzzard (Backup)",
+                  "Oppressor MK2"
+                ],
+                "strategy": "Travel to closest package first, then work outward to maximize efficiency"
+              },
+              "details": [
+                "💻 OBJECTIVE: Hack 3 briefcases at random locations around map",
+                "🚁 ROUTE: Always do closest → furthest to minimize travel time",
+                "⚠️ ALTERNATIVE: If packages are spread far apart, do 'Hostile Takeover - LSIA' instead",
+                "💡 NO COMBAT: Pure travel mission, no enemies to fight",
+                "⏰ TIME BONUS: Complete under 5 minutes for maximum payout",
+                "🔄 ROTATION: Alternate with Headhunter during cooldowns"
+              ]
+            },
+            {
+              "id": "hostile-takeover",
+              "name": "Hostile Takeover",
+              "priority": "MEDIUM",
+              "reward": "$15,000-18,000",
+              "time": "2-5 minutes",
+              "launchLocation": {
+                "icon": "📱",
+                "name": "Interaction Menu",
+                "method": "SecuroServ > VIP/CEO Work > Hostile Takeover"
+              },
+              "requirements": [
+                "CEO/VIP Status"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Any armored vehicle",
+                  "Kuruma",
+                  "Nightshark"
+                ],
+                "strategy": "LSIA (easiest) or Altruist Camp, eliminate enemies and collect briefcase"
+              },
+              "details": [
+                "🏢 BEST LOCATIONS: LSIA (airport - easiest), Altruist Camp (mountain)",
+                "⚔️ LSIA STRATEGY: Drive to hangar, kill 6-8 enemies, grab briefcase",
+                "🏔️ ALTRUIST STRATEGY: More enemies but closer together, use cover",
+                "💡 TIP: Use when Sightseer packages are too spread out",
+                "🚗 VEHICLE: Any armored car works, Kuruma ideal for protection"
+              ]
+            },
+            {
+              "id": "asset-recovery",
+              "name": "Asset Recovery",
+              "priority": "MEDIUM",
+              "reward": "$15,000-20,000",
+              "time": "4-6 minutes",
+              "launchLocation": {
+                "icon": "📱",
+                "name": "Interaction Menu",
+                "method": "SecuroServ > VIP/CEO Work > Asset Recovery"
+              },
+              "requirements": [
+                "CEO/VIP Status"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Sparrow/Buzzard",
+                  "Cargobob (if available)"
+                ],
+                "strategy": "Steal specific vehicle and deliver to warehouse, avoid damage"
+              },
+              "details": [
+                "🚗 OBJECTIVE: Steal specific vehicle (changes each time)",
+                "🎯 LOCATIONS: Various around Los Santos, check GPS",
+                "⚠️ ENEMIES: Usually 4-6 NPCs guarding the target vehicle",
+                "💡 CARGOBOB METHOD: Pick up vehicle to avoid damage (if you own one)",
+                "🔧 CONDITION: Vehicle condition affects payout - avoid damage"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nightclub-sales",
+          "name": "Nightclub Sales",
+          "activities": [
+            {
+              "id": "nightclub-sale",
+              "name": "Sell Nightclub Stock",
+              "priority": "HIGH",
+              "reward": "$600,000-1,200,000",
+              "time": "10-15 minutes",
+              "difficulty": "Easy",
+              "moneyPotential": "Very High ($500K+)",
+              "timeRequired": "Short (15-30 min)",
+              "soloFriendly": "Solo Only",
+              "launchLocation": {
+                "icon": "🌃",
+                "name": "Nightclub",
+                "method": "Tony's computer or main desk"
+              },
+              "requirements": [
+                "Nightclub",
+                "Technicians assigned to businesses",
+                "Security upgrades recommended"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Mule Custom (90-180 units)",
+                  "Pounder Custom (180-360 units)",
+                  "Speedo Custom (under 90 units)"
+                ],
+                "strategy": "OPTIMAL: Sell at 120-150 units for guaranteed Mule Custom (best handling)"
+              },
+              "details": [
+                "🎯 SWEET SPOT: 90-180 units = Mule Custom (easiest to drive)",
+                "🌆 BUYERS: Always choose Los Santos buyers (shorter distance)",
+                "👥 SESSION: Solo public session mandatory (avoid griefers)",
+                "💰 PROFIT: $600K-900K for optimal range, $1.2M for full warehouse",
+                "⏰ PRODUCTION: Takes 20+ hours to reach 180 units",
+                "🔧 TECHNICIANS: Assign to Cargo, Sporting Goods, Pharmaceutical, Cash, Cocaine",
+                "💡 TIP: Never exceed 180 units if you want to avoid Pounder Custom"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "agency-work",
+          "name": "Agency Security Contracts",
+          "activities": [
+            {
+              "id": "asset-protection",
+              "name": "Asset Protection",
+              "priority": "HIGH",
+              "reward": "$31,000",
+              "time": "5 minutes",
+              "launchLocation": {
+                "icon": "🏛️",
+                "name": "Agency",
+                "method": "Computer > Security Contracts"
+              },
+              "requirements": [
+                "Agency Property"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Sparrow (Agency spawn)",
+                  "Kuruma (if ground combat)"
+                ],
+                "strategy": "Protect client's assets from attackers, easiest security contract"
+              },
+              "details": [
+                "🛡️ OBJECTIVE: Defend CEO's car, yacht, or other assets",
+                "🚁 STRATEGY: Use Sparrow missiles to eliminate attackers quickly",
+                "⏰ EFFICIENCY: Shortest and easiest security contract",
+                "💡 SPAWN: Agency Sparrow spawns right outside building",
+                "🔄 COOLDOWN: No cooldown between security contracts"
+              ]
+            },
+            {
+              "id": "gang-termination",
+              "name": "Gang Termination",
+              "priority": "HIGH",
+              "reward": "$31,000",
+              "time": "8 minutes",
+              "launchLocation": {
+                "icon": "🏛️",
+                "name": "Agency",
+                "method": "Computer > Security Contracts"
+              },
+              "requirements": [
+                "Agency Property"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Kuruma (recommended)",
+                  "Sparrow for travel"
+                ],
+                "strategy": "Eliminate gang members at specific location, use cover and armor"
+              },
+              "details": [
+                "🎯 OBJECTIVE: Eliminate all gang members at marked location",
+                "🚗 STRATEGY: Use Kuruma for protection, park safely and clear on foot",
+                "⚔️ COMBAT: 10-15 enemies, use cover and snacks/armor",
+                "💡 TIP: Clear from outside-in to avoid being surrounded"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "auto-shop-services",
+          "name": "Auto Shop Services",
+          "activities": [
+            {
+              "id": "customer-vehicles",
+              "name": "Deliver Customer Vehicles",
+              "priority": "MEDIUM",
+              "reward": "$20,000-30,000",
+              "time": "5-10 minutes",
+              "launchLocation": {
+                "icon": "🔧",
+                "name": "Auto Shop",
+                "method": "Customer vehicles appear automatically, check garage"
+              },
+              "requirements": [
+                "Auto Shop Property"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Customer's modified vehicle"
+                ],
+                "strategy": "Modify to exact customer specifications, deliver without damage for full payment"
+              },
+              "details": [
+                "🔧 MODIFICATIONS: Follow customer request exactly (color, wheels, etc.)",
+                "🚗 DELIVERY: Drive carefully to avoid damage penalties",
+                "💰 PAYOUT: $20K-30K for clean delivery, reduced for damage",
+                "👥 STAFF: Can have staff deliver for 50% profit while you do other activities",
+                "⏰ FREQUENCY: New customer car every 48 minutes (real time)",
+                "💡 TIP: Check phone for customer specifications before modifying"
+              ]
+            },
+            {
+              "id": "exotic-exports",
+              "name": "Exotic Exports List",
+              "priority": "MEDIUM",
+              "reward": "$300,000 (all 10)",
+              "time": "Variable (30-60 minutes total)",
+              "launchLocation": {
+                "icon": "🏁",
+                "name": "LS Car Meet",
+                "method": "Notice board for daily list, then search map"
+              },
+              "requirements": [
+                "Auto Shop Property",
+                "LS Car Meet membership"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Fast vehicle for searching",
+                  "Oppressor MK2 for efficiency"
+                ],
+                "strategy": "Check LS Car Meet board daily, locate and deliver 10 specific vehicles"
+              },
+              "details": [
+                "📋 LIST: Check LS Car Meet notice board for today's 10 vehicles",
+                "🚗 VEHICLES: Spawn randomly around map, use interaction menu to request locations",
+                "💰 PAYOUT: $20,000 per vehicle + $100,000 bonus for all 10",
+                "📱 TRACKING: Use phone app to see general locations",
+                "⏰ DAILY RESET: New list every 24 hours (real time)",
+                "💡 TIP: Some vehicles only spawn during specific weather/time conditions"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "terrorbyte-client-jobs",
+          "name": "Terrorbyte Client Jobs",
+          "activities": [
+            {
+              "id": "robbery-in-progress",
+              "name": "Robbery in Progress",
+              "priority": "MEDIUM",
+              "reward": "$30,000",
+              "time": "5 minutes",
+              "launchLocation": {
+                "icon": "🚛",
+                "name": "Terrorbyte",
+                "method": "Computer > Client Jobs"
+              },
+              "requirements": [
+                "Terrorbyte",
+                "CEO Status"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Buzzard",
+                  "Kuruma",
+                  "Oppressor MK2"
+                ],
+                "strategy": "Eliminate robbers and recover stolen goods, use armored vehicle"
+              },
+              "details": [
+                "🎯 OBJECTIVE: Stop robbery and eliminate all perpetrators",
+                "🚗 APPROACH: Use armored vehicle or aircraft with missiles",
+                "💰 GOODS: Collect briefcase after eliminating enemies",
+                "⏰ EFFICIENCY: Can be done quickly with proper vehicle",
+                "🔄 ROTATION: Good to mix with other client jobs"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heists",
+      "name": "Heists",
+      "icon": "💰",
+      "sections": [
+        {
+          "id": "cayo-perico",
+          "name": "Cayo Perico Heist",
+          "activities": [
+            {
+              "id": "cayo-scope-out",
+              "name": "Scope Out Mission",
+              "priority": "HIGH",
+              "reward": "Required for heist",
+              "time": "15-20 minutes",
+              "launchLocation": {
+                "icon": "🛥️",
+                "name": "Kosatka Submarine",
+                "method": "Planning screen > Scope Out"
+              },
+              "requirements": [
+                "Kosatka Submarine",
+                "Must be CEO/VIP"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Sparrow (fastest)",
+                  "Oppressor MK2",
+                  "Velum aircraft provided"
+                ],
+                "strategy": "Use Sparrow to quickly travel around island, land near points of interest"
+              },
+              "details": [
+                "🎯 PRIMARY TARGET: Always check office safe (Panther Statue = $1.9M, Pink Diamond = $1.4M, Bearer Bonds = $1.1M, Tequila = $900K)",
+                "🚪 ENTRY POINTS: Drainage tunnel is BEST (no detection, direct basement access)",
+                "💰 SECONDARY LOOT: Prioritize cocaine ($220K-440K), then weed ($150K-378K), cash is worst",
+                "✂️ BOLT CUTTERS: Essential for wire fences, found in 11 possible locations",
+                "👕 DISGUISES: Guard clothes (compound) and supply truck driver outfit",
+                "🔑 KEYCARDS: Blue keycard (beach party area), red keycard (office after primary target)",
+                "⚠️ CAMERAS: Mark all security cameras during scope to avoid during heist",
+                "🚁 ESCAPE: Mark motorcycle spawn points near compound for quick exit"
+              ]
+            },
+            {
+              "id": "cayo-prep-missions",
+              "name": "Prep Missions (Required)",
+              "priority": "HIGH",
+              "reward": "Unlocks heist approaches",
+              "time": "60-90 minutes total",
+              "launchLocation": {
+                "icon": "🛥️",
+                "name": "Kosatka Submarine",
+                "method": "Planning screen > Prep Work"
+              },
+              "requirements": [
+                "Completed scope out"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Sparrow for travel",
+                  "Kuruma for combat missions",
+                  "Oppressor MK2 alternative"
+                ],
+                "strategy": "Always use Sparrow from Kosatka, park on rooftops when possible"
+              },
+              "setupMissions": [
+                {
+                  "name": "Approach Vehicle",
+                  "options": [
+                    "Kosatka (drainage tunnel - BEST)",
+                    "Velum (airstrip)",
+                    "Patrol Boat (dock)",
+                    "Longfin (beach)"
+                  ],
+                  "tip": "Kosatka drainage tunnel = direct basement access, no guards"
+                },
+                {
+                  "name": "Equipment",
+                  "required": [
+                    "Fingerprint Cloner",
+                    "Plasma Cutter/Safecracker",
+                    "Weapons (Aggressor/Conspirator/Marksman)"
+                  ],
+                  "tip": "Safecracker is faster than plasma cutter for office safe"
+                },
+                {
+                  "name": "Disruption (Optional)",
+                  "options": [
+                    "Air Support",
+                    "Armor",
+                    "Weapons"
+                  ],
+                  "tip": "Skip disruption missions for faster setup, not needed for stealth approach"
+                }
+              ],
+              "details": [
+                "🎯 MANDATORY: Always do Approach Vehicle + Equipment missions",
+                "⏱️ TIME SAVER: Skip disruption missions unless going loud",
+                "🔫 WEAPON LOADOUT: Conspirator (silenced weapons) best for stealth",
+                "🎒 EQUIPMENT TIP: Safecracker kit opens office safe 50% faster than plasma cutter",
+                "📍 MISSION LOCATIONS: Use interaction menu > Kosatka > Request Sparrow for instant spawn"
+              ]
+            },
+            {
+              "id": "cayo-heist-execution",
+              "name": "The Heist (Solo Stealth Route)",
+              "priority": "HIGH",
+              "reward": "$1,000,000-1,900,000",
+              "time": "8-15 minutes execution",
+              "launchLocation": {
+                "icon": "🛥️",
+                "name": "Kosatka Submarine",
+                "method": "Planning screen > Start Heist"
+              },
+              "requirements": [
+                "All prep missions complete",
+                "Kosatka approach"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Drainage tunnel entry",
+                  "Any motorcycle for escape"
+                ],
+                "strategy": "Stealth only, avoid all unnecessary guards, prioritize speed over perfection"
+              },
+              "details": [
+                "🏊 ENTRY: Drainage tunnel → swim to grate → enter basement (NO GUARDS ALERTED)",
+                "💰 LOOT ORDER: Secondary loot FIRST (basement/compound), primary target LAST",
+                "🚪 BASEMENT ROUTE: Storage room → office stairs → avoid camera in hallway",
+                "🎯 OFFICE: Hack fingerprint scanner, grab primary target, exit through office door",
+                "🏃 ESCAPE: Main gate (NOT compound exit), steal motorcycle, drive to main dock cliff",
+                "🌊 CLIFF JUMP: Drive off east cliff into water for instant escape (no boat needed)",
+                "⚠️ STEALTH TIPS: Stay behind guards, use cover, one headshot kills with conspirator weapons",
+                "💡 SPEED TIPS: Don't grab loot outside compound unless cocaine, 8-minute runs possible"
+              ]
+            },
+            {
+              "id": "cayo-advanced-tips",
+              "name": "Advanced Strategies & Tips",
+              "priority": "MEDIUM",
+              "reward": "Maximize efficiency and profit",
+              "time": "Knowledge for optimization",
+              "launchLocation": {
+                "icon": "📚",
+                "name": "Knowledge Base",
+                "method": "Reference for optimization strategies"
+              },
+              "requirements": [
+                "Experience with basic heist"
+              ],
+              "details": [
+                "🔄 REPLAY STRATEGY: Primary target changes every scope out, secondary loot spawns are random",
+                "💎 LOOT PRIORITY: Panther Statue ($1.9M) > Pink Diamond ($1.4M) > Bearer Bonds ($1.1M) > Tequila ($900K)",
+                "🗝️ KEYCARD STRATEGY: Blue keycard opens extra loot areas, red keycard from office unlocks escape route",
+                "👥 MULTI-PLAYER: Gold requires 2+ players (can't carry alone), art/cash/weed can be solo",
+                "⏰ COOLDOWN: 3 real-world hours between heists (solo), 1 hour (team)",
+                "🎒 LOOT CAPACITY: Can carry 1 full stack of secondary loot solo, cocaine fills bag fastest",
+                "📱 HEIST REPLAY: Complete scope out every time, prep missions stay completed if failed",
+                "🏆 ELITE CHALLENGE: Complete in under 15 minutes, stealth, no restart = extra $50K-100K"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "casino-heist",
+          "name": "Casino Heist",
+          "activities": [
+            {
+              "id": "casino-scope-out",
+              "name": "Scope Out Casino",
+              "priority": "MEDIUM",
+              "reward": "Required for heist setup",
+              "time": "30-45 minutes",
+              "launchLocation": {
+                "icon": "🕹️",
+                "name": "Arcade Property",
+                "method": "Heist planning board"
+              },
+              "requirements": [
+                "Arcade Property",
+                "Complete setup mission from Lester"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Any vehicle",
+                  "Oppressor MK2 for speed"
+                ],
+                "strategy": "Park away from casino, walk around to avoid suspicion"
+              },
+              "details": [
+                "📸 MANDATORY PHOTOS: All 10 access points (roof, sewer, tunnel, etc.)",
+                "🎰 VAULT CONTENTS: Check what's in the vault (diamonds > gold > art > cash)",
+                "📋 OPTIONAL INTEL: Security cameras (14 total), keycard doors, guard patrol routes",
+                "🚪 ACCESS POINTS: Staff lobby (easiest), waste disposal (sneaky), roof (aggressive)",
+                "💡 TIP: Take photos of everything for maximum intel bonus",
+                "⏰ COOLDOWN: Can only scope once per heist setup"
+              ]
+            },
+            {
+              "id": "casino-prep-missions",
+              "name": "Casino Prep Missions",
+              "priority": "MEDIUM",
+              "reward": "Unlocks approach options",
+              "time": "2-3 hours total",
+              "launchLocation": {
+                "icon": "🕹️",
+                "name": "Arcade Property",
+                "method": "Heist planning board > Prep Work"
+              },
+              "requirements": [
+                "Completed scope out",
+                "Chosen approach"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Kuruma for combat missions",
+                  "Buzzard for travel",
+                  "Oppressor MK2"
+                ],
+                "strategy": "Always use armored vehicles for prep missions involving combat"
+              },
+              "setupMissions": [
+                {
+                  "approach": "Silent & Sneaky",
+                  "required": [
+                    "Patrol Routes",
+                    "Security Intel",
+                    "Infiltration Suits",
+                    "Exit Disguise"
+                  ],
+                  "optional": [
+                    "Level 2 Keycards",
+                    "Infiltration Device",
+                    "EMP Device"
+                  ],
+                  "tip": "EMP device disables all electronics for 30 seconds during heist"
+                },
+                {
+                  "approach": "The Big Con",
+                  "required": [
+                    "Security Intel",
+                    "Vault Keycards",
+                    "Infiltration Outfits",
+                    "Exit Disguise"
+                  ],
+                  "optional": [
+                    "Patrol Routes",
+                    "Security Pass",
+                    "Infiltration Device"
+                  ],
+                  "tip": "Gruppe Sechs disguise is easiest, lets you walk right in"
+                },
+                {
+                  "approach": "Aggressive",
+                  "required": [
+                    "Patrol Routes",
+                    "Duggan Shipments",
+                    "Infiltration Device",
+                    "Exit Disguise"
+                  ],
+                  "optional": [
+                    "Level 2 Keycards",
+                    "Security Intel",
+                    "Reinforced Armor"
+                  ],
+                  "tip": "Destroy all 10 Duggan shipments to weaken casino security armor"
+                }
+              ],
+              "details": [
+                "🎯 MANDATORY PREPS: Each approach has 4-6 required setup missions",
+                "🔫 DUGGAN SHIPMENTS: Only required for Aggressive (10 locations, use Oppressor MK2)",
+                "👔 DISGUISES: Gruppe Sechs (maintenance), Firefighters, Police, etc.",
+                "🚗 GETAWAY VEHICLES: Choose between armored cars or motorcycles",
+                "💡 EFFICIENCY: Skip optional preps unless going for elite challenge"
+              ]
+            },
+            {
+              "id": "casino-heist-execution",
+              "name": "Casino Heist Execution",
+              "priority": "MEDIUM",
+              "reward": "$1,500,000-2,100,000 (host take)",
+              "time": "20-40 minutes execution",
+              "launchLocation": {
+                "icon": "🕹️",
+                "name": "Arcade Property",
+                "method": "Heist planning board > Start Heist"
+              },
+              "requirements": [
+                "All mandatory preps complete",
+                "2-4 players",
+                "Chosen approach"
+              ],
+              "approaches": [
+                {
+                  "name": "Silent & Sneaky",
+                  "description": "Stealth approach through maintenance areas",
+                  "difficulty": "Hard",
+                  "strategy": "Avoid cameras, use silenced weapons, coordinate takedowns",
+                  "tips": [
+                    "Entry: Staff lobby or waste disposal",
+                    "Vault: Hack keypads quietly, avoid detection",
+                    "Exit: NOOSE outfit through staff lobby",
+                    "Best for: Experienced stealth players"
+                  ]
+                },
+                {
+                  "name": "The Big Con",
+                  "description": "Disguise approach, walk in the front door",
+                  "difficulty": "Medium",
+                  "strategy": "Use disguises to blend in, minimal combat until detected",
+                  "tips": [
+                    "Entry: Main entrance with Gruppe Sechs gear",
+                    "Vault: Disguise holds until you leave vault area",
+                    "Exit: Switch to NOOSE/Firefighter outfit",
+                    "Best for: First-time casino heist players"
+                  ]
+                },
+                {
+                  "name": "Aggressive",
+                  "description": "Loud approach with heavy combat",
+                  "difficulty": "Medium",
+                  "strategy": "Fight through casino security, use cover and teamwork",
+                  "tips": [
+                    "Entry: Blast through front or back entrances",
+                    "Vault: Combat throughout, bring heavy weapons",
+                    "Exit: Fighting all the way to getaway vehicles",
+                    "Best for: Players who prefer action over stealth"
+                  ]
+                }
+              ],
+              "targets": [
+                {
+                  "name": "Diamonds",
+                  "value": "$3,619,000 max (85% cut)",
+                  "note": "Only during special events, easiest to grab"
+                },
+                {
+                  "name": "Gold",
+                  "value": "$2,585,000 max (85% cut)",
+                  "note": "Requires 2+ players, can't solo all carts"
+                },
+                {
+                  "name": "Artwork",
+                  "value": "$2,350,000 max (85% cut)",
+                  "note": "Can be grabbed solo, moderate difficulty"
+                },
+                {
+                  "name": "Cash",
+                  "value": "$2,115,000 max (85% cut)",
+                  "note": "Worst target, takes longest to grab"
+                }
+              ]
+            },
+            {
+              "id": "casino-advanced-strategies",
+              "name": "Advanced Casino Strategies",
+              "priority": "LOW",
+              "reward": "Optimize profit and efficiency",
+              "time": "Knowledge for mastery",
+              "launchLocation": {
+                "icon": "📚",
+                "name": "Knowledge Base",
+                "method": "Reference for mastery strategies"
+              },
+              "requirements": [
+                "Multiple casino heist completions"
+              ],
+              "details": [
+                "🔄 APPROACH ROTATION: Can't repeat same approach twice, rotates Silent→Big Con→Aggressive",
+                "👥 CREW SELECTION: Lower skilled crew = more money, higher skilled = easier heist",
+                "💰 PAYOUT BREAKDOWN: 60-85% host cut depending on crew size and split",
+                "🎯 ELITE CHALLENGE: Complete in 15 minutes, stealth (Silent/Big Con), $100K bonus",
+                "🏆 HARD MODE: Available if completed previous heist in same session, +10% payout",
+                "📱 HEIST REPLAY: Must do scope out every time, preps reset after completion",
+                "💡 MONEY TIPS: Host should take 85% on 2-player, 70-75% on 3-4 players",
+                "⏰ COOLDOWN: No cooldown between casino heists (unlike Cayo Perico)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "classic-heists",
+          "name": "Classic Heists (Original 5)",
+          "activities": [
+            {
+              "id": "fleeca-job",
+              "name": "Fleeca Job",
+              "priority": "LOW",
+              "reward": "$143,750 (host)",
+              "time": "30 minutes",
+              "launchLocation": {
+                "icon": "🏢",
+                "name": "High-End Apartment",
+                "method": "Heist planning room"
+              },
+              "requirements": [
+                "High-end apartment",
+                "2 players"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Kuruma (recommended)",
+                  "Any 4-door car"
+                ],
+                "strategy": "Simple drilling finale, good for beginners"
+              },
+              "details": [
+                "🏦 SETUP: Scope the bank, steal Kuruma, get hacking device",
+                "💳 FINALE: One player drills, other holds hostages",
+                "🚗 ESCAPE: Drive Kuruma to Lester's factory",
+                "💡 TIP: Easiest heist, perfect for new players",
+                "⏰ ELITE: Complete in under 5 minutes and 40 seconds"
+              ]
+            },
+            {
+              "id": "prison-break",
+              "name": "Prison Break",
+              "priority": "LOW",
+              "reward": "$500,000 (host)",
+              "time": "90 minutes",
+              "launchLocation": {
+                "icon": "🏢",
+                "name": "High-End Apartment",
+                "method": "Heist planning room"
+              },
+              "requirements": [
+                "High-end apartment",
+                "4 players"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Buzzard",
+                  "Police cars",
+                  "Bus"
+                ],
+                "strategy": "Coordinate air support with ground team"
+              },
+              "details": [
+                "✈️ SETUP: Steal Velum, get bus, prison intel, wet work",
+                "🚁 FINALE: Pilot + Demolition (air), Officer + Prisoner (ground)",
+                "🎯 STRATEGY: Demo destroys jets, Pilot picks up team at beach",
+                "💡 TIP: Most difficult classic heist due to coordination needed",
+                "⚠️ COMMON FAIL: Pilot getting shot down by jets"
+              ]
+            },
+            {
+              "id": "humane-labs",
+              "name": "Humane Labs Raid",
+              "priority": "LOW",
+              "reward": "$675,000 (host)",
+              "time": "90 minutes",
+              "launchLocation": {
+                "icon": "🏢",
+                "name": "High-End Apartment",
+                "method": "Heist planning room"
+              },
+              "requirements": [
+                "High-end apartment",
+                "4 players"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Insurgent",
+                  "Valkyrie helicopter",
+                  "Hydra"
+                ],
+                "strategy": "Use heavy vehicles for combat missions"
+              },
+              "details": [
+                "🧪 SETUP: Key codes, Insurgents, EMP device, Valkyrie, Hydra",
+                "🎖️ FINALE: Two teams - ground assault and air support",
+                "💡 STRATEGY: Air team clears enemies, ground team plants EMP",
+                "⚠️ DIFFICULTY: Requires good pilots and coordination",
+                "🏆 ELITE: Complete without losing any lives"
+              ]
+            },
+            {
+              "id": "series-a-funding",
+              "name": "Series A Funding",
+              "priority": "LOW",
+              "reward": "$505,000 (host)",
+              "time": "90 minutes",
+              "launchLocation": {
+                "icon": "🏢",
+                "name": "High-End Apartment",
+                "method": "Heist planning room"
+              },
+              "requirements": [
+                "High-end apartment",
+                "4 players"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Kuruma",
+                  "Buzzard",
+                  "Trash truck"
+                ],
+                "strategy": "Heavy combat focus, use armored vehicles"
+              },
+              "details": [
+                "💊 SETUP: Coke, meth, weed, steal Lectro, trash truck",
+                "🔫 FINALE: Defend Trevor's meth lab from waves of enemies",
+                "💡 STRATEGY: Use cover, focus fire on priority targets",
+                "⚠️ CHALLENGE: Very combat-heavy, requires good shooting skills",
+                "🎯 TIP: Host should have snacks and armor ready"
+              ]
+            },
+            {
+              "id": "pacific-standard",
+              "name": "Pacific Standard",
+              "priority": "MEDIUM",
+              "reward": "$1,250,000 (host)",
+              "time": "2 hours",
+              "launchLocation": {
+                "icon": "🏢",
+                "name": "High-End Apartment",
+                "method": "Heist planning room"
+              },
+              "requirements": [
+                "High-end apartment",
+                "4 players",
+                "Kuruma essential"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Kuruma (mandatory)",
+                  "Lectro bikes",
+                  "Convoy vehicles"
+                ],
+                "strategy": "Kuruma method for finale to minimize damage"
+              },
+              "details": [
+                "🏦 SETUP: Vans, signal, hacking device, convoy, bikes",
+                "💰 FINALE: Rob Pacific Standard Bank, escape on bikes through sewers",
+                "🚗 KURUMA METHOD: One player gets Kuruma, team gets in for safe escape",
+                "💡 STRATEGY: Demolition carries bag, others provide cover",
+                "🏆 ELITE: Complete in under 10:15 with no damage to Kuruma",
+                "💸 MAX TAKE: $1.25M with elite challenge and careful play"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "doomsday-heists",
+          "name": "Doomsday Heists",
+          "activities": [
+            {
+              "id": "doomsday-act-1",
+              "name": "Act I: The Data Breaches",
+              "priority": "MEDIUM",
+              "reward": "$812,500 (host)",
+              "time": "2-3 hours",
+              "launchLocation": {
+                "icon": "🏭",
+                "name": "Facility",
+                "method": "Heist planning room"
+              },
+              "requirements": [
+                "Facility",
+                "2-4 players"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Kuruma (setups)",
+                  "Buzzard (travel)",
+                  "Akula (stealth)"
+                ],
+                "strategy": "Use Kuruma for most combat setups"
+              },
+              "details": [
+                "🎯 SETUPS: Dead Courier, Signal Intercepts, Server Farm, Rescue ULP, Submarine Recon",
+                "🎖️ FINALE: Infiltrate IAA facility and rescue Agent ULP",
+                "💡 STRATEGY: Stealth approach recommended, use hacking skills",
+                "🏆 ELITE: Complete all setups and finale on hard difficulty",
+                "⚠️ DIFFICULTY: Moderate, good for intermediate players"
+              ]
+            },
+            {
+              "id": "doomsday-act-2",
+              "name": "Act II: The Bogdan Problem",
+              "priority": "MEDIUM",
+              "reward": "$1,187,500 (host)",
+              "time": "2-3 hours",
+              "launchLocation": {
+                "icon": "🏭",
+                "name": "Facility",
+                "method": "Heist planning room"
+              },
+              "requirements": [
+                "Facility",
+                "2-4 players",
+                "Completed Act I"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Stromberg",
+                  "Avenger",
+                  "Khanjali Tank"
+                ],
+                "strategy": "Naval and air combat focus"
+              },
+              "details": [
+                "🚁 SETUPS: Rescue ULP, Salvage Hard Drives, Submarine Reconnaissance, Avenger, RCV",
+                "🌊 FINALE: Underwater infiltration of Russian submarine",
+                "💡 STRATEGY: One team takes sub route, other takes Avenger route",
+                "⚠️ REPLAY GLITCH: Popular for money glitching (against ToS)",
+                "🏆 ELITE: Complete finale in under 15 minutes on hard mode"
+              ]
+            },
+            {
+              "id": "doomsday-act-3",
+              "name": "Act III: The Doomsday Scenario",
+              "priority": "LOW",
+              "reward": "$1,500,000 (host)",
+              "time": "3-4 hours",
+              "launchLocation": {
+                "icon": "🏭",
+                "name": "Facility",
+                "method": "Heist planning room"
+              },
+              "requirements": [
+                "Facility",
+                "2-4 players",
+                "Completed Act II",
+                "Skilled team"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Barrage",
+                  "Volatol",
+                  "Jetpacks"
+                ],
+                "strategy": "Hardest heist in game, requires coordination"
+              },
+              "details": [
+                "🎯 SETUPS: Rescue Agent 14, Khanjali, Barrage, Chernobog, Volatol",
+                "🚀 FINALE: Mt. Chiliad facility assault with jetpacks",
+                "💡 STRATEGY: Perfect coordination required, use cover extensively",
+                "⚠️ DIFFICULTY: Hardest heist finale in the game",
+                "🎖️ JETPACK SECTION: Most challenging part, requires skill and patience",
+                "🏆 ELITE: Nearly impossible, only for expert teams"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "auto-shop-contracts",
+          "name": "Auto Shop Contracts",
+          "activities": [
+            {
+              "id": "union-depository",
+              "name": "Union Depository Contract",
+              "priority": "HIGH",
+              "reward": "$300,000",
+              "time": "1-2 hours",
+              "launchLocation": {
+                "icon": "🔧",
+                "name": "Auto Shop",
+                "method": "Planning board > Contracts"
+              },
+              "requirements": [
+                "Auto Shop Property"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Kuruma (setups)",
+                  "Fast sports car (finale)"
+                ],
+                "strategy": "Most profitable Auto Shop contract, requires skilled driving for finale"
+              },
+              "details": [
+                "🏦 SETUPS: Reconnaissance (scope security), Equipment prep (hacking device), Vehicle prep",
+                "💰 FINALE: Infiltrate Union Depository vault, steal gold bars from safety deposit boxes",
+                "🚗 ESCAPE: High-speed chase through downtown Los Santos traffic",
+                "💡 BEST CONTRACT: Highest payout of all Auto Shop contracts",
+                "⚠️ DIFFICULTY: Finale car chase is very challenging, requires excellent driving",
+                "🎯 VEHICLE TIP: Use Krieger, Emerus, or other high-end sports car with good handling",
+                "🔄 COOLDOWN: Can replay after cooldown, no setup cost"
+              ]
+            },
+            {
+              "id": "fleeca-bank-contract",
+              "name": "Fleeca Bank Contract",
+              "priority": "MEDIUM",
+              "reward": "$180,000",
+              "time": "45 minutes",
+              "launchLocation": {
+                "icon": "🔧",
+                "name": "Auto Shop",
+                "method": "Planning board > Contracts"
+              },
+              "requirements": [
+                "Auto Shop Property"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Any vehicle",
+                  "Motorcycles for finale"
+                ],
+                "strategy": "Classic bank robbery, easiest Auto Shop contract"
+              },
+              "details": [
+                "🏦 SETUP: Scope the Fleeca bank, acquire drilling equipment",
+                "💳 FINALE: Standard Fleeca bank robbery with vault drilling mini-game",
+                "🏍️ ESCAPE: Motorcycle chase through city streets",
+                "💡 EASIEST: Most straightforward Auto Shop contract, good for beginners",
+                "⏰ SPEED: Can be completed very quickly once familiar with route",
+                "🎯 DRILLING TIP: Keep drill temperature in green zone for fastest progress"
+              ]
+            },
+            {
+              "id": "prison-contract",
+              "name": "Prison Contract",
+              "priority": "MEDIUM",
+              "reward": "$200,000",
+              "time": "1 hour",
+              "launchLocation": {
+                "icon": "🔧",
+                "name": "Auto Shop",
+                "method": "Planning board > Contracts"
+              },
+              "requirements": [
+                "Auto Shop Property"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Buzzard helicopter",
+                  "Kuruma for setups"
+                ],
+                "strategy": "Extract target from Bolingbroke Penitentiary using helicopter"
+              },
+              "details": [
+                "🚁 SETUP: Plan extraction route, acquire equipment and disguises",
+                "🏢 INFILTRATION: Enter prison facility and locate target",
+                "🚁 EXTRACTION: Buzzard helicopter pickup from prison yard",
+                "💡 STEALTH: Use stealth approach to minimize wanted level",
+                "⚠️ TIMING: Have escape route and helicopter ready before starting extraction",
+                "🎯 TIP: Land helicopter in prison yard, not on roof"
+              ]
+            },
+            {
+              "id": "agency-bank-contract",
+              "name": "Agency Bank Contract",
+              "priority": "MEDIUM",
+              "reward": "$250,000",
+              "time": "1.5 hours",
+              "launchLocation": {
+                "icon": "🔧",
+                "name": "Auto Shop",
+                "method": "Planning board > Contracts"
+              },
+              "requirements": [
+                "Auto Shop Property"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Kuruma",
+                  "Buzzard",
+                  "Armored vehicle for finale"
+                ],
+                "strategy": "Multi-stage bank heist with heavy security"
+              },
+              "details": [
+                "🏦 SETUPS: Infiltrate IAA building, acquire keycards and intel",
+                "💰 FINALE: Rob high-security bank vault with multiple stages",
+                "🚁 ESCAPE: Coordinated escape with multiple vehicles",
+                "⚠️ DIFFICULTY: More complex than other Auto Shop contracts",
+                "🔫 COMBAT: Heavy security, bring armor and snacks"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "businesses",
+      "name": "Businesses",
+      "icon": "🏢",
+      "sections": [
+        {
+          "id": "vehicle-cargo",
+          "name": "Vehicle Cargo (Import/Export)",
+          "activities": [
+            {
+              "id": "vehicle-cargo-32-car",
+              "name": "32-Car Method (Optimal)",
+              "priority": "HIGH",
+              "reward": "$80,000 per top-range car",
+              "time": "15-20 min cycle",
+              "launchLocation": {
+                "icon": "🏢",
+                "name": "CEO Office",
+                "method": "Computer > SecuroServ > Import/Export"
+              },
+              "requirements": [
+                "Vehicle Warehouse",
+                "CEO Office"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Buzzard (travel)",
+                  "Kuruma (combat missions)",
+                  "Cargobob (avoid damage)"
+                ],
+                "strategy": "Maintain exactly 32 cars: 10 Standard + 10 Mid + 12 Top-Range, only sell Top-Range"
+              },
+              "details": [
+                "🎯 COLLECTION PHASE: Source cars until you have 10 Standard + 10 Mid-Range",
+                "🚫 NEVER SELL: Standard and Mid-Range cars (keep all 20)",
+                "💰 PROFIT PHASE: Only source and sell Top-Range cars ($80K profit each)",
+                "🎯 SPECIALIST DEALER: Always choose this option for maximum profit ($100K sale)",
+                "🚁 CARGOBOB METHOD: Use Cargobob to lift cars and avoid NPC damage",
+                "⏰ EFFICIENCY: Source car → Headhunter → Sell car → repeat",
+                "💡 DAMAGE COSTS: Repair costs reduce profit, drive carefully or use Cargobob"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bunker",
+          "name": "Bunker Operations",
+          "activities": [
+            {
+              "id": "bunker-production",
+              "name": "Bunker Production & Sales",
+              "priority": "HIGH",
+              "reward": "$135,000 profit per cycle",
+              "time": "2h 20min per supply bar",
+              "launchLocation": {
+                "icon": "🏭",
+                "name": "Bunker",
+                "method": "Computer terminal for supplies and sales"
+              },
+              "requirements": [
+                "Bunker",
+                "Staff + Equipment upgrades essential"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Varies: Phantom Wedge, Insurgent, Dune FAV, Marshall, Merryweather"
+                ],
+                "strategy": "ALWAYS buy supplies, sell at 25% stock for guaranteed single vehicle"
+              },
+              "details": [
+                "💰 SUPPLY STRATEGY: Always BUY supplies for $75,000 (never steal - wastes time)",
+                "📊 SELL TIMING: Sell at 25% stock ($175K value) = guaranteed 1 vehicle delivery",
+                "🚚 VEHICLE GUARANTEE: 25% stock = 1 vehicle, 50% = 1-2 vehicles, 75%+ = 2-3 vehicles",
+                "💡 PROFIT CALCULATION: $175K sale - $75K supplies = $100K profit (passive income)",
+                "⏰ TIMING: Takes 2h 20min to convert 1 supply bar to 25% stock",
+                "🔧 UPGRADES: Staff + Equipment upgrades are ESSENTIAL for profitability",
+                "🌆 BUYERS: Always sell to Los Santos for maximum profit",
+                "👥 SESSION: Use solo public session to avoid griefers"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "special-cargo",
+          "name": "Special Cargo Operations",
+          "activities": [
+            {
+              "id": "cargo-warehouse",
+              "name": "Cargo Warehouse (CEO Crates)",
+              "priority": "MEDIUM",
+              "reward": "$2,220,000 (full large warehouse)",
+              "time": "6-8 hours to fill large warehouse",
+              "launchLocation": {
+                "icon": "🏢",
+                "name": "CEO Office",
+                "method": "Computer > SecuroServ > Buy Special Cargo"
+              },
+              "requirements": [
+                "CEO Office",
+                "Large Cargo Warehouse (111 crates)"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Buzzard (travel)",
+                  "Terrorbyte (source from anywhere)",
+                  "Kuruma (combat)"
+                ],
+                "strategy": "Always buy 3 crates, wait for double money events, use solo public sessions"
+              },
+              "details": [
+                "💰 CRATE STRATEGY: Always buy 3 crates ($18K) - most efficient cost per crate",
+                "🏪 WAREHOUSE SIZES: Small (16), Medium (42), Large (111 crates)",
+                "📈 PROFIT SCALING: Large warehouse = $2.22M normal, $4.44M during 2x events",
+                "🚚 TERRORBYTE: Source crates from anywhere without returning to office",
+                "⚠️ RAID PROTECTION: Sell before reaching 78 crates or face potential raids",
+                "⏰ 2X EVENTS: Wait for double money weeks for maximum profit",
+                "👥 SOLO DELIVERY: Large warehouse sale usually requires multiple people",
+                "🎯 EFFICIENCY: Source 3 crates → VIP work → repeat"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "motorcycle-club",
+          "name": "Motorcycle Club Businesses",
+          "activities": [
+            {
+              "id": "cocaine-lockup",
+              "name": "Cocaine Lockup",
+              "priority": "HIGH",
+              "reward": "$420,000 per full sale",
+              "time": "5 hours to fill (with upgrades)",
+              "launchLocation": {
+                "icon": "🏭",
+                "name": "Cocaine Lockup",
+                "method": "Computer terminal or Clubhouse computer"
+              },
+              "requirements": [
+                "MC Clubhouse",
+                "Cocaine Lockup",
+                "Staff + Equipment upgrades"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Post Op Vans",
+                  "Garbage Trucks",
+                  "Boats",
+                  "Helicopters"
+                ],
+                "strategy": "Buy supplies, sell at 2.5 bars for guaranteed single vehicle"
+              },
+              "details": [
+                "💰 PROFIT: $420K sale - $225K supplies = $195K profit per cycle",
+                "📊 OPTIMAL SALE: 2.5 bars = 1 vehicle, 5 bars = 2-4 vehicles",
+                "🔧 UPGRADES: Staff + Equipment upgrades essential for profitability",
+                "⏰ PRODUCTION: 5 hours for full stock with upgrades",
+                "🚚 VEHICLE TYPES: Post Op (worst), Garbage Truck (bad), Boat/Heli (good)",
+                "💡 SUPPLY TIP: Buy supplies for $75K each (stealing wastes time)"
+              ]
+            },
+            {
+              "id": "methamphetamine-lab",
+              "name": "Methamphetamine Lab",
+              "priority": "MEDIUM",
+              "reward": "$357,000 per full sale",
+              "time": "5 hours to fill (with upgrades)",
+              "launchLocation": {
+                "icon": "🏭",
+                "name": "Methamphetamine Lab",
+                "method": "Computer terminal or Clubhouse computer"
+              },
+              "requirements": [
+                "MC Clubhouse",
+                "Meth Lab",
+                "Staff + Equipment upgrades"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Same as Cocaine delivery vehicles"
+                ],
+                "strategy": "Second most profitable MC business after Cocaine"
+              },
+              "details": [
+                "💰 PROFIT: $357K sale - $225K supplies = $132K profit per cycle",
+                "📈 RANKING: 2nd most profitable MC business",
+                "🔧 SETUP: Same upgrade and supply strategy as Cocaine",
+                "⏰ TIMING: Slightly lower production rate than Cocaine"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "acid-lab",
+          "name": "Acid Lab (Mobile)",
+          "activities": [
+            {
+              "id": "acid-production",
+              "name": "Acid Production & Sales",
+              "priority": "HIGH",
+              "reward": "$300,000+ per sale",
+              "time": "3-4 hours to fill",
+              "launchLocation": {
+                "icon": "🚐",
+                "name": "Acid Lab (Mobile)",
+                "method": "Interaction Menu > Services > Acid Lab"
+              },
+              "requirements": [
+                "Acid Lab",
+                "Freakshop missions completed"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Acid Lab van (mobile)",
+                  "Brickade for sales"
+                ],
+                "strategy": "Mobile lab that produces while you play, excellent passive income"
+              },
+              "details": [
+                "🚐 MOBILE: Lab moves around map automatically, no fixed location",
+                "💰 PASSIVE: Produces acid while you do other activities",
+                "🎯 SALES: Deliver in Brickade, usually single vehicle",
+                "🔧 UPGRADES: Equipment upgrade increases production speed",
+                "💡 BONUS: Complete Freakshop missions for better production",
+                "⏰ EFFICIENCY: One of the best passive income sources in game"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "daily-weekly",
+      "name": "Daily & Weekly",
+      "icon": "📅",
+      "sections": [
+        {
+          "id": "daily-objectives",
+          "name": "Daily Objectives & Bonuses",
+          "activities": [
+            {
+              "id": "daily-objectives",
+              "name": "Daily Objectives",
+              "priority": "MEDIUM",
+              "reward": "$30,000 + bonuses",
+              "time": "Variable",
+              "launchLocation": {
+                "icon": "📱",
+                "name": "Interaction Menu",
+                "method": "Interaction Menu > Objectives"
+              },
+              "requirements": [
+                "None"
+              ],
+              "details": [
+                "Complete 3 daily objectives",
+                "7 day streak: $100,000 bonus",
+                "28 day streak: $500,000 bonus",
+                "Check interaction menu"
+              ]
+            },
+            {
+              "id": "lucky-wheel",
+              "name": "Lucky Wheel Spin",
+              "priority": "MEDIUM",
+              "reward": "Vehicle/Cash/RP/Chips",
+              "time": "1 minute",
+              "launchLocation": {
+                "icon": "🎰",
+                "name": "Diamond Casino",
+                "method": "Main casino floor, near entrance"
+              },
+              "requirements": [
+                "Casino access"
+              ],
+              "details": [
+                "One spin per real day",
+                "Can win podium vehicle",
+                "Mystery prizes available"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "time-trials",
+          "name": "Time Trials & Races",
+          "activities": [
+            {
+              "id": "weekly-time-trial",
+              "name": "Weekly Time Trial",
+              "priority": "MEDIUM",
+              "reward": "$101,000",
+              "time": "5-10 minutes",
+              "difficulty": "Medium",
+              "moneyPotential": "Medium ($50K-200K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Solo Only",
+              "launchLocation": {
+                "icon": "🗺️",
+                "name": "Map",
+                "method": "Purple time trial icon (changes weekly)"
+              },
+              "requirements": [
+                "Fast vehicle"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Shotaro",
+                  "Hakuchou Drag",
+                  "Krieger"
+                ],
+                "strategy": "Learn the route, use fastest vehicle for class"
+              },
+              "details": [
+                "🗓️ SCHEDULE: Changes every Thursday at 10 AM GMT",
+                "🏁 PAR TIME: Varies by location and vehicle class",
+                "💰 TRIPLE REWARDS: $101,000 during 3x events",
+                "🏍️ VEHICLE TIP: Check required vehicle class (bike, car, etc.)",
+                "📍 ROUTE: Practice the route before attempting for best time"
+              ]
+            },
+            {
+              "id": "rc-bandito-time-trial",
+              "name": "RC Bandito Time Trial",
+              "priority": "HIGH",
+              "reward": "$100,000",
+              "time": "5 minutes",
+              "difficulty": "Easy",
+              "moneyPotential": "Medium ($50K-200K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Solo Only",
+              "launchLocation": {
+                "icon": "🗺️",
+                "name": "Map",
+                "method": "Blue RC time trial icon (changes weekly)"
+              },
+              "requirements": [
+                "RC Bandito (Free from Arena War)"
+              ],
+              "vehicles": {
+                "setup": [
+                  "RC Bandito"
+                ],
+                "strategy": "Much easier than regular time trials, very forgiving"
+              },
+              "details": [
+                "🎮 RC VEHICLE: Use RC Bandito (can be claimed free from Arena War)",
+                "😊 DIFFICULTY: Much easier than regular time trials",
+                "🗓️ WEEKLY: New location every Thursday",
+                "💰 CONSISTENT: $100,000 every completion",
+                "💡 TIP: More forgiving than regular time trials, great for beginners"
+              ]
+            },
+            {
+              "id": "stunt-races",
+              "name": "Stunt Races",
+              "priority": "LOW",
+              "reward": "$20,000-80,000",
+              "time": "5-10 minutes",
+              "difficulty": "Medium",
+              "moneyPotential": "Medium ($50K-200K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Team Preferred",
+              "launchLocation": {
+                "icon": "📱",
+                "name": "Phone",
+                "method": "Quick Job > Races > Stunt Races"
+              },
+              "requirements": [
+                "None"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Depends on race class"
+                ],
+                "strategy": "Focus on 2x money weeks for maximum profit"
+              },
+              "details": [
+                "🏁 VARIETY: Different race types (Super, Sports, Motorcycles, etc.)",
+                "💰 2X EVENTS: Wait for double money weeks for best payout",
+                "🏆 WINNING: First place gets maximum payout",
+                "👥 LOBBIES: Join during bonus weeks for better payouts",
+                "🎯 STRATEGY: Learn popular tracks for consistent wins"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "contact-missions",
+          "name": "Contact Missions",
+          "activities": [
+            {
+              "id": "rooftop-rumble",
+              "name": "Rooftop Rumble (Martin)",
+              "priority": "MEDIUM",
+              "reward": "$25,000",
+              "time": "8 minutes",
+              "difficulty": "Easy",
+              "moneyPotential": "Low ($0-50K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Solo Capable",
+              "launchLocation": {
+                "icon": "📞",
+                "name": "Phone",
+                "method": "Call Martin Madrazo > Jobs > Missions"
+              },
+              "requirements": [
+                "Level 75+"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Kuruma (recommended)",
+                  "Any armored vehicle"
+                ],
+                "strategy": "Wait 4+ minutes before delivery for maximum payout"
+              },
+              "details": [
+                "🎯 STRATEGY: Kill all enemies at FIB building, steal package",
+                "⏰ TIMING: Wait 4+ minutes before delivery for max payout ($25K)",
+                "🚗 KURUMA METHOD: Drive Kuruma up parking garage for easy kills",
+                "💰 2X EVENTS: $50,000 during double money weeks",
+                "📞 ACCESS: Call Martin Madrazo after reaching Level 75"
+              ]
+            },
+            {
+              "id": "blow-up",
+              "name": "Blow Up (Simeon)",
+              "priority": "LOW",
+              "reward": "$20,000",
+              "time": "5 minutes",
+              "difficulty": "Easy",
+              "moneyPotential": "Low ($0-50K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Solo Only",
+              "launchLocation": {
+                "icon": "📞",
+                "name": "Phone",
+                "method": "Call Simeon Yetarian > Jobs > Missions"
+              },
+              "requirements": [
+                "Level 15+"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Any vehicle with explosives"
+                ],
+                "strategy": "Destroy cars with sticky bombs or RPG"
+              },
+              "details": [
+                "💣 OBJECTIVE: Destroy specific vehicles around the city",
+                "🚗 LOCATIONS: Check GPS for vehicle locations",
+                "💥 EXPLOSIVES: Use sticky bombs or RPG for quick destruction",
+                "📞 ACCESS: Call Simeon Yetarian"
+              ]
+            },
+            {
+              "id": "los-santos-connection",
+              "name": "Los Santos Connection (Martin)",
+              "priority": "MEDIUM",
+              "reward": "$30,000",
+              "time": "12 minutes",
+              "difficulty": "Medium",
+              "moneyPotential": "Low ($0-50K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Solo Capable",
+              "launchLocation": {
+                "icon": "📞",
+                "name": "Phone",
+                "method": "Call Martin Madrazo > Jobs > Missions"
+              },
+              "requirements": [
+                "Level 75+"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Buzzard (travel)",
+                  "Kuruma (combat)"
+                ],
+                "strategy": "Clear enemies, steal drugs, deliver to location"
+              },
+              "details": [
+                "🎯 OBJECTIVE: Steal drugs from gang members, deliver to Martin",
+                "⚔️ COMBAT: Multiple enemy waves, use cover and armor",
+                "🚁 EFFICIENCY: Use Buzzard for travel between locations",
+                "💰 PAYOUT: Higher payout than most contact missions"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "adversary-modes",
+          "name": "Adversary Modes",
+          "activities": [
+            {
+              "id": "sumo-remix",
+              "name": "Sumo (Remix)",
+              "priority": "LOW",
+              "reward": "$30,000-50,000",
+              "time": "5-8 minutes",
+              "difficulty": "Medium",
+              "moneyPotential": "Medium ($50K-200K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Team Required",
+              "launchLocation": {
+                "icon": "📱",
+                "name": "Phone",
+                "method": "Quick Job > Adversary Modes > Sumo"
+              },
+              "requirements": [
+                "None"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Provided vehicles"
+                ],
+                "strategy": "Push opponents off platform, avoid being pushed"
+              },
+              "details": [
+                "🥊 OBJECTIVE: Push other players off the platform using vehicles",
+                "🏆 STRATEGY: Use momentum and timing to knock opponents off",
+                "💰 2X EVENTS: Best during double money weeks",
+                "🎮 ROUNDS: Multiple rounds, winner takes highest payout",
+                "💡 TIP: Stay in center, use other players' momentum against them"
+              ]
+            },
+            {
+              "id": "motor-wars",
+              "name": "Motor Wars",
+              "priority": "LOW",
+              "reward": "$25,000-40,000",
+              "time": "10-15 minutes",
+              "difficulty": "Hard",
+              "moneyPotential": "Medium ($50K-200K)",
+              "timeRequired": "Short (15-30 min)",
+              "soloFriendly": "Team Required",
+              "launchLocation": {
+                "icon": "📱",
+                "name": "Phone",
+                "method": "Quick Job > Adversary Modes > Motor Wars"
+              },
+              "requirements": [
+                "None"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Various weaponized vehicles"
+                ],
+                "strategy": "Battle royale with vehicles, last team standing wins"
+              },
+              "details": [
+                "⚔️ BATTLE ROYALE: Last team/player standing wins",
+                "🚗 VEHICLES: Various weaponized vehicles provided",
+                "💰 SURVIVAL: Longer survival = higher payout",
+                "🎯 STRATEGY: Stay mobile, use terrain for cover",
+                "👥 TEAMS: Can be solo or team-based depending on lobby"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "open-world-activities",
+          "name": "Open World Activities",
+          "activities": [
+            {
+              "id": "armored-truck-robbery",
+              "name": "Armored Truck Robbery",
+              "priority": "LOW",
+              "reward": "$10,000-20,000",
+              "time": "3 minutes",
+              "difficulty": "Easy",
+              "moneyPotential": "Low ($0-50K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Solo Only",
+              "launchLocation": {
+                "icon": "🗺️",
+                "name": "Open World",
+                "method": "Find armored trucks randomly spawning on highways"
+              },
+              "requirements": [
+                "None"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Any vehicle"
+                ],
+                "strategy": "Use sticky bombs on back doors, collect cash"
+              },
+              "details": [
+                "🚛 RANDOM SPAWN: Armored trucks appear randomly on map",
+                "💣 METHOD: Stick bomb on back doors, stand clear, collect cash",
+                "⭐ WANTED LEVEL: Triggers 2-star wanted level",
+                "💰 VARIABLE: $10K-20K depending on truck type",
+                "📍 LOCATIONS: Usually on highways and main roads"
+              ]
+            },
+            {
+              "id": "security-van-robbery",
+              "name": "Security Van Robbery (Gruppe Sechs)",
+              "priority": "LOW",
+              "reward": "$15,000-25,000",
+              "time": "5 minutes",
+              "difficulty": "Easy",
+              "moneyPotential": "Low ($0-50K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Solo Only",
+              "launchLocation": {
+                "icon": "🗺️",
+                "name": "Open World",
+                "method": "Follow white Gruppe Sechs vans around city"
+              },
+              "requirements": [
+                "None"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Any vehicle"
+                ],
+                "strategy": "Follow security van, wait for guards to exit, steal briefcase"
+              },
+              "details": [
+                "🚐 GRUPPE SECHS: Follow white security vans around the city",
+                "👮 GUARDS: Wait for guards to exit van at stops",
+                "💼 BRIEFCASE: Steal briefcase when guards are away",
+                "⭐ WANTED LEVEL: Minimal wanted level if done stealthily",
+                "📍 ROUTES: Vans follow predictable routes around LS"
+              ]
+            },
+            {
+              "id": "store-robberies",
+              "name": "Store Robberies",
+              "priority": "LOW",
+              "reward": "$1,000-2,000 each",
+              "time": "2 minutes per store",
+              "difficulty": "Easy",
+              "moneyPotential": "Low ($0-50K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Solo Only",
+              "launchLocation": {
+                "icon": "🏦",
+                "name": "Convenience Stores",
+                "method": "Any 24/7, LTD Gasoline, or Rob's Liquor store"
+              },
+              "requirements": [
+                "None"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Any vehicle for getaway"
+                ],
+                "strategy": "Point gun at cashier, wait for cash, escape quickly"
+              },
+              "details": [
+                "🏪 LOCATIONS: 20 convenience stores around Los Santos",
+                "🔫 METHOD: Point gun at cashier, wait for them to fill bag",
+                "⭐ WANTED LEVEL: 1-star, easy to escape",
+                "💰 SMALL MONEY: $1K-2K per store, adds up over time",
+                "⏰ COOLDOWN: Each store has individual cooldown timer"
+              ]
+            },
+            {
+              "id": "bounty-hunting",
+              "name": "Bounty Hunting",
+              "priority": "LOW",
+              "reward": "$1,000-10,000",
+              "time": "Variable",
+              "difficulty": "Medium",
+              "moneyPotential": "Low ($0-50K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Solo Only",
+              "launchLocation": {
+                "icon": "🗺️",
+                "name": "Map",
+                "method": "Find red skull icons (players with bounties)"
+              },
+              "requirements": [
+                "Other players with bounties"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Fast vehicle or aircraft"
+                ],
+                "strategy": "Hunt players with bounties, avoid their retaliation"
+              },
+              "details": [
+                "🎯 TARGET: Players with bounties (red dot on map)",
+                "💰 PAYOUT: Varies based on bounty amount ($1K-10K)",
+                "⚔️ RISK: Target player will likely fight back",
+                "🚁 STRATEGY: Use aircraft for hit-and-run tactics",
+                "📍 LOCATION: Bounties show on map with red skull icon"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vip-ceo-challenges",
+          "name": "VIP/CEO Challenges",
+          "activities": [
+            {
+              "id": "most-wanted",
+              "name": "Most Wanted",
+              "priority": "MEDIUM",
+              "reward": "$30,000",
+              "time": "10 minutes",
+              "difficulty": "Hard",
+              "moneyPotential": "Low ($0-50K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Solo Capable",
+              "launchLocation": {
+                "icon": "📱",
+                "name": "Interaction Menu",
+                "method": "SecuroServ > VIP/CEO Challenges > Most Wanted"
+              },
+              "requirements": [
+                "CEO/VIP Status"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Fast car",
+                  "Knowledge of tunnel locations"
+                ],
+                "strategy": "Survive highest wanted level using tunnels and subways"
+              },
+              "details": [
+                "⭐ OBJECTIVE: Survive 10 minutes with maximum wanted level",
+                "🚇 STRATEGY: Use subway tunnels and underground areas",
+                "🚗 ESCAPE: Fast car to reach tunnel entrances quickly",
+                "💰 PAYOUT: $30,000 for surviving full 10 minutes",
+                "📍 BEST SPOTS: Metro tunnels, underground parking garages"
+              ]
+            },
+            {
+              "id": "executive-deathmatch",
+              "name": "Executive Deathmatch",
+              "priority": "MEDIUM",
+              "reward": "$25,000",
+              "time": "10 minutes",
+              "difficulty": "Hard",
+              "moneyPotential": "Low ($0-50K)",
+              "timeRequired": "Quick (0-15 min)",
+              "soloFriendly": "Team Preferred",
+              "launchLocation": {
+                "icon": "📱",
+                "name": "Interaction Menu",
+                "method": "SecuroServ > VIP/CEO Challenges > Executive Deathmatch"
+              },
+              "requirements": [
+                "CEO/VIP Status",
+                "Other CEOs/VIPs in session"
+              ],
+              "vehicles": {
+                "setup": [
+                  "Weaponized vehicles",
+                  "Aircraft"
+                ],
+                "strategy": "Kill other CEOs and VIPs while avoiding their bodyguards"
+              },
+              "details": [
+                "🎯 OBJECTIVE: Kill other CEOs/VIPs in the session",
+                "👥 TARGETS: Only other CEOs and VIPs count as targets",
+                "🚁 STRATEGY: Use aircraft for mobility and firepower",
+                "💰 SCORING: Points for kills, bonus for survival",
+                "⚠️ DIFFICULTY: Other players will target you as well"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "passive-income",
+          "name": "Passive Income Collection",
+          "activities": [
+            {
+              "id": "nightclub-safe",
+              "name": "Nightclub Safe",
+              "priority": "LOW",
+              "reward": "$50,000/day",
+              "time": "30 seconds",
+              "launchLocation": {
+                "icon": "🌃",
+                "name": "Nightclub",
+                "method": "Office safe (upstairs)"
+              },
+              "requirements": [
+                "Nightclub",
+                "100% popularity"
+              ],
+              "details": [
+                "Collect every 48 minutes",
+                "Maintain popularity for max income",
+                "Check every few hours"
+              ]
+            },
+            {
+              "id": "agency-safe",
+              "name": "Agency Safe",
+              "priority": "LOW",
+              "reward": "$20,000/day",
+              "time": "30 seconds",
+              "launchLocation": {
+                "icon": "🏢",
+                "name": "Agency",
+                "method": "Office safe (main floor)"
+              },
+              "requirements": [
+                "Agency"
+              ],
+              "details": [
+                "Passive accumulation",
+                "Complete 201 contracts for bonus",
+                "Max capacity: $250,000"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2024-12-25",
+    "game": "GTA Online"
+  },
+  "filters": {
+    "difficulty": [
+      "Easy",
+      "Medium",
+      "Hard",
+      "Expert"
+    ],
+    "moneyPotential": [
+      "Low ($0-50K)",
+      "Medium ($50K-200K)",
+      "High ($200K-500K)",
+      "Very High ($500K+)"
+    ],
+    "timeRequired": [
+      "Quick (0-15 min)",
+      "Short (15-30 min)",
+      "Medium (30-60 min)",
+      "Long (1-2 hours)",
+      "Very Long (2+ hours)"
+    ],
+    "soloFriendly": [
+      "Solo Only",
+      "Solo Capable",
+      "Team Preferred",
+      "Team Required"
+    ],
+    "requirements": [
+      "None",
+      "Property Required",
+      "Expensive Setup",
+      "Skill Required"
+    ],
+    "launchLocation": [
+      "Acid Lab (Mobile)",
+      "Agency",
+      "Arcade Property",
+      "Auto Shop",
+      "Bunker",
+      "CEO Office",
+      "Cocaine Lockup",
+      "Convenience Stores",
+      "Diamond Casino",
+      "Facility",
+      "High-End Apartment",
+      "Interaction Menu",
+      "Knowledge Base",
+      "Kosatka Submarine",
+      "LS Car Meet",
+      "Map",
+      "Methamphetamine Lab",
+      "Nightclub",
+      "Open World",
+      "Phone",
+      "Terrorbyte"
+    ]
+  }
+}
