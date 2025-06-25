@@ -1,0 +1,599 @@
+{
+  "id": "daily-weekly",
+  "name": "Daily & Weekly",
+  "icon": "📅",
+  "sections": [
+    {
+      "id": "daily-objectives",
+      "name": "Daily Objectives",
+      "activities": [
+        {
+          "id": "daily-objectives",
+          "name": "Complete Daily Objectives (3/3)",
+          "priority": "MEDIUM",
+          "reward": "$30,000 + bonuses",
+          "time": "Variable",
+          "difficulty": "Easy",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "📱",
+              "name": "Interaction Menu",
+              "method": "Interaction Menu > Objectives"
+            },
+            {
+              "icon": "⏸️",
+              "name": "Pause Menu",
+              "method": "Online > Daily Objectives"
+            }
+          ],
+          "requirements": ["None"],
+          "details": [
+            "Complete 3 daily objectives",
+            "7 day streak: $100,000 bonus",
+            "28 day streak: $500,000 bonus",
+            "Check interaction menu"
+          ]
+        },
+        {
+          "id": "lucky-wheel",
+          "name": "Lucky Wheel Spin",
+          "priority": "MEDIUM",
+          "reward": "Vehicle/Cash/RP/Chips",
+          "time": "1 minute",
+          "difficulty": "Easy",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🎰",
+              "name": "Diamond Casino",
+              "method": "Main casino floor, near entrance"
+            }
+          ],
+          "requirements": ["Casino access"],
+          "details": [
+            "One spin per real day",
+            "Can win podium vehicle",
+            "Mystery prizes available"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-trials",
+      "name": "Time Trials & Races",
+      "activities": [
+        {
+          "id": "weekly-time-trial",
+          "name": "Weekly Time Trial",
+          "priority": "MEDIUM",
+          "reward": "$101,000 (Triple Time)",
+          "time": "5-15 minutes",
+          "difficulty": "Medium",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🗺️",
+              "name": "Map",
+              "method": "Purple time trial icon (changes weekly)"
+            }
+          ],
+          "requirements": ["Fast vehicle"],
+          "vehicles": {
+            "setup": ["Shotaro", "Hakuchou Drag", "Krieger"],
+            "strategy": "Learn the route, use fastest vehicle for class"
+          },
+          "details": [
+            "🗓️ SCHEDULE: Changes every Thursday at 10 AM GMT",
+            "🏁 PAR TIME: Varies by location and vehicle class",
+            "💰 TRIPLE REWARDS: $101,000 during 3x events",
+            "🏍️ VEHICLE TIP: Check required vehicle class (bike, car, etc.)",
+            "📍 ROUTE: Practice the route before attempting for best time"
+          ]
+        },
+        {
+          "id": "rc-bandito-time-trial",
+          "name": "RC Bandito Time Trial",
+          "priority": "HIGH",
+          "reward": "$100,000",
+          "time": "5 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🗺️",
+              "name": "Map",
+              "method": "Blue RC time trial icon (changes weekly)"
+            }
+          ],
+          "requirements": ["RC Bandito (Free from Arena War)"],
+          "vehicles": {
+            "setup": ["RC Bandito"],
+            "strategy": "Much easier than regular time trials, very forgiving"
+          },
+          "details": [
+            "🎮 RC VEHICLE: Use RC Bandito (can be claimed free from Arena War)",
+            "😊 DIFFICULTY: Much easier than regular time trials",
+            "🗺️ WEEKLY: New location every Thursday",
+            "💰 CONSISTENT: $100,000 every completion",
+            "💡 TIP: More forgiving than regular time trials, great for beginners"
+          ]
+        },
+        {
+          "id": "stunt-races",
+          "name": "Stunt Races",
+          "priority": "LOW",
+          "reward": "$20,000-80,000",
+          "time": "5-10 minutes",
+          "difficulty": "Medium",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Team Preferred",
+          "launchLocations": [
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Races > Stunt Races"
+            },
+            {
+              "icon": "🗺️",
+              "name": "Map",
+              "method": "Race markers and job coronas"
+            },
+            {
+              "icon": "⏸️",
+              "name": "Pause Menu",
+              "method": "Online > Jobs > Races"
+            }
+          ],
+          "requirements": ["None"],
+          "vehicles": {
+            "setup": ["Depends on race class"],
+            "strategy": "Focus on 2x money weeks for maximum profit"
+          },
+          "details": [
+            "🏁 VARIETY: Different race types (Super, Sports, Motorcycles, etc.)",
+            "💰 2X EVENTS: Wait for double money weeks for best payout",
+            "🏆 WINNING: First place gets maximum payout",
+            "👥 LOBBIES: Join during bonus weeks for better payouts",
+            "🎯 STRATEGY: Learn popular tracks for consistent wins"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact-missions",
+      "name": "Contact Missions",
+      "activities": [
+        {
+          "id": "rooftop-rumble",
+          "name": "Rooftop Rumble (Martin)",
+          "priority": "MEDIUM",
+          "reward": "$25,000",
+          "time": "8 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "📞",
+              "name": "Phone",
+              "method": "Call Martin Madrazo > Jobs > Missions"
+            }
+          ],
+          "requirements": ["Level 75+"],
+          "vehicles": {
+            "setup": ["Kuruma (recommended)", "Any armored vehicle"],
+            "strategy": "Wait 4+ minutes before delivery for maximum payout"
+          },
+          "details": [
+            "🎯 STRATEGY: Kill all enemies at FIB building, steal package",
+            "⏰ TIMING: Wait 4+ minutes before delivery for max payout ($25K)",
+            "🚗 KURUMA METHOD: Drive Kuruma up parking garage for easy kills",
+            "💰 2X EVENTS: $50,000 during double money weeks",
+            "📞 ACCESS: Call Martin Madrazo after reaching Level 75"
+          ]
+        },
+        {
+          "id": "blow-up",
+          "name": "Blow Up (Simeon)",
+          "priority": "LOW",
+          "reward": "$20,000",
+          "time": "5 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "📞",
+              "name": "Phone",
+              "method": "Call Simeon Yetarian > Jobs > Missions"
+            }
+          ],
+          "requirements": ["Level 15+"],
+          "vehicles": {
+            "setup": ["Any vehicle with explosives"],
+            "strategy": "Destroy cars with sticky bombs or RPG"
+          },
+          "details": [
+            "💣 OBJECTIVE: Destroy specific vehicles around the city",
+            "🚗 LOCATIONS: Check GPS for vehicle locations",
+            "💥 EXPLOSIVES: Use sticky bombs or RPG for quick destruction",
+            "📞 ACCESS: Call Simeon Yetarian"
+          ]
+        },
+        {
+          "id": "los-santos-connection",
+          "name": "Los Santos Connection (Martin)",
+          "priority": "MEDIUM",
+          "reward": "$30,000",
+          "time": "12 minutes",
+          "difficulty": "Medium",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "📞",
+              "name": "Phone",
+              "method": "Call Martin Madrazo > Jobs > Missions"
+            }
+          ],
+          "requirements": ["Level 75+"],
+          "vehicles": {
+            "setup": ["Buzzard (travel)", "Kuruma (combat)"],
+            "strategy": "Clear enemies, steal drugs, deliver to location"
+          },
+          "details": [
+            "🎯 OBJECTIVE: Steal drugs from gang members, deliver to Martin",
+            "⚔️ COMBAT: Multiple enemy waves, use cover and armor",
+            "🚁 EFFICIENCY: Use Buzzard for travel between locations",
+            "💰 PAYOUT: Higher payout than most contact missions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adversary-modes",
+      "name": "Adversary Modes",
+      "activities": [
+        {
+          "id": "sumo-remix",
+          "name": "Sumo (Remix)",
+          "priority": "LOW",
+          "reward": "$30,000-50,000",
+          "time": "5-8 minutes",
+          "difficulty": "Medium",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Team Required",
+          "launchLocations": [
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Adversary Modes > Sumo"
+            },
+            {
+              "icon": "⏸️",
+              "name": "Pause Menu",
+              "method": "Online > Jobs > Adversary Modes"
+            }
+          ],
+          "requirements": ["None"],
+          "vehicles": {
+            "setup": ["Provided vehicles"],
+            "strategy": "Push opponents off platform, avoid being pushed"
+          },
+          "details": [
+            "🥊 OBJECTIVE: Push other players off the platform using vehicles",
+            "🏆 STRATEGY: Use momentum and timing to knock opponents off",
+            "💰 2X EVENTS: Best during double money weeks",
+            "🎮 ROUNDS: Multiple rounds, winner takes highest payout",
+            "💡 TIP: Stay in center, use other players' momentum against them"
+          ]
+        },
+        {
+          "id": "motor-wars",
+          "name": "Motor Wars",
+          "priority": "LOW",
+          "reward": "$25,000-40,000",
+          "time": "10-15 minutes",
+          "difficulty": "Hard",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Short (15-30 min)",
+          "soloFriendly": "Team Required",
+          "launchLocations": [
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Adversary Modes > Motor Wars"
+            },
+            {
+              "icon": "⏸️",
+              "name": "Pause Menu",
+              "method": "Online > Jobs > Adversary Modes"
+            }
+          ],
+          "requirements": ["None"],
+          "vehicles": {
+            "setup": ["Various weaponized vehicles"],
+            "strategy": "Battle royale with vehicles, last team standing wins"
+          },
+          "details": [
+            "⚔️ BATTLE ROYALE: Last team/player standing wins",
+            "🚗 VEHICLES: Various weaponized vehicles provided",
+            "💰 SURVIVAL: Longer survival = higher payout",
+            "🎯 STRATEGY: Stay mobile, use terrain for cover",
+            "👥 TEAMS: Can be solo or team-based depending on lobby"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "open-world-activities",
+      "name": "Open World Activities",
+      "activities": [
+        {
+          "id": "armored-truck-robbery",
+          "name": "Armored Truck Robbery",
+          "priority": "LOW",
+          "reward": "$10,000-20,000",
+          "time": "3 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🗺️",
+              "name": "Open World",
+              "method": "Find armored trucks randomly spawning on highways"
+            }
+          ],
+          "requirements": ["None"],
+          "vehicles": {
+            "setup": ["Any vehicle"],
+            "strategy": "Use sticky bombs on back doors, collect cash"
+          },
+          "details": [
+            "🚛 RANDOM SPAWN: Armored trucks appear randomly on map",
+            "💣 METHOD: Stick bomb on back doors, stand clear, collect cash",
+            "⭐ WANTED LEVEL: Triggers 2-star wanted level",
+            "💰 VARIABLE: $10K-20K depending on truck type",
+            "📍 LOCATIONS: Usually on highways and main roads"
+          ]
+        },
+        {
+          "id": "security-van-robbery",
+          "name": "Security Van Robbery (Gruppe Sechs)",
+          "priority": "LOW",
+          "reward": "$15,000-25,000",
+          "time": "5 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🗺️",
+              "name": "Open World",
+              "method": "Follow white Gruppe Sechs vans around city"
+            }
+          ],
+          "requirements": ["None"],
+          "vehicles": {
+            "setup": ["Any vehicle"],
+            "strategy": "Follow security van, wait for guards to exit, steal briefcase"
+          },
+          "details": [
+            "🚐 GRUPPE SECHS: Follow white security vans around the city",
+            "👮 GUARDS: Wait for guards to exit van at stops",
+            "💼 BRIEFCASE: Steal briefcase when guards are away",
+            "⭐ WANTED LEVEL: Minimal wanted level if done stealthily",
+            "📍 ROUTES: Vans follow predictable routes around LS"
+          ]
+        },
+        {
+          "id": "bounty-hunting",
+          "name": "Bounty Hunting",
+          "priority": "LOW",
+          "reward": "$1,000-10,000",
+          "time": "Variable",
+          "difficulty": "Medium",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🗺️",
+              "name": "Map",
+              "method": "Find red skull icons (players with bounties)"
+            }
+          ],
+          "requirements": ["Other players with bounties"],
+          "vehicles": {
+            "setup": ["Fast vehicle or aircraft"],
+            "strategy": "Hunt players with bounties, avoid their retaliation"
+          },
+          "details": [
+            "🎯 TARGET: Players with bounties (red dot on map)",
+            "💰 PAYOUT: Varies based on bounty amount ($1K-10K)",
+            "⚔️ RISK: Target player will likely fight back",
+            "🚁 STRATEGY: Use aircraft for hit-and-run tactics",
+            "📍 LOCATION: Bounties show on map with red skull icon"
+          ]
+        },
+        {
+          "id": "store-robberies",
+          "name": "Store Robberies",
+          "priority": "LOW",
+          "reward": "$1,000-2,000 each",
+          "time": "2 minutes per store",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🏦",
+              "name": "Convenience Stores",
+              "method": "Any 24/7, LTD Gasoline, or Rob's Liquor store"
+            }
+          ],
+          "requirements": ["None"],
+          "vehicles": {
+            "setup": ["Any vehicle for getaway"],
+            "strategy": "Point gun at cashier, wait for cash, escape quickly"
+          },
+          "details": [
+            "🏠 LOCATIONS: 20 convenience stores around Los Santos",
+            "🔫 METHOD: Point gun at cashier, wait for them to fill bag",
+            "⭐ WANTED LEVEL: 1-star, easy to escape",
+            "💰 SMALL MONEY: $1K-2K per store, adds up over time",
+            "⏰ COOLDOWN: Each store has individual cooldown timer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vip-ceo-challenges",
+      "name": "VIP/CEO Challenges",
+      "activities": [
+        {
+          "id": "most-wanted",
+          "name": "Most Wanted",
+          "priority": "MEDIUM",
+          "reward": "$30,000",
+          "time": "10 minutes",
+          "difficulty": "Hard",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "📱",
+              "name": "Interaction Menu",
+              "method": "SecuroServ > VIP/CEO Challenges > Most Wanted"
+            },
+            {
+              "icon": "🏢",
+              "name": "CEO Office",
+              "method": "Computer > SecuroServ > VIP Challenges"
+            }
+          ],
+          "requirements": ["CEO/VIP Status"],
+          "vehicles": {
+            "setup": ["Fast car", "Knowledge of tunnel locations"],
+            "strategy": "Survive highest wanted level using tunnels and subways"
+          },
+          "details": [
+            "⭐ OBJECTIVE: Survive 10 minutes with maximum wanted level",
+            "🚇 STRATEGY: Use subway tunnels and underground areas",
+            "🚗 ESCAPE: Fast car to reach tunnel entrances quickly",
+            "💰 PAYOUT: $30,000 for surviving full 10 minutes",
+            "📍 BEST SPOTS: Metro tunnels, underground parking garages"
+          ]
+        },
+        {
+          "id": "executive-deathmatch",
+          "name": "Executive Deathmatch",
+          "priority": "MEDIUM",
+          "reward": "$25,000",
+          "time": "10 minutes",
+          "difficulty": "Hard",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Team Preferred",
+          "launchLocations": [
+            {
+              "icon": "📱",
+              "name": "Interaction Menu",
+              "method": "SecuroServ > VIP/CEO Challenges > Executive Deathmatch"
+            },
+            {
+              "icon": "🏢",
+              "name": "CEO Office",
+              "method": "Computer > SecuroServ > VIP Challenges"
+            }
+          ],
+          "requirements": ["CEO/VIP Status", "Other CEOs/VIPs in session"],
+          "vehicles": {
+            "setup": ["Weaponized vehicles", "Aircraft"],
+            "strategy": "Kill other CEOs and VIPs while avoiding their bodyguards"
+          },
+          "details": [
+            "🎯 OBJECTIVE: Kill other CEOs/VIPs in the session",
+            "👥 TARGETS: Only other CEOs and VIPs count as targets",
+            "🚁 STRATEGY: Use aircraft for mobility and firepower",
+            "💰 SCORING: Points for kills, bonus for survival",
+            "⚠️ DIFFICULTY: Other players will target you as well"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "passive-income",
+      "name": "Passive Income Collection",
+      "activities": [
+        {
+          "id": "nightclub-safe",
+          "name": "Nightclub Safe",
+          "priority": "LOW",
+          "reward": "$50,000/day",
+          "time": "30 seconds",
+          "difficulty": "Easy",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🌃",
+              "name": "Nightclub",
+              "method": "Office safe (upstairs)"
+            }
+          ],
+          "requirements": ["Nightclub", "100% popularity"],
+          "details": [
+            "Collect every 48 minutes",
+            "Maintain popularity for max income",
+            "Check every few hours"
+          ]
+        },
+        {
+          "id": "agency-safe",
+          "name": "Agency Safe",
+          "priority": "LOW",
+          "reward": "$20,000/day",
+          "time": "30 seconds",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🏢",
+              "name": "Agency",
+              "method": "Office safe (main floor)"
+            }
+          ],
+          "requirements": ["Agency"],
+          "details": [
+            "Passive accumulation",
+            "Complete 201 contracts for bonus",
+            "Max capacity: $250,000"
+          ]
+        }
+      ]
+    }
+  ]
+}

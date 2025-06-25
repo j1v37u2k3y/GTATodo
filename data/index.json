@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "quick-money",
+    "heists", 
+    "businesses",
+    "daily-weekly"
+  ],
+  "metadata": {
+    "version": "2.0",
+    "lastUpdated": "2024-12-25",
+    "game": "GTA Online",
+    "structure": "modular"
+  }
+}

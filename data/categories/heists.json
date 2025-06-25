@@ -1,0 +1,716 @@
+{
+  "id": "heists",
+  "name": "Heists",
+  "icon": "🏆",
+  "sections": [
+    {
+      "id": "cayo-perico",
+      "name": "Cayo Perico Heist",
+      "activities": [
+        {
+          "id": "cayo-scope-out",
+          "name": "Scope Out Mission",
+          "priority": "HIGH",
+          "reward": "Required for heist",
+          "time": "15-20 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Short (15-30 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🛥️",
+              "name": "Kosatka Submarine",
+              "method": "Planning screen > Scope Out"
+            }
+          ],
+          "requirements": [
+            "Kosatka Submarine",
+            "Must be CEO/VIP"
+          ],
+          "vehicles": {
+            "setup": [
+              "Sparrow (fastest)",
+              "Oppressor MK2",
+              "Velum aircraft provided"
+            ],
+            "strategy": "Use Sparrow to quickly travel around island, land near points of interest"
+          },
+          "details": [
+            "🎯 PRIMARY TARGET: Always check office safe (Panther Statue = $1.9M, Pink Diamond = $1.4M, Bearer Bonds = $1.1M, Tequila = $900K)",
+            "🚪 ENTRY POINTS: Drainage tunnel is BEST (no detection, direct basement access)",
+            "💰 SECONDARY LOOT: Prioritize cocaine ($220K-440K), then weed ($150K-378K), cash is worst",
+            "✂️ BOLT CUTTERS: Essential for wire fences, found in 11 possible locations",
+            "👕 DISGUISES: Guard clothes (compound) and supply truck driver outfit",
+            "🔑 KEYCARDS: Blue keycard (beach party area), red keycard (office after primary target)",
+            "⚠️ CAMERAS: Mark all security cameras during scope to avoid during heist",
+            "🚁 ESCAPE: Mark motorcycle spawn points near compound for quick exit"
+          ]
+        },
+        {
+          "id": "cayo-prep-missions",
+          "name": "Prep Missions (Required)",
+          "priority": "HIGH",
+          "reward": "Unlocks heist approaches",
+          "time": "60-90 minutes total",
+          "difficulty": "Medium",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🚥️",
+              "name": "Kosatka Submarine",
+              "method": "Planning screen > Prep Work"
+            },
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Heists (after scope out)"
+            }
+          ],
+          "requirements": ["Completed scope out"],
+          "vehicles": {
+            "setup": ["Sparrow for travel", "Kuruma for combat missions", "Oppressor MK2 alternative"],
+            "strategy": "Always use Sparrow from Kosatka, park on rooftops when possible"
+          },
+          "details": [
+            "🎯 MANDATORY: Always do Approach Vehicle + Equipment missions",
+            "⏱️ TIME SAVER: Skip disruption missions unless going loud",
+            "🔫 WEAPON LOADOUT: Conspirator (silenced weapons) best for stealth",
+            "🎒 EQUIPMENT TIP: Safecracker kit opens office safe 50% faster than plasma cutter",
+            "📍 MISSION LOCATIONS: Use interaction menu > Kosatka > Request Sparrow for instant spawn"
+          ]
+        },
+        {
+          "id": "cayo-heist-execution",
+          "name": "The Heist (Solo Stealth Route)",
+          "priority": "HIGH",
+          "reward": "$1,000,000-1,900,000",
+          "time": "8-15 minutes execution",
+          "difficulty": "Medium",
+          "moneyPotential": "Very High ($500K+)",
+          "timeRequired": "Short (15-30 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🚥️",
+              "name": "Kosatka Submarine",
+              "method": "Planning screen > Start Heist"
+            },
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Heists when ready"
+            }
+          ],
+          "requirements": ["All prep missions complete", "Kosatka approach"],
+          "vehicles": {
+            "setup": ["Drainage tunnel entry", "Any motorcycle for escape"],
+            "strategy": "Stealth only, avoid all unnecessary guards, prioritize speed over perfection"
+          },
+          "details": [
+            "🏊 ENTRY: Drainage tunnel → swim to grate → enter basement (NO GUARDS ALERTED)",
+            "💰 LOOT ORDER: Secondary loot FIRST (basement/compound), primary target LAST",
+            "🚺 BASEMENT ROUTE: Storage room → office stairs → avoid camera in hallway",
+            "🎯 OFFICE: Hack fingerprint scanner, grab primary target, exit through office door",
+            "🏃 ESCAPE: Main gate (NOT compound exit), steal motorcycle, drive to main dock cliff",
+            "🌊 CLIFF JUMP: Drive off east cliff into water for instant escape (no boat needed)",
+            "⚠️ STEALTH TIPS: Stay behind guards, use cover, one headshot kills with conspirator weapons",
+            "💡 SPEED TIPS: Don't grab loot outside compound unless cocaine, 8-minute runs possible"
+          ]
+        },
+        {
+          "id": "cayo-advanced-tips",
+          "name": "Advanced Strategies & Tips",
+          "priority": "MEDIUM",
+          "reward": "Maximize efficiency and profit",
+          "time": "Knowledge for optimization",
+          "difficulty": "Easy",
+          "moneyPotential": "Very High ($500K+)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "📚",
+              "name": "Knowledge Base",
+              "method": "Reference for optimization strategies"
+            }
+          ],
+          "requirements": ["Experience with basic heist"],
+          "details": [
+            "🔄 REPLAY STRATEGY: Primary target changes every scope out, secondary loot spawns are random",
+            "💎 LOOT PRIORITY: Panther Statue ($1.9M) > Pink Diamond ($1.4M) > Bearer Bonds ($1.1M) > Tequila ($900K)",
+            "🗝️ KEYCARD STRATEGY: Blue keycard opens extra loot areas, red keycard from office unlocks escape route",
+            "👥 MULTI-PLAYER: Gold requires 2+ players (can't carry alone), art/cash/weed can be solo",
+            "⏰ COOLDOWN: 3 real-world hours between heists (solo), 1 hour (team)",
+            "🎒 LOOT CAPACITY: Can carry 1 full stack of secondary loot solo, cocaine fills bag fastest",
+            "📱 HEIST REPLAY: Complete scope out every time, prep missions stay completed if failed",
+            "🏆 ELITE CHALLENGE: Complete in under 15 minutes, stealth, no restart = extra $50K-100K"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "classic-heists",
+      "name": "Classic Heists (Original 5)",
+      "activities": [
+        {
+          "id": "fleeca-job",
+          "name": "Fleeca Job",
+          "priority": "LOW",
+          "reward": "$143,750 (host)",
+          "time": "30 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Short (15-30 min)",
+          "soloFriendly": "Team Required",
+          "launchLocations": [
+            {
+              "icon": "🏢",
+              "name": "High-End Apartment",
+              "method": "Heist planning room"
+            },
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Heists > Fleeca Job"
+            }
+          ],
+          "requirements": ["High-end apartment", "2 players"],
+          "vehicles": {
+            "setup": ["Kuruma (recommended)", "Any 4-door car"],
+            "strategy": "Simple drilling finale, good for beginners"
+          },
+          "details": [
+            "🏦 SETUP: Scope the bank, steal Kuruma, get hacking device",
+            "💳 FINALE: One player drills, other holds hostages",
+            "🚗 ESCAPE: Drive Kuruma to Lester's factory",
+            "💡 TIP: Easiest heist, perfect for new players",
+            "⏰ ELITE: Complete in under 5 minutes and 40 seconds"
+          ]
+        },
+        {
+          "id": "prison-break",
+          "name": "Prison Break",
+          "priority": "LOW",
+          "reward": "$500,000 (host)",
+          "time": "90 minutes",
+          "difficulty": "Hard",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Team Required",
+          "launchLocations": [
+            {
+              "icon": "🏢",
+              "name": "High-End Apartment",
+              "method": "Heist planning room"
+            },
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Heists > Prison Break"
+            }
+          ],
+          "requirements": [
+            "High-end apartment",
+            "4 players"
+          ],
+          "vehicles": {
+            "setup": [
+              "Buzzard",
+              "Police cars",
+              "Bus"
+            ],
+            "strategy": "Coordinate air support with ground team"
+          },
+          "details": [
+            "✈️ SETUP: Steal Velum, get bus, prison intel, wet work",
+            "🚁 FINALE: Pilot + Demolition (air), Officer + Prisoner (ground)",
+            "🎯 STRATEGY: Demo destroys jets, Pilot picks up team at beach",
+            "💡 TIP: Most difficult classic heist due to coordination needed",
+            "⚠️ COMMON FAIL: Pilot getting shot down by jets"
+          ]
+        },
+        {
+          "id": "humane-labs",
+          "name": "Humane Labs Raid",
+          "priority": "LOW",
+          "reward": "$675,000 (host)",
+          "time": "90 minutes",
+          "difficulty": "Hard",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Team Required",
+          "launchLocations": [
+            {
+              "icon": "🏢",
+              "name": "High-End Apartment",
+              "method": "Heist planning room"
+            },
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Heists > Humane Labs"
+            }
+          ],
+          "requirements": [
+            "High-end apartment",
+            "4 players"
+          ],
+          "vehicles": {
+            "setup": [
+              "Insurgent",
+              "Valkyrie helicopter",
+              "Hydra"
+            ],
+            "strategy": "Use heavy vehicles for combat missions"
+          },
+          "details": [
+            "🧪 SETUP: Key codes, Insurgents, EMP device, Valkyrie, Hydra",
+            "🎖️ FINALE: Two teams - ground assault and air support",
+            "💡 STRATEGY: Air team clears enemies, ground team plants EMP",
+            "⚠️ DIFFICULTY: Requires good pilots and coordination",
+            "🏆 ELITE: Complete without losing any lives"
+          ]
+        },
+        {
+          "id": "series-a-funding",
+          "name": "Series A Funding",
+          "priority": "LOW",
+          "reward": "$505,000 (host)",
+          "time": "90 minutes",
+          "difficulty": "Hard",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Team Required",
+          "launchLocations": [
+            {
+              "icon": "🏢",
+              "name": "High-End Apartment",
+              "method": "Heist planning room"
+            },
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Heists > Series A"
+            }
+          ],
+          "requirements": [
+            "High-end apartment",
+            "4 players"
+          ],
+          "vehicles": {
+            "setup": [
+              "Trash truck",
+              "Kuruma",
+              "Buzzard",
+              "Armored vehicles"
+            ],
+            "strategy": "Heavy combat focus, defend Trevor's meth lab"
+          },
+          "details": [
+            "🧪 SETUP: Steal meth supplies, eliminate competition, acquire vehicles",
+            "🏭 FINALE: Defend Trevor's meth lab from multiple waves of enemies",
+            "⚔️ COMBAT: Most combat-heavy classic heist, requires good shooters",
+            "🎯 STRATEGY: Use cover effectively, coordinate team positioning",
+            "🏆 ELITE: Complete without any team member dying"
+          ]
+        },
+        {
+          "id": "pacific-standard",
+          "name": "Pacific Standard",
+          "priority": "MEDIUM",
+          "reward": "$1,250,000 (host)",
+          "time": "2 hours",
+          "difficulty": "Hard",
+          "moneyPotential": "Very High ($500K+)",
+          "timeRequired": "Very Long (2+ hours)",
+          "soloFriendly": "Team Required",
+          "launchLocations": [
+            {
+              "icon": "🏢",
+              "name": "High-End Apartment",
+              "method": "Heist planning room"
+            },
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Heists > Pacific Standard"
+            }
+          ],
+          "requirements": ["High-end apartment", "4 players", "Kuruma essential"],
+          "vehicles": {
+            "setup": ["Kuruma (mandatory)", "Lectro bikes", "Convoy vehicles"],
+            "strategy": "Kuruma method for finale to minimize damage"
+          },
+          "details": [
+            "🏦 SETUP: Vans, signal, hacking device, convoy, bikes",
+            "💰 FINALE: Rob Pacific Standard Bank, escape on bikes through sewers",
+            "🚗 KURUMA METHOD: One player gets Kuruma, team gets in for safe escape",
+            "💡 STRATEGY: Demolition carries bag, others provide cover",
+            "🏆 ELITE: Complete in under 10:15 with no damage to Kuruma",
+            "💸 MAX TAKE: $1.25M with elite challenge and careful play"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "casino-heist",
+      "name": "Casino Heist", 
+      "activities": [
+        {
+          "id": "casino-scope-out",
+          "name": "Scope Out Casino",
+          "priority": "MEDIUM",
+          "reward": "Required for heist setup",
+          "time": "30-45 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Short (15-30 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🕹️",
+              "name": "Arcade Property",
+              "method": "Heist planning board"
+            },
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Heists > Casino Heist"
+            }
+          ],
+          "requirements": [
+            "Arcade Property",
+            "Complete setup mission from Lester"
+          ],
+          "vehicles": {
+            "setup": [
+              "Any vehicle",
+              "Oppressor MK2 for speed"
+            ],
+            "strategy": "Park away from casino, walk around to avoid suspicion"
+          },
+          "details": [
+            "📸 MANDATORY PHOTOS: All 10 access points (roof, sewer, tunnel, etc.)",
+            "🎰 VAULT CONTENTS: Check what's in the vault (diamonds > gold > art > cash)",
+            "📋 OPTIONAL INTEL: Security cameras (14 total), keycard doors, guard patrol routes",
+            "🚪 ACCESS POINTS: Staff lobby (easiest), waste disposal (sneaky), roof (aggressive)",
+            "💡 TIP: Take photos of everything for maximum intel bonus"
+          ]
+        },
+        {
+          "id": "casino-prep-missions",
+          "name": "Casino Prep Missions",
+          "priority": "MEDIUM",
+          "reward": "Unlocks approach options",
+          "time": "2-3 hours total",
+          "difficulty": "Medium",
+          "moneyPotential": "Very High ($500K+)",
+          "timeRequired": "Very Long (2+ hours)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "🕹️",
+              "name": "Arcade Property",
+              "method": "Heist planning board > Prep Work"
+            },
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Heists (after scope out)"
+            }
+          ],
+          "requirements": ["Completed scope out", "Chosen approach"],
+          "vehicles": {
+            "setup": ["Kuruma for combat missions", "Buzzard for travel", "Oppressor MK2"],
+            "strategy": "Always use armored vehicles for prep missions involving combat"
+          },
+          "details": [
+            "🎯 MANDATORY PREPS: Each approach has 4-6 required setup missions",
+            "🔫 DUGGAN SHIPMENTS: Only required for Aggressive (10 locations, use Oppressor MK2)",
+            "👔 DISGUISES: Gruppe Sechs (maintenance), Firefighters, Police, etc.",
+            "🚗 GETAWAY VEHICLES: Choose between armored cars or motorcycles",
+            "💡 EFFICIENCY: Skip optional preps unless going for elite challenge"
+          ]
+        },
+        {
+          "id": "casino-heist-execution",
+          "name": "Casino Heist Execution",
+          "priority": "MEDIUM",
+          "reward": "$1,500,000-2,100,000 (host take)",
+          "time": "20-40 minutes execution",
+          "difficulty": "Hard",
+          "moneyPotential": "Very High ($500K+)",
+          "timeRequired": "Short (15-30 min)",
+          "soloFriendly": "Team Required",
+          "launchLocations": [
+            {
+              "icon": "🕹️",
+              "name": "Arcade Property",
+              "method": "Heist planning board > Start Heist"
+            },
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Heists when ready"
+            }
+          ],
+          "requirements": ["All mandatory preps complete", "2-4 players", "Chosen approach"],
+          "details": [
+            "🔄 APPROACH ROTATION: Can't repeat same approach twice, rotates Silent→Big Con→Aggressive",
+            "👥 CREW SELECTION: Lower skilled crew = more money, higher skilled = easier heist",
+            "💰 PAYOUT BREAKDOWN: 60-85% host cut depending on crew size and split",
+            "🎯 ELITE CHALLENGE: Complete in 15 minutes, stealth (Silent/Big Con), $100K bonus",
+            "🏆 HARD MODE: Available if completed previous heist in same session, +10% payout",
+            "📱 HEIST REPLAY: Must do scope out every time, preps reset after completion",
+            "💡 MONEY TIPS: Host should take 85% on 2-player, 70-75% on 3-4 players",
+            "⏰ COOLDOWN: No cooldown between casino heists (unlike Cayo Perico)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "doomsday-heists",
+      "name": "Doomsday Heists",
+      "activities": [
+        {
+          "id": "doomsday-act-1",
+          "name": "Act I: The Data Breaches",
+          "priority": "MEDIUM",
+          "reward": "$812,500 (host)",
+          "time": "2-3 hours",
+          "difficulty": "Medium",
+          "moneyPotential": "Very High ($500K+)",
+          "timeRequired": "Very Long (2+ hours)",
+          "soloFriendly": "Team Required",
+          "launchLocations": [
+            {
+              "icon": "🏭",
+              "name": "Facility",
+              "method": "Heist planning room"
+            },
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Heists > Doomsday"
+            }
+          ],
+          "requirements": ["Facility", "2-4 players"],
+          "vehicles": {
+            "setup": ["Akula", "Thruster", "Deluxo"],
+            "strategy": "Infiltrate IAA facility, rescue Agent ULP"
+          },
+          "details": [
+            "🚁 SETUPS: Dead Courier, Signal Intercepts, Server Farm, Rescue ULP, Deluxos",
+            "🏭 FINALE: Infiltrate IAA facility to rescue Agent ULP",
+            "💡 STRATEGY: Stealth approach recommended for finale",
+            "🎆 EQUIPMENT: New futuristic vehicles and weapons introduced",
+            "🏆 ELITE: Complete finale in under 11 minutes on hard mode"
+          ]
+        },
+        {
+          "id": "doomsday-act-2",
+          "name": "Act II: The Bogdan Problem",
+          "priority": "MEDIUM",
+          "reward": "$1,187,500 (host)",
+          "time": "2-3 hours",
+          "difficulty": "Hard",
+          "moneyPotential": "Very High ($500K+)",
+          "timeRequired": "Very Long (2+ hours)",
+          "soloFriendly": "Team Required",
+          "launchLocations": [
+            {
+              "icon": "🏭",
+              "name": "Facility",
+              "method": "Heist planning room"
+            },
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Heists > Doomsday"
+            }
+          ],
+          "requirements": ["Facility", "2-4 players", "Completed Act I"],
+          "vehicles": {
+            "setup": ["Stromberg", "Avenger", "Khanjali Tank"],
+            "strategy": "Naval and air combat focus"
+          },
+          "details": [
+            "🚁 SETUPS: Rescue ULP, Salvage Hard Drives, Submarine Reconnaissance, Avenger, RCV",
+            "🌊 FINALE: Underwater infiltration of Russian submarine",
+            "💡 STRATEGY: One team takes sub route, other takes Avenger route",
+            "⚠️ REPLAY GLITCH: Popular for money glitching (against ToS)",
+            "🏆 ELITE: Complete finale in under 15 minutes on hard mode"
+          ]
+        },
+        {
+          "id": "doomsday-act-3",
+          "name": "Act III: The Doomsday Scenario",
+          "priority": "HIGH",
+          "reward": "$1,500,000 (host)",
+          "time": "3-4 hours",
+          "difficulty": "Expert",
+          "moneyPotential": "Very High ($500K+)",
+          "timeRequired": "Very Long (2+ hours)",
+          "soloFriendly": "Team Required",
+          "launchLocations": [
+            {
+              "icon": "🏭",
+              "name": "Facility",
+              "method": "Heist planning room"
+            },
+            {
+              "icon": "📱",
+              "name": "Phone",
+              "method": "Quick Job > Heists > Doomsday"
+            }
+          ],
+          "requirements": ["Facility", "2-4 players", "Completed Act I & II"],
+          "vehicles": {
+            "setup": ["Barrage", "Khanjali Tank", "Thruster", "Jetpack"],
+            "strategy": "Hardest heist finale, Mt. Chiliad assault with jetpacks"
+          },
+          "details": [
+            "🚁 SETUPS: Breach charges, Air defenses, Jetpacks, Barrage, Khanjali",
+            "🏔️ FINALE: Assault Mt. Chiliad facility using jetpacks",
+            "🚀 JETPACKS: Unique finale using jetpack combat mechanics",
+            "⚠️ DIFFICULTY: Hardest heist finale in GTA Online",
+            "🏆 ELITE: Complete finale in under 30 minutes on hard mode",
+            "💰 HIGHEST PAYOUT: Best payout of all Doomsday heists"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "auto-shop-contracts",
+      "name": "Auto Shop Contracts",
+      "activities": [
+        {
+          "id": "union-depository",
+          "name": "Union Depository Contract",
+          "priority": "HIGH",
+          "reward": "$300,000",
+          "time": "1-2 hours",
+          "difficulty": "Hard",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "🔧",
+              "name": "Auto Shop",
+              "method": "Planning board > Contracts"
+            }
+          ],
+          "requirements": ["Auto Shop Property"],
+          "vehicles": {
+            "setup": ["Kuruma (setups)", "Fast sports car (finale)"],
+            "strategy": "Most profitable Auto Shop contract, requires skilled driving for finale"
+          },
+          "details": [
+            "🏦 SETUPS: Reconnaissance (scope security), Equipment prep (hacking device), Vehicle prep",
+            "💰 FINALE: Infiltrate Union Depository vault, steal gold bars from safety deposit boxes",
+            "🚗 ESCAPE: High-speed chase through downtown Los Santos traffic",
+            "💡 BEST CONTRACT: Highest payout of all Auto Shop contracts",
+            "⚠️ DIFFICULTY: Finale car chase is very challenging, requires excellent driving",
+            "🎯 VEHICLE TIP: Use Krieger, Emerus, or other high-end sports car with good handling",
+            "🔄 COOLDOWN: Can replay after cooldown, no setup cost"
+          ]
+        },
+        {
+          "id": "fleeca-bank-contract",
+          "name": "Fleeca Bank Contract",
+          "priority": "MEDIUM",
+          "reward": "$180,000",
+          "time": "45 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Short (15-30 min)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "🔧",
+              "name": "Auto Shop",
+              "method": "Planning board > Contracts"
+            }
+          ],
+          "requirements": ["Auto Shop Property"],
+          "vehicles": {
+            "setup": ["Any vehicle", "Motorcycles for finale"],
+            "strategy": "Classic bank robbery, easiest Auto Shop contract"
+          },
+          "details": [
+            "🏦 SETUP: Scope the Fleeca bank, acquire drilling equipment",
+            "💳 FINALE: Standard Fleeca bank robbery with vault drilling mini-game",
+            "🏍️ ESCAPE: Motorcycle chase through city streets",
+            "💡 EASIEST: Most straightforward Auto Shop contract, good for beginners",
+            "⏰ SPEED: Can be completed very quickly once familiar with route",
+            "🎯 DRILLING TIP: Keep drill temperature in green zone for fastest progress"
+          ]
+        },
+        {
+          "id": "prison-contract",
+          "name": "Prison Contract",
+          "priority": "MEDIUM",
+          "reward": "$200,000",
+          "time": "1 hour",
+          "difficulty": "Medium",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "🔧",
+              "name": "Auto Shop",
+              "method": "Planning board > Contracts"
+            }
+          ],
+          "requirements": ["Auto Shop Property"],
+          "vehicles": {
+            "setup": ["Helicopter for finale", "Kuruma for setups"],
+            "strategy": "Extract target from Bolingbroke Penitentiary using helicopter"
+          },
+          "details": [
+            "🏭 SETUP: Acquire prison uniforms, infiltrate security systems",
+            "🚁 FINALE: Extract target from Bolingbroke Penitentiary",
+            "👮 STEALTH: Avoid detection during prison infiltration",
+            "💡 STRATEGY: Coordinate extraction with helicopter pickup",
+            "⏰ TIMING: Quick execution required to avoid heavy response"
+          ]
+        },
+        {
+          "id": "agency-bank-contract",
+          "name": "Agency Bank Contract",
+          "priority": "MEDIUM",
+          "reward": "$250,000",
+          "time": "1.5 hours",
+          "difficulty": "Hard",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "🔧",
+              "name": "Auto Shop",
+              "method": "Planning board > Contracts"
+            }
+          ],
+          "requirements": ["Auto Shop Property"],
+          "vehicles": {
+            "setup": ["Kuruma", "Buzzard", "Armored vehicle for finale"],
+            "strategy": "Multi-stage bank heist with heavy security"
+          },
+          "details": [
+            "🏦 SETUPS: Infiltrate IAA building, acquire keycards and intel",
+            "💰 FINALE: Rob high-security bank vault with multiple stages",
+            "🚁 ESCAPE: Coordinated escape with multiple vehicles",
+            "⚠️ DIFFICULTY: More complex than other Auto Shop contracts",
+            "🔫 COMBAT: Heavy security, bring armor and snacks"
+          ]
+        }
+      ]
+    }
+  ]
+}

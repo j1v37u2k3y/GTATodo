@@ -16,38 +16,48 @@
         </div>
     </div>
 
-    <div class="progress-container">
-        <div class="progress-info">
-            <span>Progress: <span id="progressText">0%</span></span>
-            <span>Completed: <span id="completedCount">0</span>/<span id="totalCount">0</span></span>
-        </div>
-        <div class="progress-bar">
-            <div class="progress-fill" id="progressBar"></div>
-        </div>
-    </div>
+    <!-- Sidebar Toggle Button -->
+    <button class="sidebar-toggle" onclick="app.toggleSidebar()" id="sidebarToggle">
+        ☰ Controls
+    </button>
 
-    <div class="controls">
-        <button class="control-btn" onclick="app.expandAll()">Expand All</button>
-        <button class="control-btn" onclick="app.collapseAll()">Collapse All</button>
-        <button class="control-btn" onclick="app.resetChecklist()">Reset Checklist</button>
-        <button class="control-btn" onclick="app.toggleFilters()" id="filterToggle">Hide Filters</button>
-        <button class="control-btn" onclick="app.toggleCompletedView()" id="completedToggle">Show Completed</button>
-    </div>
-
-    <div class="filters-container" id="filtersContainer">
-        <div class="filters-header">
-            <h3>🔍 Filter Activities</h3>
-            <button class="clear-filters" onclick="app.clearAllFilters()">Clear All</button>
+    <!-- Control Sidebar -->
+    <div class="control-sidebar" id="controlSidebar">
+        <div class="sidebar-header">
+            <h3>🎮 Controls</h3>
+            <button class="sidebar-close" onclick="app.toggleSidebar()">✕</button>
         </div>
-        <div class="filters-grid">
+        
+        <div class="progress-container">
+            <div class="progress-info">
+                <span>Progress: <span id="progressText">0%</span></span>
+                <span>Completed: <span id="completedCount">0</span>/<span id="totalCount">0</span></span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h4>📋 Actions</h4>
+            <div class="sidebar-controls">
+                <button class="sidebar-btn" onclick="app.expandAll()">Expand All</button>
+                <button class="sidebar-btn" onclick="app.collapseAll()">Collapse All</button>
+                <button class="sidebar-btn" onclick="app.resetChecklist()">Reset Checklist</button>
+                <button class="sidebar-btn" onclick="app.toggleCompletedView()" id="completedToggle">Show Completed</button>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <h4>🔍 Filters</h4>
             <div class="filter-group">
-                <label>💰 Money Potential:</label>
+                <label>💰 Money:</label>
                 <select id="moneyFilter" onchange="app.applyFilters()">
                     <option value="">All</option>
                 </select>
             </div>
             <div class="filter-group">
-                <label>⏰ Time Required:</label>
+                <label>⏰ Time:</label>
                 <select id="timeFilter" onchange="app.applyFilters()">
                     <option value="">All</option>
                 </select>
@@ -59,7 +69,7 @@
                 </select>
             </div>
             <div class="filter-group">
-                <label>👥 Solo Friendly:</label>
+                <label>👥 Solo:</label>
                 <select id="soloFilter" onchange="app.applyFilters()">
                     <option value="">All</option>
                 </select>
@@ -74,22 +84,32 @@
                 </select>
             </div>
             <div class="filter-group">
-                <label>📍 Launch Location:</label>
+                <label>📍 Location:</label>
                 <select id="launchLocationFilter" onchange="app.applyFilters()">
                     <option value="">All</option>
                 </select>
             </div>
+            <button class="clear-filters" onclick="app.clearAllFilters()">Clear All Filters</button>
         </div>
     </div>
+
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="app.toggleSidebar()"></div>
 
     <div class="tabs" id="tabs">
         <!-- Tabs will be rendered here by JavaScript -->
     </div>
 
-    <div id="completedView" class="completed-view" style="display: none;">
+    <!-- Overlay for when drawer is open -->
+    <div id="drawerOverlay" class="drawer-overlay"></div>
+
+    <div id="completedView" class="completed-view">
         <div class="completed-header">
-            <h2>✅ Completed Tasks</h2>
-            <p class="completed-subtitle">Your accomplishments for today</p>
+            <div class="completed-header-content">
+                <h2>✅ Completed Tasks</h2>
+                <p class="completed-subtitle">Your accomplishments for today</p>
+            </div>
+            <button class="completed-close" onclick="app.toggleCompletedView()">✕</button>
         </div>
         <div id="completedList" class="completed-list">
             <!-- Completed tasks will be rendered here -->

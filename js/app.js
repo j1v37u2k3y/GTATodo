@@ -7,6 +7,7 @@ class GTAChecklist {
         this.progress = this.loadProgress() || {};
         this.filtersVisible = true;
         this.completedViewVisible = false;
+        this.sidebarVisible = false;
         this.activeFilters = {
             money: '',
             time: '',
@@ -19,9 +20,8 @@ class GTAChecklist {
 
     async init() {
         try {
-            // Load missions data
-            const response = await fetch('data/missions.json');
-            this.missionsData = await response.json();
+            // Load modular data structure
+            await this.loadModularData();
 
             // Render the application
             this.renderTabs();
@@ -35,6 +35,31 @@ class GTAChecklist {
             console.error('Failed to initialize app:', error);
             document.getElementById('app').innerHTML = '<p>Error loading missions data. Please refresh the page.</p>';
         }
+    }
+
+    async loadModularData() {
+        // Load index file to get category list
+        const indexResponse = await fetch('data/index.json');
+        const index = await indexResponse.json();
+        
+        // Load filters
+        const filtersResponse = await fetch('data/filters.json');
+        const filters = await filtersResponse.json();
+        
+        // Load each category
+        const categories = [];
+        for (const categoryId of index.categories) {
+            const categoryResponse = await fetch(`data/categories/${categoryId}.json`);
+            const category = await categoryResponse.json();
+            categories.push(category);
+        }
+        
+        // Build missionsData structure
+        this.missionsData = {
+            categories: categories,
+            filters: filters,
+            metadata: index.metadata
+        };
     }
 
     renderTabs() {
@@ -109,15 +134,19 @@ class GTAChecklist {
             detailsHTML += `<div class="task-time">⏱️ ${activity.time}</div>`;
         }
 
-        // Render launch location if available
-        if (activity.launchLocation) {
-            detailsHTML += `
-                <div class="launch-location">
-                    <span class="location-icon">${activity.launchLocation.icon}</span>
-                    <span class="location-name">${activity.launchLocation.name}</span>
-                    ${activity.launchLocation.method ? `<span class="location-method"> - ${activity.launchLocation.method}</span>` : ''}
-                </div>
-            `;
+        // Render launch locations if available
+        if (activity.launchLocations && activity.launchLocations.length > 0) {
+            detailsHTML += `<div class="launch-locations-section">`;
+            activity.launchLocations.forEach((location, index) => {
+                detailsHTML += `
+                    <div class="launch-location ${index > 0 ? 'alternative' : 'primary'}">
+                        <span class="location-icon">${location.icon}</span>
+                        <span class="location-name">${location.name}</span>
+                        ${location.method ? `<span class="location-method"> - ${location.method}</span>` : ''}
+                    </div>
+                `;
+            });
+            detailsHTML += `</div>`;
         }
 
         // Render requirements
@@ -312,6 +341,30 @@ class GTAChecklist {
         if (this.completedViewVisible) {
             this.renderCompletedView();
         }
+
+        // Update completed button with count indicator
+        this.updateCompletedButton(completedTasks);
+    }
+
+    updateCompletedButton(completedCount) {
+        const toggle = document.getElementById('completedToggle');
+        if (!toggle) return;
+
+        const baseText = this.completedViewVisible ? 'Hide Completed' : 'Show Completed';
+        
+        if (completedCount > 0) {
+            toggle.textContent = `${baseText} (${completedCount})`;
+            if (!this.completedViewVisible) {
+                toggle.style.background = 'rgba(0, 255, 136, 0.15)';
+                toggle.style.borderColor = 'rgba(0, 255, 136, 0.4)';
+            }
+        } else {
+            toggle.textContent = baseText;
+            if (!this.completedViewVisible) {
+                toggle.style.background = 'rgba(255, 255, 255, 0.1)';
+                toggle.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+            }
+        }
     }
 
     resetChecklist() {
@@ -359,20 +412,6 @@ class GTAChecklist {
         });
     }
 
-    toggleFilters() {
-        const container = document.getElementById('filtersContainer');
-        const toggle = document.getElementById('filterToggle');
-
-        this.filtersVisible = !this.filtersVisible;
-
-        if (this.filtersVisible) {
-            container.style.display = 'block';
-            toggle.textContent = 'Hide Filters';
-        } else {
-            container.style.display = 'none';
-            toggle.textContent = 'Show Filters';
-        }
-    }
 
     applyFilters() {
         // Get current filter values
@@ -421,8 +460,13 @@ class GTAChecklist {
         if (this.activeFilters.priority && taskData.priority !== this.activeFilters.priority) {
             return false;
         }
-        if (this.activeFilters.launchLocation && taskData.launchLocation && taskData.launchLocation.name !== this.activeFilters.launchLocation) {
-            return false;
+        if (this.activeFilters.launchLocation && taskData.launchLocations) {
+            const hasMatchingLocation = taskData.launchLocations.some(location => 
+                location.name === this.activeFilters.launchLocation
+            );
+            if (!hasMatchingLocation) {
+                return false;
+            }
         }
 
         return true;
@@ -495,26 +539,56 @@ class GTAChecklist {
 
     toggleCompletedView() {
         const completedView = document.getElementById('completedView');
-        const content = document.getElementById('content');
-        const tabs = document.getElementById('tabs');
+        const overlay = document.getElementById('drawerOverlay');
         const toggle = document.getElementById('completedToggle');
 
         this.completedViewVisible = !this.completedViewVisible;
 
         if (this.completedViewVisible) {
-            completedView.style.display = 'block';
-            content.style.display = 'none';
-            tabs.style.display = 'none';
-            toggle.textContent = 'Show Tasks';
+            completedView.classList.add('active');
+            overlay.classList.add('active');
             toggle.classList.add('active');
             this.renderCompletedView();
+            this.enableBackgroundScroll();
         } else {
-            completedView.style.display = 'none';
-            content.style.display = 'block';
-            tabs.style.display = 'flex';
-            toggle.textContent = 'Show Completed';
+            completedView.classList.remove('active');
+            overlay.classList.remove('active');
             toggle.classList.remove('active');
+            this.disableBackgroundScroll();
         }
+
+        // Update button text and styling
+        this.updateCompletedButton(document.querySelectorAll('.task.completed').length);
+    }
+
+    enableBackgroundScroll() {
+        // Allow background interactions when drawer is open
+        const overlay = document.getElementById('drawerOverlay');
+        overlay.style.pointerEvents = 'none'; // Allow clicking through to background
+        
+        // Add wheel event listener to the document instead
+        document.addEventListener('wheel', this.handleOverlayWheel, { passive: false });
+    }
+
+    disableBackgroundScroll() {
+        const overlay = document.getElementById('drawerOverlay');
+        overlay.style.pointerEvents = 'none';
+        document.removeEventListener('wheel', this.handleOverlayWheel);
+    }
+
+    handleOverlayWheel = (e) => {
+        // Only handle wheel events when drawer is open and not scrolling within the drawer
+        if (!this.completedViewVisible) return;
+        
+        const completedView = document.getElementById('completedView');
+        const completedList = document.getElementById('completedList');
+        
+        // If the wheel event is over the drawer content, let it scroll normally
+        if (completedView.contains(e.target) || completedList.contains(e.target)) {
+            return; // Allow normal scrolling within the drawer
+        }
+        
+        // Otherwise, it's a background scroll - do nothing special, let it scroll normally
     }
 
     renderCompletedView() {
@@ -529,6 +603,7 @@ class GTAChecklist {
                     if (this.progress[taskId]) {
                         completedTasks.push({
                             ...activity,
+                            taskId: taskId,
                             categoryName: category.name,
                             categoryIcon: category.icon,
                             sectionName: section.name
@@ -551,22 +626,61 @@ class GTAChecklist {
             <div class="completed-item">
                 <div class="completed-item-left">
                     <span class="completed-check">✅</span>
-                    <span class="completed-name">${task.name}</span>
-                    <span class="completed-category">${task.categoryIcon} ${task.categoryName}</span>
+                    <div class="completed-content">
+                        <span class="completed-name">${task.name}</span>
+                        <span class="completed-category">${task.categoryIcon} ${task.categoryName}</span>
+                    </div>
                 </div>
                 <div class="completed-item-right">
                     <span class="completed-reward">${task.reward}</span>
-                    ${task.launchLocation ? `
+                    ${task.launchLocations && task.launchLocations.length > 0 ? `
                         <div class="completed-location">
-                            <span class="completed-location-icon">${task.launchLocation.icon}</span>
-                            <span>${task.launchLocation.name}</span>
+                            <span class="completed-location-icon">${task.launchLocations[0].icon}</span>
+                            <span>${task.launchLocations[0].name}</span>
                         </div>
                     ` : ''}
+                    <button class="uncheck-btn" onclick="app.uncheckTask('${task.taskId}')" title="Uncheck this task">
+                        <span>↶</span>
+                    </button>
                 </div>
             </div>
         `).join('');
 
         completedList.innerHTML = completedHTML;
+    }
+
+    uncheckTask(taskId) {
+        // Find the task element in the main content
+        const taskElement = document.querySelector(`[data-task-id="${taskId}"]`);
+        if (taskElement) {
+            const checkbox = taskElement.querySelector('input[type="checkbox"]');
+            if (checkbox) {
+                checkbox.checked = false;
+                taskElement.classList.remove('completed');
+                this.progress[taskId] = false;
+                delete this.progress[taskId];
+                this.updateProgress();
+                this.saveProgress();
+            }
+        }
+    }
+
+    toggleSidebar() {
+        const sidebar = document.getElementById('controlSidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+        const toggle = document.getElementById('sidebarToggle');
+
+        this.sidebarVisible = !this.sidebarVisible;
+
+        if (this.sidebarVisible) {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+            toggle.textContent = '✕ Close';
+        } else {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            toggle.textContent = '☰ Controls';
+        }
     }
 }
 

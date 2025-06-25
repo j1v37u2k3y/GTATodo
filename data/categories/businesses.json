@@ -1,0 +1,598 @@
+{
+  "id": "businesses",
+  "name": "Businesses",
+  "icon": "🏢",
+  "sections": [
+    {
+      "id": "bail-office",
+      "name": "Bail Office", 
+      "activities": [
+        {
+          "id": "bail-office-bonds",
+          "name": "Bail Bond Recovery",
+          "priority": "HIGH",
+          "reward": "$50,000-100,000",
+          "time": "10-20 minutes",
+          "difficulty": "Medium",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Short (15-30 min)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "🏢",
+              "name": "Bail Office",
+              "method": "Computer > Most Wanted"
+            }
+          ],
+          "requirements": ["Bail Office Property"],
+          "vehicles": {
+            "setup": ["Kuruma", "Buzzard", "Any armored vehicle"],
+            "strategy": "Track down bail jumpers, bring them back alive for full payout"
+          },
+          "details": [
+            "🎯 OBJECTIVE: Locate and capture bail jumpers around Los Santos",
+            "💰 ALIVE BONUS: Full payout for bringing targets back alive", 
+            "🚗 TRANSPORT: Use secure vehicles to prevent escapes",
+            "📍 LOCATIONS: Targets spawn in various locations around map",
+            "⏰ COOLDOWN: New targets available regularly"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "salvage-yard",
+      "name": "Salvage Yard",
+      "activities": [
+        {
+          "id": "salvage-yard-robbery",
+          "name": "Salvage Yard Robbery", 
+          "priority": "HIGH",
+          "reward": "$150,000-300,000",
+          "time": "30-45 minutes",
+          "difficulty": "Medium", 
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Medium (30-60 min)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "🔧",
+              "name": "Salvage Yard",
+              "method": "Planning board > Robberies"
+            }
+          ],
+          "requirements": ["Salvage Yard Property"],
+          "vehicles": {
+            "setup": ["Tow Truck", "Any fast vehicle", "Kuruma for combat"],
+            "strategy": "Steal specific vehicles and deliver to salvage yard"
+          },
+          "details": [
+            "🚗 TARGETS: Steal high-value vehicles marked on map",
+            "🔧 DELIVERY: Tow or drive vehicles back to salvage yard",
+            "💰 VALUE: Vehicle condition affects final payout",
+            "⚠️ HEAT: Higher value targets attract more police attention",
+            "🏭 PROCESSING: Vehicles are broken down for parts and profit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "car-wash",
+      "name": "Car Wash",
+      "activities": [
+        {
+          "id": "car-wash-income",
+          "name": "Car Wash Passive Income",
+          "priority": "LOW",
+          "reward": "$25,000/day",
+          "time": "30 seconds",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)", 
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🚿",
+              "name": "Car Wash",
+              "method": "Office safe collection"
+            }
+          ],
+          "requirements": ["Car Wash Property"],
+          "details": [
+            "💰 PASSIVE: Generates money over time",
+            "🔄 COLLECTION: Check safe regularly for accumulated funds",
+            "📈 STEADY: Consistent daily income with minimal effort",
+            "🚗 THEME: Fits well with vehicle-focused businesses"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "freight-cargo",
+      "name": "Freight Cargo & Hangar",
+      "activities": [
+        {
+          "id": "air-freight-cargo",
+          "name": "Air Freight Cargo",
+          "priority": "MEDIUM", 
+          "reward": "$200,000-500,000",
+          "time": "45-90 minutes",
+          "difficulty": "Hard",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "✈️",
+              "name": "Hangar",
+              "method": "Computer > Source Cargo"
+            }
+          ],
+          "requirements": ["Hangar Property", "Aircraft"],
+          "vehicles": {
+            "setup": ["Rogue", "Pyro", "Any fighter aircraft", "Buzzard"],
+            "strategy": "Source air cargo and sell during bonus weeks"
+          },
+          "details": [
+            "✈️ AIRCRAFT: Use hangar aircraft for sourcing missions",
+            "💰 2X EVENTS: Wait for double money weeks for best profit",
+            "🎯 SOURCING: Steal cargo from rival operations",
+            "⚔️ COMBAT: Heavy air-to-air and air-to-ground combat",
+            "📦 STORAGE: Build up cargo before selling for maximum profit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "garment-factory", 
+      "name": "Garment Factory",
+      "activities": [
+        {
+          "id": "garment-factory-income",
+          "name": "Garment Factory Production", 
+          "priority": "MEDIUM",
+          "reward": "$45,000/day",
+          "time": "2 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)", 
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "👔",
+              "name": "Garment Factory",
+              "method": "Office safe collection"
+            }
+          ],
+          "requirements": ["Garment Factory Property"],
+          "details": [
+            "💰 PASSIVE: Generates steady daily income",
+            "🏭 PRODUCTION: Automatic clothing manufacturing",
+            "💼 COLLECTION: Regular safe collection needed",
+            "📈 RELIABLE: Consistent money source with no setup required"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arcade-passive",
+      "name": "Arcade Income",
+      "activities": [
+        {
+          "id": "arcade-passive-income",
+          "name": "Arcade Machine Income",
+          "priority": "LOW", 
+          "reward": "$5,000/day",
+          "time": "30 seconds",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🕹️",
+              "name": "Arcade Property", 
+              "method": "Safe in back office"
+            }
+          ],
+          "requirements": ["Arcade Property", "Arcade machines"],
+          "details": [
+            "🎮 MACHINES: Fill arcade with games for maximum income",
+            "💰 SMALL: Low income but completely passive",
+            "🔄 COLLECTION: Check safe when doing casino heist prep",
+            "🎯 SECONDARY: Not main income source, just bonus money"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vehicle-cargo",
+      "name": "Vehicle Cargo",
+      "activities": [
+        {
+          "id": "vehicle-cargo-32-car",
+          "name": "Vehicle Cargo - 32-Car Method",
+          "priority": "HIGH",
+          "reward": "$80,000 per top-range car",
+          "time": "15-20 min cycle",
+          "difficulty": "Medium",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Short (15-30 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🏢",
+              "name": "CEO Office",
+              "method": "Computer > SecuroServ > Import/Export"
+            },
+            {
+              "icon": "🚛",
+              "name": "Terrorbyte",
+              "method": "Client Services > Source Vehicle Cargo"
+            }
+          ],
+          "requirements": [
+            "Vehicle Warehouse",
+            "CEO Office"
+          ],
+          "vehicles": {
+            "setup": [
+              "Buzzard (travel)",
+              "Kuruma (combat missions)",
+              "Cargobob (avoid damage)"
+            ],
+            "strategy": "Maintain exactly 32 cars: 10 Standard + 10 Mid + 12 Top-Range, only sell Top-Range"
+          },
+          "details": [
+            "🎯 COLLECTION PHASE: Source cars until you have 10 Standard + 10 Mid-Range",
+            "🚫 NEVER SELL: Standard and Mid-Range cars (keep all 20)",
+            "💰 PROFIT PHASE: Only source and sell Top-Range cars ($80K profit each)",
+            "🎯 SPECIALIST DEALER: Always choose this option for maximum profit ($100K sale)",
+            "🚁 CARGOBOB METHOD: Use Cargobob to lift cars and avoid NPC damage",
+            "⚠️ NPC WAVES: Blue Sultans spawn in groups of 4 when selling, eliminate them first",
+            "💡 SOLO SESSION: Recommended to avoid player interference"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bunker",
+      "name": "Bunker Operations",
+      "activities": [
+        {
+          "id": "bunker-production",
+          "name": "Bunker Production & Sales",
+          "priority": "HIGH",
+          "reward": "$135,000 profit per cycle",
+          "time": "2h 20min per supply bar",
+          "difficulty": "Easy",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🏭",
+              "name": "Bunker",
+              "method": "Computer terminal for supplies and sales"
+            }
+          ],
+          "requirements": ["Bunker", "Staff + Equipment upgrades essential"],
+          "vehicles": {
+            "setup": ["Varies: Phantom Wedge, Insurgent, Dune FAV, Marshall, Merryweather"],
+            "strategy": "ALWAYS buy supplies, sell at 25% stock for guaranteed single vehicle"
+          },
+          "details": [
+            "💰 SUPPLY STRATEGY: Always BUY supplies for $75,000 (never steal - wastes time)",
+            "📊 SELL TIMING: Sell at 25% stock ($175K value) = guaranteed 1 vehicle delivery",
+            "🚚 VEHICLE GUARANTEE: 25% stock = 1 vehicle, 50% = 1-2 vehicles, 75%+ = 2-3 vehicles",
+            "💡 PROFIT CALCULATION: $175K sale - $75K supplies = $100K profit (passive income)",
+            "⏰ TIMING: Takes 2h 20min to convert 1 supply bar to 25% stock",
+            "🔧 UPGRADES: Staff + Equipment upgrades are ESSENTIAL for profitability",
+            "🌆 BUYERS: Always sell to Los Santos for maximum profit",
+            "👥 SESSION: Use solo public session to avoid griefers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "special-cargo",
+      "name": "Special Cargo Operations",
+      "activities": [
+        {
+          "id": "cargo-warehouse",
+          "name": "Cargo Warehouse (CEO Crates)",
+          "priority": "MEDIUM",
+          "reward": "$2,220,000 (full large warehouse)",
+          "time": "6-8 hours to fill large warehouse",
+          "difficulty": "Medium",
+          "moneyPotential": "Very High ($500K+)",
+          "timeRequired": "Very Long (2+ hours)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "🏢",
+              "name": "CEO Office",
+              "method": "Computer > SecuroServ > Buy Special Cargo"
+            },
+            {
+              "icon": "📱",
+              "name": "Interaction Menu",
+              "method": "SecuroServ > CEO Abilities > Buy Special Cargo"
+            },
+            {
+              "icon": "🚛",
+              "name": "Terrorbyte",
+              "method": "Computer > Special Cargo Buy"
+            }
+          ],
+          "requirements": ["CEO Office", "Large Cargo Warehouse (111 crates)"],
+          "vehicles": {
+            "setup": ["Buzzard (travel)", "Terrorbyte (source from anywhere)", "Kuruma (combat)"],
+            "strategy": "Always buy 3 crates, wait for double money events, use solo public sessions"
+          },
+          "details": [
+            "💰 CRATE STRATEGY: Always buy 3 crates ($18K) - most efficient cost per crate",
+            "🏠 WAREHOUSE SIZES: Small (16), Medium (42), Large (111 crates)",
+            "📈 PROFIT SCALING: Large warehouse = $2.22M normal, $4.44M during 2x events",
+            "🚚 TERRORBYTE: Source crates from anywhere without returning to office",
+            "⚠️ RAID PROTECTION: Sell before reaching 78 crates or face potential raids",
+            "⏰ 2X EVENTS: Wait for double money weeks for maximum profit",
+            "👥 SOLO DELIVERY: Large warehouse sale usually requires multiple people",
+            "🎯 EFFICIENCY: Source 3 crates → VIP work → repeat"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "motorcycle-club",
+      "name": "Motorcycle Club Businesses",
+      "activities": [
+        {
+          "id": "cocaine-lockup",
+          "name": "Cocaine Lockup",
+          "priority": "HIGH",
+          "reward": "$420,000 per full sale",
+          "time": "5 hours to fill (with upgrades)",
+          "difficulty": "Medium",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "🏭",
+              "name": "Cocaine Lockup",
+              "method": "Computer terminal"
+            },
+            {
+              "icon": "🏠",
+              "name": "MC Clubhouse",
+              "method": "Computer > Businesses"
+            },
+            {
+              "icon": "📱",
+              "name": "Interaction Menu",
+              "method": "MC President > MC Business"
+            }
+          ],
+          "requirements": ["MC Clubhouse", "Cocaine Lockup", "Staff + Equipment upgrades"],
+          "vehicles": {
+            "setup": ["Post Op Vans", "Garbage Trucks", "Boats", "Helicopters"],
+            "strategy": "Buy supplies, sell at 2.5 bars for guaranteed single vehicle"
+          },
+          "details": [
+            "💰 PROFIT: $420K sale - $225K supplies = $195K profit per cycle",
+            "📊 OPTIMAL SALE: 2.5 bars = 1 vehicle, 5 bars = 2-4 vehicles",
+            "🔧 UPGRADES: Staff + Equipment upgrades essential for profitability",
+            "⏰ PRODUCTION: 5 hours for full stock with upgrades",
+            "🚚 VEHICLE TYPES: Post Op (worst), Garbage Truck (bad), Boat/Heli (good)",
+            "💡 SUPPLY TIP: Buy supplies for $75K each (stealing wastes time)"
+          ]
+        },
+        {
+          "id": "methamphetamine-lab",
+          "name": "Methamphetamine Lab",
+          "priority": "MEDIUM",
+          "reward": "$357,000 per full sale",
+          "time": "5 hours to fill (with upgrades)",
+          "difficulty": "Medium",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "🏭",
+              "name": "Methamphetamine Lab",
+              "method": "Computer terminal"
+            },
+            {
+              "icon": "🏠",
+              "name": "MC Clubhouse",
+              "method": "Computer > Businesses"
+            },
+            {
+              "icon": "📱",
+              "name": "Interaction Menu",
+              "method": "MC President > MC Business"
+            }
+          ],
+          "requirements": ["MC Clubhouse", "Meth Lab", "Staff + Equipment upgrades"],
+          "vehicles": {
+            "setup": ["Same as Cocaine delivery vehicles"],
+            "strategy": "Second most profitable MC business after Cocaine"
+          },
+          "details": [
+            "💰 PROFIT: $357K sale - $225K supplies = $132K profit per cycle",
+            "📈 RANKING: 2nd most profitable MC business",
+            "🔧 SETUP: Same upgrade and supply strategy as Cocaine",
+            "⏰ TIMING: Slightly lower production rate than Cocaine"
+          ]
+        },
+        {
+          "id": "counterfeit-cash-factory",
+          "name": "Counterfeit Cash Factory",
+          "priority": "MEDIUM",
+          "reward": "$294,000 per full sale",
+          "time": "5 hours to fill (with upgrades)",
+          "difficulty": "Easy",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "🏭",
+              "name": "Counterfeit Cash Factory",
+              "method": "Computer terminal"
+            },
+            {
+              "icon": "🏍️",
+              "name": "MC Clubhouse",
+              "method": "Computer > Businesses"
+            },
+            {
+              "icon": "📱",
+              "name": "Interaction Menu",
+              "method": "MC President > MC Business"
+            }
+          ],
+          "requirements": [
+            "MC Clubhouse",
+            "Counterfeit Cash Factory",
+            "Staff + Equipment upgrades recommended"
+          ],
+          "vehicles": {
+            "setup": ["Post Op Vans", "Garbage Trucks", "Boats"],
+            "strategy": "Third most profitable MC business"
+          },
+          "details": [
+            "💰 PROFIT: $294K sale - $225K supplies = $69K profit per cycle",
+            "📈 RANKING: 3rd most profitable MC business",
+            "🔧 SETUP: Same strategy as other MC businesses",
+            "⏰ TIMING: 5 hours for full stock with upgrades"
+          ]
+        },
+        {
+          "id": "document-forgery",
+          "name": "Document Forgery Office",
+          "priority": "LOW",
+          "reward": "$126,000 per full sale",
+          "time": "5 hours to fill (with upgrades)",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "🏭",
+              "name": "Document Forgery Office",
+              "method": "Computer terminal"
+            },
+            {
+              "icon": "🏍️",
+              "name": "MC Clubhouse",
+              "method": "Computer > Businesses"
+            },
+            {
+              "icon": "📱",
+              "name": "Interaction Menu",
+              "method": "MC President > MC Business"
+            }
+          ],
+          "requirements": [
+            "MC Clubhouse",
+            "Document Forgery Office",
+            "Staff + Equipment upgrades recommended"
+          ],
+          "vehicles": {
+            "setup": ["Post Op Vans", "Garbage Trucks"],
+            "strategy": "Lowest profit MC business, consider shutting down"
+          },
+          "details": [
+            "💰 PROFIT: $126K sale - $225K supplies = -$99K LOSS per cycle",
+            "📉 RANKING: Worst MC business, actually loses money",
+            "❌ RECOMMENDATION: Don't run this business, shut it down",
+            "💡 TIP: Only useful for nightclub technician assignment"
+          ]
+        },
+        {
+          "id": "weed-farm",
+          "name": "Weed Farm",
+          "priority": "LOW", 
+          "reward": "$252,000 per full sale",
+          "time": "5 hours to fill (with upgrades)",
+          "difficulty": "Easy",
+          "moneyPotential": "Medium ($50K-200K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Solo Capable",
+          "launchLocations": [
+            {
+              "icon": "🏭",
+              "name": "Weed Farm",
+              "method": "Computer terminal"
+            },
+            {
+              "icon": "🏍️",
+              "name": "MC Clubhouse", 
+              "method": "Computer > Businesses"
+            },
+            {
+              "icon": "📱",
+              "name": "Interaction Menu",
+              "method": "MC President > MC Business"
+            }
+          ],
+          "requirements": [
+            "MC Clubhouse",
+            "Weed Farm",
+            "Staff + Equipment upgrades recommended"
+          ],
+          "vehicles": {
+            "setup": ["Post Op Vans", "Garbage Trucks", "Boats"],
+            "strategy": "Fourth most profitable MC business"
+          },
+          "details": [
+            "💰 PROFIT: $252K sale - $225K supplies = $27K profit per cycle",
+            "📈 RANKING: 4th most profitable MC business",
+            "💡 LOW PROFIT: Better than Document Forgery but still not great",
+            "🎯 NIGHTCLUB: Main value is for nightclub technician assignment"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "acid-lab",
+      "name": "Acid Lab (Mobile)",
+      "activities": [
+        {
+          "id": "acid-production",
+          "name": "Acid Production & Sales",
+          "priority": "HIGH",
+          "reward": "$300,000+ per sale",
+          "time": "3-4 hours to fill",
+          "difficulty": "Easy",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Long (1-2 hours)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🚐",
+              "name": "Acid Lab (Mobile)",
+              "method": "Interaction Menu > Services > Acid Lab"
+            }
+          ],
+          "requirements": ["Acid Lab", "Freakshop missions completed"],
+          "vehicles": {
+            "setup": ["Acid Lab van (mobile)", "Brickade for sales"],
+            "strategy": "Mobile lab that produces while you play, excellent passive income"
+          },
+          "details": [
+            "🚐 MOBILE: Lab moves around map automatically, no fixed location",
+            "💰 PASSIVE: Produces acid while you do other activities",
+            "🎯 SALES: Deliver in Brickade, usually single vehicle",
+            "🔧 UPGRADES: Equipment upgrade increases production speed",
+            "💡 BONUS: Complete Freakshop missions for better production",
+            "⏰ EFFICIENCY: One of the best passive income sources in game"
+          ]
+        }
+      ]
+    }
+  ]
+}

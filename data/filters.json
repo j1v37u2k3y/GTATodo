@@ -1,0 +1,8 @@
+{
+  "difficulty": ["Easy", "Medium", "Hard", "Expert"],
+  "moneyPotential": ["Low ($0-50K)", "Medium ($50K-200K)", "High ($200K-500K)", "Very High ($500K+)"],
+  "timeRequired": ["Quick (0-15 min)", "Short (15-30 min)", "Medium (30-60 min)", "Long (1-2 hours)", "Very Long (2+ hours)"],
+  "soloFriendly": ["Solo Only", "Solo Capable", "Team Preferred", "Team Required"],
+  "requirements": ["None", "Property Required", "Expensive Setup", "Skill Required"],
+  "launchLocation": ["Acid Lab (Mobile)", "Agency", "Arcade Property", "Auto Shop", "Bail Office", "Bunker", "Car Wash", "CEO Office", "Cocaine Lockup", "Convenience Stores", "Diamond Casino", "Facility", "Garment Factory", "Hangar", "High-End Apartment", "Interaction Menu", "Knowledge Base", "Kosatka Submarine", "LS Car Meet", "Map", "Methamphetamine Lab", "Nightclub", "Open World", "Phone", "Salvage Yard", "Terrorbyte"]
+}

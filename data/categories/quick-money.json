@@ -1,0 +1,369 @@
+{
+  "id": "quick-money",
+  "name": "Quick Money (15-30 min)",
+  "icon": "⚡",
+  "sections": [
+    {
+      "id": "ceo-vip-work",
+      "name": "CEO/VIP Work",
+      "activities": [
+        {
+          "id": "headhunter",
+          "name": "Headhunter",
+          "priority": "HIGH",
+          "reward": "$20,000-25,000",
+          "time": "3-4 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "📱",
+              "name": "Interaction Menu",
+              "method": "SecuroServ > VIP/CEO Work > Headhunter"
+            },
+            {
+              "icon": "🏢",
+              "name": "CEO Office",
+              "method": "Computer > SecuroServ > VIP Work"
+            }
+          ],
+          "requirements": ["CEO/VIP Status", "$25,000 minimum to register as VIP"],
+          "vehicles": {
+            "setup": ["Sparrow (Agency - fastest)", "Buzzard (CEO Menu)", "Oppressor MK2"],
+            "strategy": "Always target armored car first with homing missiles, then hover high and pick off bodyguards"
+          },
+          "details": [
+            "🎯 TARGET ORDER: Armored car → 3 bodyguards around the target",
+            "🚁 STRATEGY: Stay airborne, use homing missiles, maintain altitude to avoid RPGs",
+            "⏰ EFFICIENCY: Park Sparrow on nearby rooftop between targets",
+            "💡 TIP: If no aircraft, use Kuruma and drive-by shooting",
+            "🔄 COOLDOWN: 5 minutes between VIP work missions",
+            "💰 PAYOUT: $20K-25K depending on time taken (under 7 minutes = max payout)"
+          ]
+        },
+        {
+          "id": "sightseer",
+          "name": "Sightseer", 
+          "priority": "HIGH",
+          "reward": "$15,000-20,000",
+          "time": "3-5 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "📱",
+              "name": "Interaction Menu",
+              "method": "SecuroServ > VIP/CEO Work > Sightseer"
+            },
+            {
+              "icon": "🏢",
+              "name": "CEO Office",
+              "method": "Computer > SecuroServ > VIP Work"
+            }
+          ],
+          "requirements": ["CEO/VIP Status"],
+          "vehicles": {
+            "setup": ["Sparrow (Speed)", "Buzzard (Backup)", "Oppressor MK2"],
+            "strategy": "Travel to closest package first, then work outward to maximize efficiency"
+          },
+          "details": [
+            "💻 OBJECTIVE: Hack 3 briefcases at random locations around map",
+            "🚁 ROUTE: Always do closest → furthest to minimize travel time",
+            "⚠️ ALTERNATIVE: If packages are spread far apart, do 'Hostile Takeover - LSIA' instead",
+            "💡 NO COMBAT: Pure travel mission, no enemies to fight",
+            "⏰ TIME BONUS: Complete under 5 minutes for maximum payout",
+            "🔄 ROTATION: Alternate with Headhunter during cooldowns"
+          ]
+        },
+        {
+          "id": "hostile-takeover",
+          "name": "Hostile Takeover",
+          "priority": "MEDIUM",
+          "reward": "$15,000-18,000",
+          "time": "2-5 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "📱",
+              "name": "Interaction Menu",
+              "method": "SecuroServ > VIP/CEO Work > Hostile Takeover"
+            },
+            {
+              "icon": "🏢",
+              "name": "CEO Office",
+              "method": "Computer > SecuroServ > VIP Work"
+            }
+          ],
+          "requirements": ["CEO/VIP Status"],
+          "vehicles": {
+            "setup": ["Any armored vehicle", "Kuruma", "Nightshark"],
+            "strategy": "LSIA (easiest) or Altruist Camp, eliminate enemies and collect briefcase"
+          },
+          "details": [
+            "🏢 BEST LOCATIONS: LSIA (airport - easiest), Altruist Camp (mountain)",
+            "⚔️ LSIA STRATEGY: Drive to hangar, kill 6-8 enemies, grab briefcase",
+            "🏔️ ALTRUIST STRATEGY: More enemies but closer together, use cover",
+            "💡 TIP: Use when Sightseer packages are too spread out",
+            "🚗 VEHICLE: Any armored car works, Kuruma ideal for protection"
+          ]
+        },
+        {
+          "id": "asset-recovery",
+          "name": "Asset Recovery",
+          "priority": "MEDIUM",
+          "reward": "$15,000-20,000",
+          "time": "4-6 minutes",
+          "difficulty": "Medium",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "📱",
+              "name": "Interaction Menu",
+              "method": "SecuroServ > VIP/CEO Work > Asset Recovery"
+            },
+            {
+              "icon": "🏢",
+              "name": "CEO Office",
+              "method": "Computer > SecuroServ > VIP Work"
+            }
+          ],
+          "requirements": ["CEO/VIP Status"],
+          "vehicles": {
+            "setup": ["Sparrow/Buzzard", "Cargobob (if available)"],
+            "strategy": "Steal specific vehicle and deliver to warehouse, avoid damage"
+          },
+          "details": [
+            "🚗 OBJECTIVE: Steal specific vehicle (changes each time)",
+            "🎯 LOCATIONS: Various around Los Santos, check GPS",
+            "⚠️ ENEMIES: Usually 4-6 NPCs guarding the target vehicle",
+            "💡 CARGOBOB METHOD: Pick up vehicle to avoid damage (if you own one)",
+            "🔧 CONDITION: Vehicle condition affects payout - avoid damage"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nightclub-sales",
+      "name": "Nightclub Sales",
+      "activities": [
+        {
+          "id": "nightclub-sale",
+          "name": "Sell Nightclub Goods",
+          "priority": "HIGH",
+          "reward": "$600,000-1,200,000",
+          "time": "15-25 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Very High ($500K+)",
+          "timeRequired": "Short (15-30 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🌃",
+              "name": "Nightclub",
+              "method": "Tony's computer or main desk"
+            }
+          ],
+          "requirements": [
+            "Nightclub",
+            "Technicians assigned to businesses",
+            "Security upgrades recommended"
+          ],
+          "vehicles": {
+            "setup": [
+              "Mule Custom (90-180 units)",
+              "Pounder Custom (180-360 units)",
+              "Speedo Custom (under 90 units)"
+            ],
+            "strategy": "OPTIMAL: Sell at 120-150 units for guaranteed Mule Custom (best handling)"
+          },
+          "details": [
+            "🎯 SWEET SPOT: 90-180 units = Mule Custom (easiest to drive)",
+            "🌆 BUYERS: Always choose Los Santos buyers (shorter distance)",
+            "👥 SESSION: Solo public session mandatory (avoid griefers)",
+            "💰 PROFIT: $600K-900K for optimal range, $1.2M for full warehouse",
+            "⏰ PRODUCTION: Takes 20+ hours to reach 180 units",
+            "🔧 TECHNICIANS: Assign to Cargo, Sporting Goods, Pharma, Organic, Cash"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "agency-work",
+      "name": "Agency Security Contracts",
+      "activities": [
+        {
+          "id": "asset-protection",
+          "name": "Asset Protection",
+          "priority": "HIGH",
+          "reward": "$31,000",
+          "time": "5 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🏛️",
+              "name": "Agency",
+              "method": "Computer > Security Contracts"
+            }
+          ],
+          "requirements": ["Agency Property"],
+          "vehicles": {
+            "setup": ["Sparrow (Agency spawn)", "Kuruma (if ground combat)"],
+            "strategy": "Protect client's assets from attackers, easiest security contract"
+          },
+          "details": [
+            "🛡️ OBJECTIVE: Defend CEO's car, yacht, or other assets",
+            "🚁 STRATEGY: Use Sparrow missiles to eliminate attackers quickly",
+            "⏰ EFFICIENCY: Shortest and easiest security contract",
+            "💡 SPAWN: Agency Sparrow spawns right outside building",
+            "🔄 COOLDOWN: No cooldown between security contracts"
+          ]
+        },
+        {
+          "id": "gang-termination",
+          "name": "Gang Termination",
+          "priority": "HIGH",
+          "reward": "$31,000",
+          "time": "8 minutes",
+          "difficulty": "Medium",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🏛️",
+              "name": "Agency",
+              "method": "Computer > Security Contracts"
+            }
+          ],
+          "requirements": ["Agency Property"],
+          "vehicles": {
+            "setup": ["Kuruma (recommended)", "Sparrow for travel"],
+            "strategy": "Eliminate gang members at specific location, use cover and armor"
+          },
+          "details": [
+            "🎯 OBJECTIVE: Eliminate all gang members at marked location",
+            "🚗 STRATEGY: Use Kuruma for protection, park safely and clear on foot",
+            "⚔️ COMBAT: 10-15 enemies, use cover and snacks/armor",
+            "💡 TIP: Clear from outside-in to avoid being surrounded"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "auto-shop-services",
+      "name": "Auto Shop Services",
+      "activities": [
+        {
+          "id": "customer-vehicles",
+          "name": "Deliver Customer Vehicles",
+          "priority": "MEDIUM",
+          "reward": "$20,000-30,000",
+          "time": "5-10 minutes",
+          "difficulty": "Easy",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🔧",
+              "name": "Auto Shop",
+              "method": "Customer vehicles appear automatically, check garage"
+            }
+          ],
+          "requirements": ["Auto Shop Property"],
+          "vehicles": {
+            "setup": ["Customer's modified vehicle"],
+            "strategy": "Modify to exact customer specifications, deliver without damage for full payment"
+          },
+          "details": [
+            "🔧 MODIFICATIONS: Follow customer request exactly (color, wheels, etc.)",
+            "🚗 DELIVERY: Drive carefully to avoid damage penalties",
+            "💰 PAYOUT: $20K-30K for clean delivery, reduced for damage",
+            "👥 STAFF: Can have staff deliver for 50% profit while you do other activities",
+            "⏰ FREQUENCY: New customer car every 48 minutes (real time)",
+            "💡 TIP: Check phone for customer specifications before modifying"
+          ]
+        },
+        {
+          "id": "exotic-exports",
+          "name": "Exotic Exports List",
+          "priority": "MEDIUM",
+          "reward": "$300,000 (all 10)",
+          "time": "Variable (30-60 minutes total)",
+          "difficulty": "Medium",
+          "moneyPotential": "High ($200K-500K)",
+          "timeRequired": "Medium (30-60 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🏁",
+              "name": "LS Car Meet",
+              "method": "Notice board for daily list, then search map"
+            }
+          ],
+          "requirements": ["Auto Shop Property", "LS Car Meet membership"],
+          "vehicles": {
+            "setup": ["Fast vehicle for searching", "Oppressor MK2 for efficiency"],
+            "strategy": "Check LS Car Meet board daily, locate and deliver 10 specific vehicles"
+          },
+          "details": [
+            "📋 LIST: Check LS Car Meet notice board for today's 10 vehicles",
+            "🚗 VEHICLES: Spawn randomly around map, use interaction menu to request locations",
+            "💰 PAYOUT: $20,000 per vehicle + $100,000 bonus for all 10",
+            "📱 TRACKING: Use phone app to see general locations",
+            "⏰ DAILY RESET: New list every 24 hours (real time)",
+            "💡 TIP: Some vehicles only spawn during specific weather/time conditions"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "terrorbyte-client-jobs",
+      "name": "Terrorbyte Client Jobs",
+      "activities": [
+        {
+          "id": "robbery-in-progress",
+          "name": "Robbery in Progress",
+          "priority": "MEDIUM",
+          "reward": "$30,000",
+          "time": "5 minutes",
+          "difficulty": "Medium",
+          "moneyPotential": "Low ($0-50K)",
+          "timeRequired": "Quick (0-15 min)",
+          "soloFriendly": "Solo Only",
+          "launchLocations": [
+            {
+              "icon": "🚛",
+              "name": "Terrorbyte",
+              "method": "Computer > Client Jobs"
+            }
+          ],
+          "requirements": ["Terrorbyte", "CEO Status"],
+          "vehicles": {
+            "setup": ["Buzzard", "Kuruma", "Oppressor MK2"],
+            "strategy": "Eliminate robbers and recover stolen goods, use armored vehicle"
+          },
+          "details": [
+            "🎯 OBJECTIVE: Stop robbery and eliminate all perpetrators",
+            "🚗 APPROACH: Use armored vehicle or aircraft with missiles",
+            "💰 GOODS: Collect briefcase after eliminating enemies",
+            "⏰ EFFICIENCY: Can be done quickly with proper vehicle",
+            "🔄 ROTATION: Good to mix with other client jobs"
+          ]
+        }
+      ]
+    }
+  ]
+}

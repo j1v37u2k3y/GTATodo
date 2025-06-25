@@ -22,7 +22,7 @@
               "launchLocation": {
                 "icon": "📱",
                 "name": "Interaction Menu",
-                "method": "SecuroServ > VIP/CEO Work > Headhunter"
+                "method": "SecuroServ > VIP/CEO Work > Headhunter (or CEO Office computer > SecuroServ)"
               },
               "requirements": [
                 "CEO/VIP Status",
@@ -58,7 +58,7 @@
               "launchLocation": {
                 "icon": "📱",
                 "name": "Interaction Menu",
-                "method": "SecuroServ > VIP/CEO Work > Sightseer"
+                "method": "SecuroServ > VIP/CEO Work > Sightseer (or CEO Office computer > SecuroServ)"
               },
               "requirements": [
                 "CEO/VIP Status"
@@ -89,7 +89,7 @@
               "launchLocation": {
                 "icon": "📱",
                 "name": "Interaction Menu",
-                "method": "SecuroServ > VIP/CEO Work > Hostile Takeover"
+                "method": "SecuroServ > VIP/CEO Work > Hostile Takeover (or CEO Office computer > SecuroServ)"
               },
               "requirements": [
                 "CEO/VIP Status"
@@ -119,7 +119,7 @@
               "launchLocation": {
                 "icon": "📱",
                 "name": "Interaction Menu",
-                "method": "SecuroServ > VIP/CEO Work > Asset Recovery"
+                "method": "SecuroServ > VIP/CEO Work > Asset Recovery (or CEO Office computer > SecuroServ)"
               },
               "requirements": [
                 "CEO/VIP Status"
@@ -371,7 +371,7 @@
               "launchLocation": {
                 "icon": "🛥️",
                 "name": "Kosatka Submarine",
-                "method": "Planning screen > Scope Out"
+                "method": "Planning screen > Scope Out (or Phone > Quick Job > Heists > Cayo Perico after first completion)"
               },
               "requirements": [
                 "Kosatka Submarine",
@@ -405,7 +405,7 @@
               "launchLocation": {
                 "icon": "🛥️",
                 "name": "Kosatka Submarine",
-                "method": "Planning screen > Prep Work"
+                "method": "Planning screen > Prep Work (preps also accessible via Phone > Quick Job after scope out)"
               },
               "requirements": [
                 "Completed scope out"
@@ -465,7 +465,7 @@
               "launchLocation": {
                 "icon": "🛥️",
                 "name": "Kosatka Submarine",
-                "method": "Planning screen > Start Heist"
+                "method": "Planning screen > Start Heist (or Phone > Quick Job > Heists when ready)"
               },
               "requirements": [
                 "All prep missions complete",
@@ -529,7 +529,7 @@
               "launchLocation": {
                 "icon": "🕹️",
                 "name": "Arcade Property",
-                "method": "Heist planning board"
+                "method": "Heist planning board (or Phone > Quick Job > Heists > Casino Heist)"
               },
               "requirements": [
                 "Arcade Property",
@@ -560,7 +560,7 @@
               "launchLocation": {
                 "icon": "🕹️",
                 "name": "Arcade Property",
-                "method": "Heist planning board > Prep Work"
+                "method": "Heist planning board > Prep Work (preps also accessible via Phone > Quick Job after scope out)"
               },
               "requirements": [
                 "Completed scope out",
@@ -638,7 +638,7 @@
               "launchLocation": {
                 "icon": "🕹️",
                 "name": "Arcade Property",
-                "method": "Heist planning board > Start Heist"
+                "method": "Heist planning board > Start Heist (or Phone > Quick Job > Heists when ready)"
               },
               "requirements": [
                 "All mandatory preps complete",
@@ -908,7 +908,7 @@
               "launchLocation": {
                 "icon": "🏭",
                 "name": "Facility",
-                "method": "Heist planning room"
+                "method": "Heist planning room (or Phone > Quick Job > Heists > Doomsday)"
               },
               "requirements": [
                 "Facility",
@@ -939,7 +939,7 @@
               "launchLocation": {
                 "icon": "🏭",
                 "name": "Facility",
-                "method": "Heist planning room"
+                "method": "Heist planning room (or Phone > Quick Job > Heists > Doomsday)"
               },
               "requirements": [
                 "Facility",
@@ -971,7 +971,7 @@
               "launchLocation": {
                 "icon": "🏭",
                 "name": "Facility",
-                "method": "Heist planning room"
+                "method": "Heist planning room (or Phone > Quick Job > Heists > Doomsday)"
               },
               "requirements": [
                 "Facility",
@@ -1145,7 +1145,7 @@
               "launchLocation": {
                 "icon": "🏢",
                 "name": "CEO Office",
-                "method": "Computer > SecuroServ > Import/Export"
+                "method": "Computer > SecuroServ > Import/Export (or Interaction Menu > SecuroServ > CEO Abilities)"
               },
               "requirements": [
                 "Vehicle Warehouse",
@@ -1222,7 +1222,7 @@
               "launchLocation": {
                 "icon": "🏢",
                 "name": "CEO Office",
-                "method": "Computer > SecuroServ > Buy Special Cargo"
+                "method": "Computer > SecuroServ > Buy Special Cargo (or Interaction Menu > SecuroServ > CEO Abilities or Terrorbyte computer)"
               },
               "requirements": [
                 "CEO Office",
@@ -1262,7 +1262,7 @@
               "launchLocation": {
                 "icon": "🏭",
                 "name": "Cocaine Lockup",
-                "method": "Computer terminal or Clubhouse computer"
+                "method": "Computer terminal or Clubhouse computer (or Interaction Menu > MC President > MC Business)"
               },
               "requirements": [
                 "MC Clubhouse",
@@ -1296,7 +1296,7 @@
               "launchLocation": {
                 "icon": "🏭",
                 "name": "Methamphetamine Lab",
-                "method": "Computer terminal or Clubhouse computer"
+                "method": "Computer terminal or Clubhouse computer (or Interaction Menu > MC President > MC Business)"
               },
               "requirements": [
                 "MC Clubhouse",
@@ -1492,7 +1492,7 @@
               "launchLocation": {
                 "icon": "📱",
                 "name": "Phone",
-                "method": "Quick Job > Races > Stunt Races"
+                "method": "Quick Job > Races > Stunt Races (or map markers, job corona, Pause Menu > Online > Jobs > Races)"
               },
               "requirements": [
                 "None"
@@ -1632,7 +1632,7 @@
               "launchLocation": {
                 "icon": "📱",
                 "name": "Phone",
-                "method": "Quick Job > Adversary Modes > Sumo"
+                "method": "Quick Job > Adversary Modes > Sumo (or Pause Menu > Online > Jobs > Adversary Modes or Job List)"
               },
               "requirements": [
                 "None"
@@ -1664,7 +1664,7 @@
               "launchLocation": {
                 "icon": "📱",
                 "name": "Phone",
-                "method": "Quick Job > Adversary Modes > Motor Wars"
+                "method": "Quick Job > Adversary Modes > Motor Wars (or Pause Menu > Online > Jobs > Adversary Modes or Job List)"
               },
               "requirements": [
                 "None"
@@ -1836,7 +1836,7 @@
               "launchLocation": {
                 "icon": "📱",
                 "name": "Interaction Menu",
-                "method": "SecuroServ > VIP/CEO Challenges > Most Wanted"
+                "method": "SecuroServ > VIP/CEO Challenges > Most Wanted (or CEO Office computer > SecuroServ)"
               },
               "requirements": [
                 "CEO/VIP Status"
@@ -1869,7 +1869,7 @@
               "launchLocation": {
                 "icon": "📱",
                 "name": "Interaction Menu",
-                "method": "SecuroServ > VIP/CEO Challenges > Executive Deathmatch"
+                "method": "SecuroServ > VIP/CEO Challenges > Executive Deathmatch (or CEO Office computer > SecuroServ)"
               },
               "requirements": [
                 "CEO/VIP Status",

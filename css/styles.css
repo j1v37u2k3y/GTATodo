@@ -52,8 +52,117 @@ h1 {
     font-size: 1.2rem;
 }
 
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 12px 20px;
+    background: rgba(26, 26, 46, 0.95);
+    border: 2px solid rgba(0, 255, 136, 0.4);
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    font-size: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-toggle:hover {
+    background: rgba(0, 255, 136, 0.15);
+    border-color: #00ff88;
+    transform: translateY(-2px);
+}
+
+/* Control Sidebar */
+.control-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100vh;
+    background: rgba(26, 26, 46, 0.98);
+    backdrop-filter: blur(15px);
+    border-left: 2px solid rgba(0, 255, 136, 0.4);
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.control-sidebar.active {
+    right: 0;
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.sidebar-header h3 {
+    color: #00ff88;
+    margin: 0;
+}
+
+.sidebar-close {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.sidebar-close:hover {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: #ff4444;
+    color: #ff4444;
+}
+
+.sidebar-section {
+    margin-bottom: 25px;
+}
+
+.sidebar-section h4 {
+    color: #00ccff;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
 .progress-container {
     margin: 20px 0;
+    background: rgba(0, 255, 136, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 136, 0.3);
 }
 
 .progress-info {
@@ -77,11 +186,34 @@ h1 {
     transition: width 0.3s ease;
 }
 
-.controls {
+.sidebar-controls {
     display: flex;
-    gap: 10px;
-    margin: 20px 0;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-btn {
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.sidebar-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #00ff88;
+    transform: translateX(5px);
+}
+
+.sidebar-btn.active {
+    background: rgba(0, 255, 136, 0.2);
+    border-color: #00ff88;
+    color: #00ff88;
 }
 
 .control-btn {
@@ -92,6 +224,8 @@ h1 {
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 .control-btn:hover {
@@ -108,10 +242,16 @@ h1 {
 
 .tabs {
     display: flex;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(26, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     margin: 20px 0;
     overflow-x: auto;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 20px;
+    z-index: 100;
 }
 
 .tab {
@@ -252,16 +392,31 @@ input[type="checkbox"] {
     margin-bottom: 5px;
 }
 
+.launch-locations-section {
+    margin: 5px 0;
+}
+
 .launch-location {
     background: rgba(0, 255, 136, 0.1);
     border: 1px solid rgba(0, 255, 136, 0.3);
     border-radius: 5px;
     padding: 5px 10px;
-    margin: 5px 0;
+    margin: 3px 0;
     display: flex;
     align-items: center;
     gap: 5px;
     font-size: 0.9rem;
+}
+
+.launch-location.primary {
+    background: rgba(0, 255, 136, 0.15);
+    border-color: rgba(0, 255, 136, 0.4);
+}
+
+.launch-location.alternative {
+    background: rgba(0, 204, 255, 0.1);
+    border-color: rgba(0, 204, 255, 0.3);
+    opacity: 0.8;
 }
 
 .location-icon {
@@ -273,9 +428,14 @@ input[type="checkbox"] {
     color: #00ff88;
 }
 
+.launch-location.alternative .location-name {
+    color: #00ccff;
+}
+
 .location-method {
     color: #ccc;
     font-style: italic;
+    font-size: 0.85rem;
 }
 
 .task-reward {
@@ -351,19 +511,77 @@ input[type="checkbox"] {
         align-self: flex-start;
     }
 
-    .controls {
-        justify-content: center;
+    /* Mobile sidebar adjustments */
+    .control-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .sidebar-toggle {
+        top: 15px;
+        right: 15px;
+        padding: 10px 15px;
+        font-size: 0.9rem;
     }
 }
 
-/* Filter Controls */
-.filters-container {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    animation: slideDown 0.3s ease;
+/* Sidebar Filter Styling */
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 12px;
+}
+
+.filter-group label {
+    font-weight: bold;
+    color: #00ccff;
+    font-size: 0.85rem;
+}
+
+.filter-group select {
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.filter-group select:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #00ff88;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: #00ff88;
+    box-shadow: 0 0 5px rgba(0, 255, 136, 0.3);
+}
+
+.filter-group option {
+    background: #1a1a2e;
+    color: #fff;
+}
+
+.clear-filters {
+    padding: 10px 15px;
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 6px;
+    color: #ff6b6b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.clear-filters:hover {
+    background: rgba(255, 0, 0, 0.3);
+    transform: translateY(-1px);
 }
 
 @keyframes slideDown {
@@ -405,11 +623,7 @@ input[type="checkbox"] {
     transform: translateY(-1px);
 }
 
-.filters-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-}
+/* Remove old filter grid styling */
 
 .filter-group {
     display: flex;
@@ -509,23 +723,206 @@ input[type="checkbox"] {
         gap: 10px;
         text-align: center;
     }
+
+    /* Responsive sticky controls for mobile */
+    .controls {
+        top: 10px;
+        margin: 10px 0;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .control-btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+        flex: 1;
+        min-width: auto;
+    }
+
+    .progress-container {
+        top: 80px;
+        margin: 10px 0;
+        padding: 12px;
+    }
+
+    .tabs {
+        top: 160px;
+        margin: 10px 0;
+    }
+
+    .filters-container {
+        top: 220px;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    /* Mobile completed view */
+    .completed-view {
+        height: 60vh;
+        bottom: -60vh;
+        border-radius: 20px 20px 0 0;
+        padding: 15px;
+        margin: 0 10px;
+        max-width: calc(100vw - 20px);
+    }
+
+    .completed-list {
+        grid-template-columns: 1fr;
+        max-height: calc(60vh - 120px);
+    }
+
+    .completed-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .completed-item-right {
+        align-self: stretch;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .uncheck-btn {
+        margin-left: 0;
+        flex-shrink: 0;
+    }
 }
 
-/* Completed View */
+/* Overlay for when drawer is open */
+.drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 150;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.drawer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: none; /* Allow clicking through to background content */
+}
+
+/* Completed View - Bottom Drawer */
 .completed-view {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    margin: 20px 0;
+    position: fixed;
+    bottom: -50vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px;
+    height: 50vh;
+    background: rgba(26, 26, 46, 0.96);
+    backdrop-filter: blur(15px);
+    border-top: 2px solid rgba(0, 255, 136, 0.4);
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
     padding: 20px;
-    border: 1px solid rgba(0, 255, 136, 0.3);
-    animation: slideDown 0.3s ease;
+    border-radius: 15px 15px 0 0;
+    margin: 0 20px;
+}
+
+.completed-view::-webkit-scrollbar {
+    width: 6px;
+}
+
+.completed-view::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.completed-view::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 136, 0.3);
+    border-radius: 3px;
+}
+
+.completed-view::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 136, 0.5);
+}
+
+.completed-view.active {
+    bottom: 0;
+    animation: slideInFromBottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* HOVER OPACITY EFFECT - This is where I added the opacity change on hover */
+.completed-view:not(:hover) {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.completed-view:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes slideInFromBottom {
+    from {
+        bottom: -50vh;
+        opacity: 0.8;
+        transform: translateX(-50%) translateY(10px);
+    }
+    to {
+        bottom: 0;
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
 }
 
 .completed-header {
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+    position: relative;
+}
+
+.completed-header::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+}
+
+.completed-header-content {
+    flex: 1;
+    text-align: center;
+}
+
+.completed-close {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.completed-close:hover {
+    background: rgba(255, 0, 0, 0.2);
+    border-color: #ff4444;
+    color: #ff4444;
+    transform: scale(1.1);
 }
 
 .completed-header h2 {
@@ -540,7 +937,30 @@ input[type="checkbox"] {
 
 .completed-list {
     display: grid;
-    gap: 10px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-height: calc(50vh - 120px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 255, 136, 0.3) transparent;
+}
+
+.completed-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.completed-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.completed-list::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 136, 0.3);
+    border-radius: 3px;
+}
+
+.completed-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 136, 0.5);
 }
 
 .completed-item {
@@ -564,6 +984,14 @@ input[type="checkbox"] {
     align-items: center;
     gap: 10px;
     flex: 1;
+    min-width: 0;
+}
+
+.completed-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
 }
 
 .completed-item-right {
@@ -595,6 +1023,31 @@ input[type="checkbox"] {
 
 .completed-reward {
     color: #00ff88;
+    font-weight: bold;
+}
+
+.uncheck-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px 8px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    line-height: 1;
+    margin-left: 10px;
+}
+
+.uncheck-btn:hover {
+    background: rgba(255, 193, 7, 0.2);
+    border-color: #ffc107;
+    color: #ffc107;
+    transform: scale(1.1);
+}
+
+.uncheck-btn span {
+    display: inline-block;
     font-weight: bold;
 }
 
