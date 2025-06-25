@@ -96,6 +96,18 @@
     <!-- Sidebar Overlay -->
     <div class="sidebar-overlay" id="sidebarOverlay" onclick="app.toggleSidebar()"></div>
 
+    <!-- Active Filters Display -->
+    <div class="active-filters" id="activeFilters" style="display: none;">
+        <div class="active-filters-header">
+            <span class="filters-icon">🔍</span>
+            <span class="filters-title">Active Filters:</span>
+            <button class="clear-active-filters" onclick="app.clearAllFilters()">Clear All</button>
+        </div>
+        <div class="filter-tags" id="filterTags">
+            <!-- Active filter tags will be rendered here -->
+        </div>
+    </div>
+
     <div class="tabs" id="tabs">
         <!-- Tabs will be rendered here by JavaScript -->
     </div>

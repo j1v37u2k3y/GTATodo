@@ -439,6 +439,7 @@ class GTAChecklist {
         // Update section visibility
         this.updateSectionVisibility();
         this.updateProgress();
+        this.updateActiveFiltersDisplay();
     }
 
     shouldShowTask(taskData) {
@@ -535,6 +536,106 @@ class GTAChecklist {
         });
 
         this.updateProgress();
+        this.updateActiveFiltersDisplay();
+    }
+
+    updateActiveFiltersDisplay() {
+        const activeFiltersContainer = document.getElementById('activeFilters');
+        const filterTagsContainer = document.getElementById('filterTags');
+        
+        // Collect active filters
+        const activeFilters = [];
+        
+        if (this.activeFilters.money) {
+            activeFilters.push({
+                type: 'money',
+                label: '💰 Money',
+                value: this.activeFilters.money
+            });
+        }
+        
+        if (this.activeFilters.time) {
+            activeFilters.push({
+                type: 'time',
+                label: '⏰ Time',
+                value: this.activeFilters.time
+            });
+        }
+        
+        if (this.activeFilters.difficulty) {
+            activeFilters.push({
+                type: 'difficulty',
+                label: '🎯 Difficulty',
+                value: this.activeFilters.difficulty
+            });
+        }
+        
+        if (this.activeFilters.solo) {
+            activeFilters.push({
+                type: 'solo',
+                label: '👥 Solo',
+                value: this.activeFilters.solo
+            });
+        }
+        
+        if (this.activeFilters.priority) {
+            activeFilters.push({
+                type: 'priority',
+                label: '🏆 Priority',
+                value: this.activeFilters.priority
+            });
+        }
+        
+        if (this.activeFilters.launchLocation) {
+            activeFilters.push({
+                type: 'launchLocation',
+                label: '📍 Location',
+                value: this.activeFilters.launchLocation
+            });
+        }
+        
+        // Show/hide active filters container
+        if (activeFilters.length > 0) {
+            activeFiltersContainer.style.display = 'block';
+            
+            // Render filter tags
+            const tagsHTML = activeFilters.map(filter => `
+                <div class="active-filter-tag">
+                    <span class="filter-tag-label">${filter.label}:</span>
+                    <span class="filter-tag-value">${filter.value}</span>
+                    <button class="remove-filter" onclick="app.removeFilter('${filter.type}')" title="Remove this filter">
+                        ✕
+                    </button>
+                </div>
+            `).join('');
+            
+            filterTagsContainer.innerHTML = tagsHTML;
+        } else {
+            activeFiltersContainer.style.display = 'none';
+        }
+    }
+
+    removeFilter(filterType) {
+        // Clear the specific filter
+        this.activeFilters[filterType] = '';
+        
+        // Update the corresponding select element
+        const filterMap = {
+            money: 'moneyFilter',
+            time: 'timeFilter',
+            difficulty: 'difficultyFilter',
+            solo: 'soloFilter',
+            priority: 'priorityFilter',
+            launchLocation: 'launchLocationFilter'
+        };
+        
+        const selectElement = document.getElementById(filterMap[filterType]);
+        if (selectElement) {
+            selectElement.value = '';
+        }
+        
+        // Reapply filters
+        this.applyFilters();
     }
 
     toggleCompletedView() {

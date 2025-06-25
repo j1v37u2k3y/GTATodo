@@ -240,6 +240,111 @@ h1 {
     color: #00ff88;
 }
 
+/* Active Filters Display */
+.active-filters {
+    background: rgba(255, 193, 7, 0.15);
+    border: 1px solid rgba(255, 193, 7, 0.4);
+    border-radius: 10px;
+    margin: 20px 0 10px 0;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+    animation: slideInFromTop 0.3s ease;
+}
+
+.active-filters-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.filters-icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+
+.filters-title {
+    color: #ffc107;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.clear-active-filters {
+    padding: 6px 12px;
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    border-radius: 6px;
+    color: #ff6b6b;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.clear-active-filters:hover {
+    background: rgba(255, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+.filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.active-filter-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: rgba(255, 193, 7, 0.25);
+    border: 1px solid rgba(255, 193, 7, 0.5);
+    border-radius: 20px;
+    color: #ffc107;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.filter-tag-label {
+    opacity: 0.8;
+}
+
+.filter-tag-value {
+    color: #fff;
+}
+
+.remove-filter {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: all 0.2s ease;
+    margin-left: 4px;
+}
+
+.remove-filter:hover {
+    background: rgba(255, 0, 0, 0.4);
+    color: #ff6b6b;
+    transform: scale(1.1);
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .tabs {
     display: flex;
     background: rgba(26, 26, 46, 0.95);
@@ -704,11 +809,7 @@ input[type="checkbox"] {
 }
 
 .section.filtered-empty {
-    opacity: 0.3;
-}
-
-.section.filtered-empty .section-header {
-    color: #666;
+    display: none !important;
 }
 
 /* Responsive filters */
